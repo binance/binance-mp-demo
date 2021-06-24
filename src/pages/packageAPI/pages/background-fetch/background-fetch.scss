@@ -1,0 +1,22 @@
+.bf-center {
+  text-align: center;
+}
+
+.page-body {
+  border-bottom: 1px solid lightgray;
+  padding: 16px 0;
+
+  input {
+    width: 100px;
+  }
+}
+
+.bf-logs {
+  white-space: pre;
+  font-size: 12px;
+  line-height: 1em;
+
+  > * {
+    margin-bottom: 8px;
+  }
+}

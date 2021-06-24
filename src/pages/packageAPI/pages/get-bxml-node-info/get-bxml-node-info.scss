@@ -1,0 +1,50 @@
+.target {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  left: 30px;
+  top: 30px;
+  background: #1aad19;
+  color: #fff;
+  position: absolute;
+}
+
+.node-container {
+  height: 400px;
+  width: 400px;
+  position: relative;
+  background-color: #ccc;
+  overflow: hidden;
+}
+
+.page-section {
+  display: flex;
+  justify-content: center;
+}
+
+.page-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.metric {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.b {
+  display: inline-block;
+  width: 150px;
+  font-weight: bold;
+}
+
+.span {
+  display: inline-block;
+  width: 100px;
+}

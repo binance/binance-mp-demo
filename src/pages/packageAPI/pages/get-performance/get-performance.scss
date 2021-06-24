@@ -1,0 +1,25 @@
+.perf-center {
+  text-align: center;
+}
+
+.perf-entry-wrapper {
+  background-color: ghostwhite;
+  padding: 4px;
+  margin-bottom: 12px;
+  color: black;
+}
+
+.perf-entry-property {
+  display: flex;
+  justify-content: space-between;
+
+  & > *:first-child {
+    font-size: 12px;
+    color: darkgray;
+  }
+
+  & > *:nth-child(2) {
+    font-size: 14px;
+    text-align: right;
+  }
+}

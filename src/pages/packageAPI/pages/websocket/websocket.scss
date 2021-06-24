@@ -1,0 +1,16 @@
+@import '../../../common/lib/bnui.scss';
+
+.ws-center {
+  text-align: center;
+}
+.ws-error {
+  color: red;
+}
+
+.ws-logs {
+  white-space: pre-line;
+  background-color: lightgray;
+  color: black;
+  padding: 0 16px;
+  min-height: 48px;
+}
