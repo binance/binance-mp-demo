@@ -8,7 +8,7 @@ import withProviders from '../../../../common/withProviders'
 function Page() {
   const sendRequest = useCallback(async () => {
     request({
-      url: 'https://www.metaweather.com/api/location/44418',
+      url: 'https://www.metaweather.com/api/location/44418/',
       // to use this demo, please replace headers below to your self headers.
       headers: {},
       method: 'GET'
