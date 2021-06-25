@@ -1,17 +1,22 @@
 import React, { useCallback } from 'react'
 import { View, Button, Text } from '@binance/mp-components'
-import { request } from '@binance/mp-service'
+import { request, showModal } from '@binance/mp-service'
 import './request.scss'
 import { Head } from '../../../../common/head'
 import withProviders from '../../../../common/withProviders'
 
 function Page() {
   const sendRequest = useCallback(async () => {
-    request({
+    const result = await request({
       url: 'https://random-data-api.com/api/stripe/random_stripe',
       // to use this demo, please replace headers below to your self headers.
       headers: {},
       method: 'GET'
+    })
+    showModal({
+      title: 'result',
+      content: JSON.stringify(result),
+      showCancel: false
     })
   }, [])
 
