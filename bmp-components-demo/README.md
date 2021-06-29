@@ -3,7 +3,7 @@
 ## Usage
 
 ```
-cd binance-mp-demo
+cd bmp-components-demo
 npm i
 npm run bootstrap
 npm run dev
