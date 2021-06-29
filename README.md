@@ -1,12 +1,9 @@
-# Binance Miniprogram Demo
+# Binance Mini Program Demos
 
-## Usage
+## BMP Components Demo
 
-```
-cd binance-mp-demo
-npm i
-npm run bootstrap
-npm run dev
-```
+`bmp-components-demo` shows the examples of components and apis available in the Binance Mini Program.
 
-After completing the above steps, import project with [Binance Devtools](https://developers.binance.com/docs/mini-program/download)
+## Example: Migrate a React app to Mini Program app
+
+`react-app-to-mp-example` shows how to migrate a React app to the Binance Mini Program app.

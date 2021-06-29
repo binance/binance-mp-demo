@@ -1,0 +1,71 @@
+.main {
+  margin: 10px;
+  border-radius: 20px;
+  background-color: #01579b;
+}
+
+.top {
+  height: 60px;
+  background-color: #424242;
+  color: whitesmoke;
+  padding: 10px;
+  border-radius: 20px 20px 0 0;
+  font-family: "Recursive", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+.header {
+  background-color: #424242;
+  color: whitesmoke;
+  margin: 10px 0px 0px 10px;
+  font-size: 24px;
+  border-radius: 20px 20px 0 0;
+  font-family: "Recursive", sans-serif;
+}
+
+.button {
+  width: 35px;
+  height: 35px;
+}
+
+.day {
+  padding: 15px;
+  color: whitesmoke;
+  font-family: "Recursive", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 43px;
+}
+
+.temp {
+  padding: 15px;
+  color: whitesmoke;
+  font-family: "Recursive", sans-serif;
+  font-size: 16px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sunrise-sunset {
+  padding: 15px;
+  color: whitesmoke;
+  font-family: "Recursive", sans-serif;
+  font-size: 14px;
+}
+
+.description {
+  padding: 15px;
+  color: whitesmoke;
+  font-family: "Recursive", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
