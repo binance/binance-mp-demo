@@ -1,7 +1,7 @@
 {
-  "miniprogramRoot": "./dist",
+  "miniprogramRoot": ".bmp/build",
   "projectname": "weather-app-mp",
-  "description": "A Nezha mini-program project",
+  "description": "A Binance mini-program project",
   "appid": "weather-app-mp-appid",
   "setting": {
     "urlCheck": true,

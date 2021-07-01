@@ -1,11 +1,9 @@
 module.exports = {
   presets: [
     [
-      "taro",
+      "@binance/babel-preset-bmp",
       {
         framework: "react",
-        ts: true,
-        reactJsxRuntime: "classic",
       },
     ],
   ],

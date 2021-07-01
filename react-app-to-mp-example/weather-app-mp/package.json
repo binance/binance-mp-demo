@@ -36,7 +36,7 @@
     ]
   },
   "devDependencies": {
-    "@binance/mp-cli": "^1.1.8",
-    "babel-preset-taro": "^3.2.13"
+    "@binance/babel-preset-bmp": "^1.0.0",
+    "@binance/mp-cli": "^1.1.9"
   }
 }
