@@ -26,10 +26,7 @@ function Page() {
         url: URL,
         // protocols: [],
         // @ts-ignore
-        headers: { test: 'a' },
-        success: () => console.log('[connectSocket] success'),
-        fail: ({ errMsg }) => console.log('[connectSocket] fail', errMsg),
-        complete: () => console.log('[connectSocket] complete')
+        headers: { test: 'a' }
       })
 
       if (socketTask.errMsg) throw new Error(socketTask.errMsg)

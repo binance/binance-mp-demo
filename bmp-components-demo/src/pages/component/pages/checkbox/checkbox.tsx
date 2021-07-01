@@ -3,7 +3,8 @@ import {
   Label,
   Checkbox,
   CheckboxGroup,
-  BaseEventOrig
+  BaseEventOrig,
+  Button
 } from '@binance/mp-components'
 import React from 'react'
 import { Head } from '../../../../common/head'
@@ -19,11 +20,15 @@ class Page extends React.Component {
       { value: 'JPN', name: '日本' },
       { value: 'ENG', name: '英国' },
       { value: 'FRA', name: '法国' }
-    ]
+    ],
+    checked: false
   }
 
   checkboxChange = (e: BaseEventOrig<{ value: string[] }>) => {
-    console.log('change event fired，value:', e.detail.value)
+    console.log(
+      '[CheckboxGroup] checkboxChange change event fired，value:',
+      e.detail.value
+    )
 
     const items = this.state.items
     const values = e.detail.value
@@ -51,27 +56,83 @@ class Page extends React.Component {
         <View className='page-body'>
           <View className='page-section page-section-gap'>
             <View className='page-section-title'>Default Style</View>
+            <Checkbox
+              value='cb'
+              checked
+              onClick={e => console.log('[Click] Checkbox', e)}
+            ></Checkbox>
+            <Checkbox
+              value='cb'
+              onClick={e => console.log('[Click] Checkbox', e)}
+            ></Checkbox>
+
+            <View className='page-section-title'>With Label</View>
+            <Label
+              className='checkbox'
+              onClick={e => console.log('[Click] Label', e)}
+            >
+              <Checkbox
+                value='cb'
+                checked
+                onClick={e => console.log('[Click] Checkbox', e)}
+              ></Checkbox>
+              Checked
+            </Label>
+            <Label
+              className='checkbox'
+              onClick={e => console.log('[Click] Label', e)}
+            >
+              <View>
+                <Checkbox
+                  value='cb'
+                  onClick={e => console.log('[Click] Checkbox', e)}
+                ></Checkbox>
+                <View onClick={e => console.log('[Click] View', e)}>
+                  Unchecked
+                </View>
+              </View>
+            </Label>
+            <View className='page-section-title'>disabled</View>
             <Label className='checkbox'>
-              <Checkbox value='cb' checked></Checkbox>Checked
+              <Checkbox value='cb' disabled checked></Checkbox>Checked
             </Label>
             <Label className='checkbox'>
-              <Checkbox value='cb'></Checkbox>Unchecked
+              <Checkbox value='cb' disabled></Checkbox>Unchecked
             </Label>
+
+            <View className='page-section-title'>Controlled</View>
+            <Label
+              className='radio'
+              onClick={() => this.setState({ checked: !this.state.checked })}
+            >
+              <Checkbox value='cb' checked={this.state.checked}></Checkbox>
+              Checked
+            </Label>
+            <Button
+              onClick={() => this.setState({ checked: !this.state.checked })}
+            >
+              Toggle checked
+            </Button>
           </View>
           <View className='page-section'>
             <View className='page-section-title'>Recommended style</View>
             <View className='bnui-cells bnui-cells_after-title'>
-              <CheckboxGroup onChange={this.checkboxChange}>
-                {items.map((item, index) => {
+              <CheckboxGroup
+                onChange={this.checkboxChange}
+                onClick={e => console.log('[Click] CheckboxGroup', e)}
+              >
+                {items.map(item => {
                   return (
                     <Label
                       className='bnui-cell bnui-check__label'
                       key={item.value}
+                      onClick={e => console.log('[Click] Label', e)}
                     >
                       <View className='bnui-cell__hd'>
                         <Checkbox
                           value={item.value}
                           checked={item.checked}
+                          onClick={e => console.log('[Click] Checkbox', e)}
                         ></Checkbox>
                       </View>
                       <View className='bnui-cell__bd'>{item.name}</View>

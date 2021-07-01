@@ -1,6 +1,10 @@
 import * as React from 'react'
 import { View } from '@binance/mp-components'
-import { getSystemInfo as bnGetSystemInfo } from '@binance/mp-service'
+import {
+  getSystemInfo as bnGetSystemInfo,
+  onThemeChange as bnOnThemeChange,
+  offThemeChange as bnOffThemeChange
+} from '@binance/mp-service'
 
 import './themeContext.scss'
 
@@ -28,6 +32,17 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       }
     }
     getSystemInfo()
+  }, [])
+
+  React.useEffect(() => {
+    function onThemeChange({ theme }) {
+      setTheme(theme)
+    }
+
+    bnOnThemeChange(onThemeChange)
+    return () => {
+      bnOffThemeChange(onThemeChange)
+    }
   }, [])
 
   return (

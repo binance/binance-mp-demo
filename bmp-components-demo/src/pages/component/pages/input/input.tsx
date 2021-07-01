@@ -285,17 +285,13 @@ function Page() {
                 value={inputValue5}
                 onInput={e => {
                   if (e.detail.value === '123') {
-                    hideKeyboard({
-                      complete(res) {
-                        console.log(`hideKeyboard complete`, res)
-                      },
-                      fail(res) {
-                        console.log(`hideKeyboard fail`, res)
-                      },
-                      success(res) {
-                        console.log(`hideKeyboard success`, res)
-                      }
-                    })
+                    hideKeyboard()
+                      .then(res => {
+                        console.log(`[hideKeyboard] success`, res)
+                      })
+                      .catch(res => {
+                        console.log(`[hideKeyboard] fail`, res)
+                      })
                   }
                   setInputValue5(e.detail.value)
                 }}

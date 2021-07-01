@@ -16,9 +16,27 @@ class Page extends React.Component {
           <View className='page-section page-section-gap'>
             <View className='page-section-title'>Set step</View>
             <View className='body-view'>
-              <Slider value={60} onChange={this.sliderChange} step={5}></Slider>
+              <Slider
+                value={60}
+                onChange={this.sliderChange}
+                step={5}
+                onClick={e => console.log(`[Slider] onClick`, e)}
+              ></Slider>
             </View>
           </View>
+
+          <View className='page-section page-section-gap'>
+            <View className='page-section-title'>disabled</View>
+            <View className='body-view'>
+              <Slider
+                value={60}
+                onChange={this.sliderChange}
+                step={5}
+                disabled
+              ></Slider>
+            </View>
+          </View>
+
           <View className='page-section page-section-gap'>
             <View className='page-section-title'>Display current value</View>
             <View className='body-view'>

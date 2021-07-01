@@ -1,11 +1,14 @@
 import React from 'react'
-import { View, Switch, BaseEventOrig } from '@binance/mp-components'
+import { View, Switch, BaseEventOrig, Button } from '@binance/mp-components'
 import { SwitchProps } from '@binance/mp-components/types/Switch'
 import { Head } from '../../../../common/head'
 import withProviders from '../../../../common/withProviders'
 import './switch.scss'
 
 class Page extends React.Component {
+  state = {
+    checked: false
+  }
   switch1Change(e: BaseEventOrig<SwitchProps.onChangeEventDetail>) {
     console.log('switch1 fire change event, value:', e.detail.value)
   }
@@ -21,9 +24,30 @@ class Page extends React.Component {
           <View className='page-section page-section-gap'>
             <View className='page-section-title'>Default Style</View>
             <View className='body-view'>
-              <Switch checked onChange={this.switch1Change}></Switch>
-              <Switch onChange={this.switch2Change}></Switch>
+              <Switch
+                checked
+                onChange={this.switch1Change}
+                onClick={e => console.log(`[Click] Switch`, e)}
+              ></Switch>
+              <Switch
+                onChange={this.switch2Change}
+                onClick={e => console.log(`[Click] Switch`, e)}
+              ></Switch>
             </View>
+            <View className='page-section-title'>disabled</View>
+            <Switch value='cb' disabled checked></Switch>
+            <Switch value='cb' disabled></Switch>
+            <View className='page-section-title'>Controlled</View>
+            <Switch
+              value='cb'
+              checked={this.state.checked}
+              onClick={e => console.log(`[Click] Switch`, e)}
+              onChange={e => this.setState({ checked: e.detail.value })}
+            ></Switch>
+            Checked
+            <Button onClick={() => this.setState({ checked: true })}>
+              Set checked
+            </Button>
           </View>
           <View className='page-section'>
             <View className='page-section-title'>Recommended Style</View>

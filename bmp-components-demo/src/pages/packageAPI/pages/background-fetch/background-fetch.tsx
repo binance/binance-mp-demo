@@ -36,66 +36,53 @@ function Page() {
 
   function getBackgroundFetchToken() {
     setLogs([])
-    bnGetBackgroundFetchToken({
-      success: args => {
-        consoleLogs(`[getBackgroundFetchToken] success`, args)
+    bnGetBackgroundFetchToken({})
+      .then(args => {
         setToken(args.token)
-      },
-      fail: args => {
-        consoleLogs(`[getBackgroundFetchToken] fail`, args)
-      },
-      complete: args => {
-        consoleLogs(`[getBackgroundFetchToken] complete`, args)
-      }
-    })
+        console.log(`[getBackgroundFetchToken] success`, args)
+      })
+      .catch(args => {
+        console.log(`[getBackgroundFetchToken] fail`, args)
+      })
   }
 
   function setBackgroundFetchToken() {
     setLogs([])
     bnSetBackgroundFetchToken({
-      token: value,
-      success: args => {
-        consoleLogs(`[setBackgroundFetchToken] success`, args)
-      },
-      fail: args => {
-        consoleLogs(`[setBackgroundFetchToken] fail`, args)
-      },
-      complete: args => {
-        consoleLogs(`[setBackgroundFetchToken] complete`, args)
-      }
+      token: value
     })
+      .then(args => {
+        console.log(`[setBackgroundFetchToken] success`, args)
+      })
+      .catch(args => {
+        console.log(`[setBackgroundFetchToken] fail`, args)
+      })
   }
 
   function getBackgroundFetchDataPeriodic() {
     setLogs([])
     getBackgroundFetchData({
-      fetchType: 'periodic',
-      success: args => {
-        consoleLogs(`[getBackgroundFetchData] success`, args)
-      },
-      fail: args => {
-        consoleLogs(`[getBackgroundFetchData] fail`, args)
-      },
-      complete: args => {
-        consoleLogs(`[getBackgroundFetchData] complete`, args)
-      }
+      fetchType: 'periodic'
     })
+      .then(args => {
+        console.log(`[getBackgroundFetchData] success`, args)
+      })
+      .catch(args => {
+        console.log(`[getBackgroundFetchData] fail`, args)
+      })
   }
 
   function getBackgroundFetchDataPre() {
     setLogs([])
     getBackgroundFetchData({
-      fetchType: 'pre',
-      success: args => {
-        consoleLogs(`[getBackgroundFetchData] success`, args)
-      },
-      fail: args => {
-        consoleLogs(`[getBackgroundFetchData] fail`, args)
-      },
-      complete: args => {
-        consoleLogs(`[getBackgroundFetchData] complete`, args)
-      }
+      fetchType: 'pre'
     })
+      .then(args => {
+        console.log(`[getBackgroundFetchData] success`, args)
+      })
+      .catch(args => {
+        console.log(`[getBackgroundFetchData] fail`, args)
+      })
   }
 
   return (

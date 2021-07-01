@@ -1,7 +1,8 @@
 import {
   usePullDownRefresh,
   stopPullDownRefresh,
-  showLoading
+  showLoading,
+  hideLoading
 } from '@binance/mp-service'
 import React from 'react'
 import { View } from '@binance/mp-components'
@@ -20,7 +21,7 @@ function Page() {
         className='btn'
         onClick={() => {
           stopPullDownRefresh()
-          showLoading()
+          hideLoading()
         }}
       >
         Stop refresh
