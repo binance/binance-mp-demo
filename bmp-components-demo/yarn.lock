@@ -1153,12 +1153,12 @@
   dependencies:
     babel-preset-taro "3.2.13"
 
-"@binance/mp-cli@^1.1.9":
-  version "1.1.9"
-  resolved "https://registry.yarnpkg.com/@binance/mp-cli/-/mp-cli-1.1.9.tgz#68a2a8a64679097862f225a9fae3ec23c17037fa"
-  integrity sha512-wsidpOta4W/oyKPaO52AzjJ581uUUdqAmhMGUKvVvQ/lgmAj0yL5RXK0cNHJCldbFvH6AYu08uiLeaN1IXhHCg==
+"@binance/mp-cli@^1.1.12":
+  version "1.1.12"
+  resolved "https://registry.yarnpkg.com/@binance/mp-cli/-/mp-cli-1.1.12.tgz#51240e814dddb665da50c8fd23c8e79b8b4ef47d"
+  integrity sha512-uI3qoJcDkchON6wpIyLwDA1uYLcM4Lk6bi4b31FuwNpB/BwBltuNFAj17APhxAp5UlnYlwzA5XODGQ5+DvHeGA==
   dependencies:
-    "@binance/taro-plugin-platform-binance" "^0.0.9"
+    "@binance/taro-plugin-platform-binance" "^0.0.11"
     "@tarojs/cli" "3.2.13"
     "@tarojs/mini-runner" "3.2.13"
     "@tarojs/react" "3.2.13"
@@ -1170,10 +1170,10 @@
     md5 "^2.3.0"
     patch-package "^6.2.2"
 
-"@binance/taro-plugin-platform-binance@^0.0.9":
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/@binance/taro-plugin-platform-binance/-/taro-plugin-platform-binance-0.0.9.tgz#cae5f4c06f8ab745e88a71863e793ac2029d9654"
-  integrity sha512-Frfi9yZRVtLqiYc61pb6wuV21Ux01CX741JFV4zZFdXMJYk9P4flGVuRaWLPguzaw4TVv3Rl7Ftd5jTMY/ZooA==
+"@binance/taro-plugin-platform-binance@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@binance/taro-plugin-platform-binance/-/taro-plugin-platform-binance-0.0.11.tgz#46b68337ecd8ed3e87e22018654c163be24d1556"
+  integrity sha512-TGoAZdxKOScP+ghYWLS6v/DrT7mrZQo/f0+1hNe4w+gcbnIhY32OFIIJeNgNckvFcR9ba2cgiNEolpP94xTMyw==
   dependencies:
     "@tarojs/service" "3.2.13"
     "@tarojs/shared" "3.2.13"

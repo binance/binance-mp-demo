@@ -37,6 +37,6 @@
   },
   "devDependencies": {
     "@binance/babel-preset-bmp": "^1.0.0",
-    "@binance/mp-cli": "^1.1.9"
+    "@binance/mp-cli": "^1.1.12"
   }
 }

@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@binance/babel-preset-bmp": "^1.0.0",
-    "@binance/mp-cli": "^1.1.9",
+    "@binance/mp-cli": "^1.1.12",
     "@types/react": "^17.0.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "typescript": "^4.1.0"
