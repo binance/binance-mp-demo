@@ -6,10 +6,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `yarn run bootstrap`
-
-Links all the essential libs and dependencies to the project.
-
 ### `yarn start`
 
 Runs the app in the development mode.\
@@ -18,14 +14,12 @@ Open [Binance DevTools](https://developers.binance.com/docs/mini-program/ide)
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-
 ### `yarn build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles Mini Program app in production mode and optimizes the build for the best performance.
 
 But in the most situation, you don't have to execute this command, the DevTools will take care of it.
-
 
 ## Learn More
 

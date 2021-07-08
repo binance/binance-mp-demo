@@ -13,7 +13,6 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "bootstrap": "bmp bootstrap",
     "start": "bmp dev",
     "build": "bmp build"
   },
@@ -36,7 +35,9 @@
     ]
   },
   "devDependencies": {
-    "@binance/babel-preset-bmp": "^1.0.0",
-    "@binance/mp-cli": "^1.1.12"
+    "@binance/babel-preset-bmp": "^1.0.1",
+    "@binance/mp-cli": "^1.1.12",
+    "@binance/mp-components": "^1.0.1",
+    "@binance/mp-service": "^1.0.1"
   }
 }

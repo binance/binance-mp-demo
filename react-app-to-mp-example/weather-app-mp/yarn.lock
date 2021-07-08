@@ -2166,10 +2166,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@binance/babel-preset-bmp@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@binance/babel-preset-bmp/-/babel-preset-bmp-1.0.0.tgz#11faf03e1d09241f48c61a0ad69928ec486ba3e8"
-  integrity sha512-mpi56grQnA70X0owL/fIPr9LaKOTKUKlfenHf0w3CW2w6ohzf2yXouekJkS3pZJJYKwdb1XxZuc5+xlNXTRGrw==
+"@binance/babel-preset-bmp@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@binance/babel-preset-bmp/-/babel-preset-bmp-1.0.1.tgz#2135096cf5bf992f3c47debc02407129afa239a6"
+  integrity sha512-93+6cIrqJl18d7ZzusX0l4smU6idXuxpLf/txjDjzNVUNEjxg3CsHzuixHyyio3j7ylAwPXq7fpntI1SY6G9CA==
   dependencies:
     babel-preset-taro "3.2.13"
 
@@ -2189,6 +2189,16 @@
     lodash "^4.17.20"
     md5 "^2.3.0"
     patch-package "^6.2.2"
+
+"@binance/mp-components@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@binance/mp-components/-/mp-components-1.0.1.tgz#d0a2322ffb3ffaeb2c482dc88e0a9817fa9fdb6b"
+  integrity sha512-lAO4a0v7/1Do97+PnXnSX++HyGPOAJKd8zqFz5VoQMwqoNDWkfP2N9FqPE2hEq8Gd5J3ZiPhfabSff+yx6Et9Q==
+
+"@binance/mp-service@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@binance/mp-service/-/mp-service-1.0.1.tgz#cb3ae57e76fe255b6218198057bd2d028cff6c4a"
+  integrity sha512-gf9Bv2odFBKZQtzNs4FocinHUTa8tlD9L+u6RVbT3iASIHYjFdaaKv21M51CEmiYFPGvEBS1x4EHSSN8unk7hg==
 
 "@binance/taro-plugin-platform-binance@^0.0.11":
   version "0.0.11"
