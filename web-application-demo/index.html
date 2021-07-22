@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>My Example App</title>
+    <title>JS-SDK Demo App</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -62,8 +62,7 @@
       const prepayId = "[YOUR PREPAY ID HERE]";
 
       window.onload = () => {
-        // const url = window.location.href.split("#")[0];
-        const url = "https://www.binance.com/en/js-sdk-demo-ui";
+        const url = window.location.href.split("#")[0];
         const now = Date.now();
         fetch("/signature?url=" + encodeURIComponent(url))
           .then((data) => data.json())
