@@ -1,5 +1,6 @@
 import * as React from 'react'
-import { navigateBack } from '@binance/mp-service'
+import mpService from '@binance/mp-service'
+import { Icon, View } from '@binance/mp-components'
 import './CustomNavigationBar.scss'
 
 interface Props {
@@ -9,6 +10,7 @@ interface Props {
   background: string
   title: string
   back: boolean
+  paddingTop: number
 }
 
 export default function CustomNavigationBar({
@@ -17,46 +19,38 @@ export default function CustomNavigationBar({
   color,
   background,
   title,
-  back
+  back,
+  paddingTop
 }: Props) {
   return show ? (
-    <div className='cnb-placeholder'>
-      <div className='cnb-wrapper'>
-        <div className='cnb-container' style={{ color, background }}>
-          <div className='cnb-title-wrapper'>
+    <View className='cnb-placeholder' style={{}}>
+      <View className='cnb-wrapper'>
+        <View
+          className='cnb-container'
+          style={{ color, background, paddingTop }}
+        >
+          <View className='cnb-title-wrapper' style={{ paddingTop }}>
             <h3 className='cnb-title'>
-              {loading && <div className='bnui-loading cnb-loading' />}
+              {loading && <View className='weui-loading cnb-loading' />}
               {title}
             </h3>
-          </div>
-          <div>
+          </View>
+          <View>
             {back && (
-              <div
-                className='cnb-icon-wrapper'
-                style={{ color }}
-                onClick={() => {
-                  navigateBack()
-                }}
-              >
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  width={12}
-                  height={24}
-                  viewBox='0 0 12 24'
-                >
-                  <path
-                    fill='currentColor'
-                    fillOpacity={0.9}
-                    fillRule='evenodd'
-                    d='M10 19.438L8.955 20.5l-7.666-7.79a1.02 1.02 0 010-1.42L8.955 3.5 10 4.563 2.682 12 10 19.438z'
-                  />
-                </svg>
-              </div>
+              <View className='cnb-icon-wrapper'>
+                <Icon
+                  type='back-arrow'
+                  color={color}
+                  onClick={() => {
+                    mpService.navigateBack()
+                  }}
+                />
+              </View>
             )}
-          </div>
-          <div></div>
-        </div>
-      </div>
-    </div>
+          </View>
+          <View></View>
+        </View>
+      </View>
+    </View>
   ) : null
 }

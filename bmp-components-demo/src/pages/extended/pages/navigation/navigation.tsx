@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { getSystemInfo } from '@binance/mp-service'
 import { View, Button } from '@binance/mp-components'
 import { Head } from '../../../../common/head'
 import CustomNavigationBar from './CustomNavigationBar'
@@ -16,10 +17,14 @@ function Page() {
   const [background, setBackground] = React.useState(() =>
     theme === 'light' ? 'white' : 'black'
   )
+  const [safeAreaTop, setSafeAreaTop] = React.useState(0)
 
   React.useEffect(() => {
     setColor(theme === 'light' ? 'black' : 'white')
     setBackground(theme === 'light' ? 'white' : 'black')
+    getSystemInfo().then(res => {
+      setSafeAreaTop(res.safeArea.top)
+    })
   }, [theme])
 
   return (
@@ -31,6 +36,7 @@ function Page() {
         color={color}
         background={background}
         back={true}
+        paddingTop={safeAreaTop}
       />
       <Head title='Custom NavigationBar'></Head>
 

@@ -3,14 +3,11 @@ body {
 }
 
 .cnb-placeholder {
-  height: var(--mp-navigator-height);
+  // height: var(--mp-navigator-height);
 }
 
 .cnb-wrapper {
-  position: absolute;
   width: 100%;
-  top: 0;
-  left: 0;
 }
 
 .cnb-container {
@@ -35,6 +32,7 @@ body {
   top: 0;
   display: flex;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .cnb-title {
