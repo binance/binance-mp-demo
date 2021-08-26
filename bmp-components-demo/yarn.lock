@@ -1153,15 +1153,16 @@
   dependencies:
     babel-preset-taro "3.2.13"
 
-"@binance/mp-cli@^1.1.12":
-  version "1.1.12"
-  resolved "https://registry.yarnpkg.com/@binance/mp-cli/-/mp-cli-1.1.12.tgz#51240e814dddb665da50c8fd23c8e79b8b4ef47d"
-  integrity sha512-uI3qoJcDkchON6wpIyLwDA1uYLcM4Lk6bi4b31FuwNpB/BwBltuNFAj17APhxAp5UlnYlwzA5XODGQ5+DvHeGA==
+"@binance/mp-cli@^1.2.8":
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/@binance/mp-cli/-/mp-cli-1.2.8.tgz#663c5dfcf245750db3cf53e31ed7c10da1af9509"
+  integrity sha512-aOgZfgzk263dTGPr8Yh638V8m65hA3FeE5Ycy0GPsYLkJZWglZqjMW2RolmHJy+XjZh4/s1fvrMVlsahd9wxhQ==
   dependencies:
-    "@binance/taro-plugin-platform-binance" "^0.0.11"
     "@tarojs/cli" "3.2.13"
     "@tarojs/mini-runner" "3.2.13"
     "@tarojs/react" "3.2.13"
+    "@tarojs/service" "3.2.13"
+    "@tarojs/shared" "3.2.13"
     chalk "^4.1.0"
     commander "^6.2.1"
     fs-extra "^9.0.1"
@@ -1175,18 +1176,10 @@
   resolved "https://registry.yarnpkg.com/@binance/mp-components/-/mp-components-1.0.1.tgz#d0a2322ffb3ffaeb2c482dc88e0a9817fa9fdb6b"
   integrity sha512-lAO4a0v7/1Do97+PnXnSX++HyGPOAJKd8zqFz5VoQMwqoNDWkfP2N9FqPE2hEq8Gd5J3ZiPhfabSff+yx6Et9Q==
 
-"@binance/mp-service@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@binance/mp-service/-/mp-service-1.0.1.tgz#cb3ae57e76fe255b6218198057bd2d028cff6c4a"
-  integrity sha512-gf9Bv2odFBKZQtzNs4FocinHUTa8tlD9L+u6RVbT3iASIHYjFdaaKv21M51CEmiYFPGvEBS1x4EHSSN8unk7hg==
-
-"@binance/taro-plugin-platform-binance@^0.0.11":
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/@binance/taro-plugin-platform-binance/-/taro-plugin-platform-binance-0.0.11.tgz#46b68337ecd8ed3e87e22018654c163be24d1556"
-  integrity sha512-TGoAZdxKOScP+ghYWLS6v/DrT7mrZQo/f0+1hNe4w+gcbnIhY32OFIIJeNgNckvFcR9ba2cgiNEolpP94xTMyw==
-  dependencies:
-    "@tarojs/service" "3.2.13"
-    "@tarojs/shared" "3.2.13"
+"@binance/mp-service@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@binance/mp-service/-/mp-service-1.0.4.tgz#e7845bb136e1caa237f4513facd546bc5e766856"
+  integrity sha512-ZYH+5iH/veMd0ROgb38WRKcKEOfSB+1Yzp0xa1+Ddw1mkn7LbJvtbKcgXsaXXMbqgbMuPQo82KWkqJdOYShxfw==
 
 "@hapi/address@^4.0.1":
   version "4.1.0"
@@ -11707,8 +11700,10 @@ watchpack@^1.7.4:
   resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.7.5.tgz#1267e6c55e0b9b5be44c2023aed5437a2c26c453"
   integrity sha512-9P3MWk6SrKjHsGkLT2KHXdQ/9SNkyoJbabxnKOoJepsvJjJG8uYTR3yTPxPQvNDI3w4Nz1xnE0TLHK4RIVe/MQ==
   dependencies:
+    chokidar "^3.4.1"
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
+    watchpack-chokidar2 "^2.0.1"
   optionalDependencies:
     chokidar "^3.4.1"
     watchpack-chokidar2 "^2.0.1"

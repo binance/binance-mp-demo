@@ -1,6 +1,6 @@
 export default {
   darkmode: true,
-  entryPage: 'pages/component/index',
+  entryPagePath: 'pages/component/index',
   pages: [
     'pages/component/index',
     'pages/component/pages/button/button',
