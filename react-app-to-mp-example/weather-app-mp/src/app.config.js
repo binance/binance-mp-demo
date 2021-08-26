@@ -4,7 +4,7 @@
 
 export default {
   // the path of the entry page
-  entryPage: "pages/IndexPage",
+  entryPagePath: "pages/IndexPage",
 
   // the list of the pages
   pages: ["pages/IndexPage"],
