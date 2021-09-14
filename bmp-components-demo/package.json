@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@binance/babel-preset-bmp": "^1.0.1",
-    "@binance/mp-cli": "^1.2.8",
+    "@binance/mp-cli": "^1.2.14",
     "@binance/mp-components": "^1.0.1",
     "@binance/mp-service": "^1.0.4",
     "@types/react": "^17.0.0",

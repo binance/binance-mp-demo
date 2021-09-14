@@ -2173,10 +2173,10 @@
   dependencies:
     babel-preset-taro "3.2.13"
 
-"@binance/mp-cli@^1.2.8":
-  version "1.2.8"
-  resolved "https://registry.yarnpkg.com/@binance/mp-cli/-/mp-cli-1.2.8.tgz#663c5dfcf245750db3cf53e31ed7c10da1af9509"
-  integrity sha512-aOgZfgzk263dTGPr8Yh638V8m65hA3FeE5Ycy0GPsYLkJZWglZqjMW2RolmHJy+XjZh4/s1fvrMVlsahd9wxhQ==
+"@binance/mp-cli@^1.2.14":
+  version "1.2.14"
+  resolved "https://registry.yarnpkg.com/@binance/mp-cli/-/mp-cli-1.2.14.tgz#7e58d11904dfa7de69d9d02c6011cb618498bde7"
+  integrity sha512-OfQR4CF0xBuJ41ahBGLjkBqmy3OpLunJfUKNOyNhRhSmnyuHJcygHz86Zo/HCQzTElvh7IE7usnEx9JNoDDR9g==
   dependencies:
     "@tarojs/cli" "3.2.13"
     "@tarojs/mini-runner" "3.2.13"
