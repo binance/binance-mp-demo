@@ -19,8 +19,8 @@ function IndexPage() {
         url: `${REACT_APP_API_URL}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${REACT_APP_API_KEY}`,
       })
       .then(({ data }) => {
-        setData(JSON.parse(data));
         console.log(data);
+        setData(data);
       });
   }, []);
 
