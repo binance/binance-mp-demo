@@ -1,0 +1,17 @@
+<view class='container'>
+  <head title='video'></head>
+  <view class='page-section tc'>
+    <video
+      id="{{id}}"
+      src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+      bindplay="onPlay"
+      bindpause="onPause"
+      bindended="onEnded"
+      bindtimeupdate="onTimeupdate"
+      bindfullscreenchange="onFullscreenchange"
+      bindloadedmetadata="onLoadedmetadata"
+      binderror="onError"
+      controls
+    />
+  </view>
+</view>

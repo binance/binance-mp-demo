@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "head": "../../../../components/head/head"
+  },
+  "onReachBottomDistance": 200
+}

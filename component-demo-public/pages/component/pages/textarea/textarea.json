@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "textarea",
+  "usingComponents": {
+    "head": "../../../../components/head/head"
+  }
+}

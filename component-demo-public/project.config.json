@@ -1,0 +1,13 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "public-nezha-component-demo",
+  "description": "A Nezha mini-program project",
+  "appid": "6UtyC3hzTzd6MziWrwX4jY",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram"
+}

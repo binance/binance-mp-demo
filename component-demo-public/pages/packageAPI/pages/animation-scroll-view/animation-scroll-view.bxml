@@ -1,0 +1,8 @@
+<view>
+  <head title="Keyframe Animation Driven By ScrollView" />
+  <scroll-view id="scroller" style="width: 100%;height: 300px" scrollY>
+    <view class="scroll-container">
+      <view class="rect"></view>
+    </view>
+  </scroll-view>
+</view>

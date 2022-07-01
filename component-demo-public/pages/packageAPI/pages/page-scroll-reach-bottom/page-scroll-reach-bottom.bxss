@@ -1,0 +1,34 @@
+.scroll-center {
+  text-align: center;
+  /* white-space: pre; */
+}
+
+.scroll-input {
+  width: 100%;
+  border: 1px solid #282828;
+  border-radius: 4px;
+  padding: 2px 12px;
+  line-height: 1.6;
+  font-size: 14px;
+  /* color: inherit; */
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+.scroll-response {
+  word-wrap: break-word;
+}
+
+.scroll-box-1 {
+  margin-top: 20px;
+  width: 100px;
+  height: 200px;
+  background-color: sandybrown;
+}
+
+.scroll-box-2 {
+  margin-top: 20px;
+  width: 100px;
+  height: 500px;
+  background-color: sandybrown;
+}

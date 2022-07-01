@@ -1,0 +1,7 @@
+ <web-view
+  class="web-view"
+  src="https://www.binance.com/en/js-sdk-demo-ui/webview"
+  bindload="onWebViewLoad"
+  binderror="onWebViewError"
+  bindmessage="onWebViewMessage"
+/>

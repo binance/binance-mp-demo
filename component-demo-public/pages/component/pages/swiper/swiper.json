@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Swiper",
+  "usingComponents": {
+    "head": "../../../../components/head/head"
+  }
+}

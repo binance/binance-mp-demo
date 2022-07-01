@@ -1,0 +1,14 @@
+page {
+  overflow: hidden;
+}
+
+.welcome {
+  text-align: center;
+  margin-top: 150px;
+  padding: 50px;
+}
+.welcome .info {
+  margin-top: 50px;
+  font-size: 28px;
+  line-height: 1.5;
+}

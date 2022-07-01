@@ -1,0 +1,13 @@
+<view>
+  <head title="GetSystemInfo" />
+  <view style="width: 100%;">
+    <view class="center">
+      <view>
+        <button bindtap="getSystemInfo">getSystemInfo</button>
+      </view>
+      <view style="width: 100%;">
+        <text style="width: 100%;">{{data}}</text>
+      </view>
+    </view>
+  </view>
+</view>

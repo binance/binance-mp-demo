@@ -1,0 +1,12 @@
+<template name="home">
+    <component-b propsA="valueA" propsB="{{propsB}}" propsC="{{ propsC ? 'valueC+' + propsB : false }}"></component-b>
+    <view>这是一个自定义模板 - home3, 变量值 {{title}} 来自 data 透传过来的 <button loading="true">loading按钮</button></view>
+</template>
+<template name="home4">
+    <component-b propsA="valueA" propsB="{{propsB}}" propsC="{{ propsC ? 'valueC+' + propsB : false }}"></component-b>
+    <view>这是一个自定义模板 - home4, 变量值 {{item.name}} 来自 data 透传过来的 </view>
+</template>
+<template name="home5"><view>这是一个自定义模板 - home5, 变量值 {{item.name}} 来自 data 透传过来的 </view></template>
+
+
+

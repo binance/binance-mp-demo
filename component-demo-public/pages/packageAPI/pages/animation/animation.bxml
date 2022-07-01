@@ -1,0 +1,14 @@
+<view>
+  <head title="Keyframe Animation" />
+  <view style="width: 100%;">
+    <view class="center">
+      <view id="container1">
+        <button class="block1" style="width: 150px; margin: 50px auto;">Sample Button</button>
+        <text class="block1" style="display: block; margin: 50px auto; width: 150px; text-align: center;">
+          Sample Text
+        </text>
+      </view>
+      <button type="primary" bindtap="startAnimation">Start Animation</button>
+    </view>
+  </view>
+</view>

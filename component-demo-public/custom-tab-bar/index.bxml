@@ -1,0 +1,7 @@
+<!--miniprogram/custom-tab-bar/index.bx-->
+<view class="bottom-tab">
+  <view bn:for="{{list}}" bn:key="index" class="bottom-tab-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+    <image class="bottom-tab-item-img" src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></image>
+    <view class="bottom-tab-item-text" style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</view>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+<view>
+  <head title="Authorize" />
+  <view style="width: '100%'">
+    <view className="center">
+      <view>
+        <button bindtap="getSetting">getSetting</button>
+      </view>
+      <view style=" width: '100%' ">
+        <text style=" width: '100%' ">{{getSettingData}}</text>
+      </view>
+      <view>
+        <button openType="openSetting" onOpenSetting="openSetting">openSetting</button>
+      </view>
+      <view style=" width: '100%' ">
+        <text style=" width: '100%' ">{{openSettingData}}</text>
+      </view>
+      <view>
+        <button data-scope="scope.camera" bindtap="authorizeApi">authorize('scope.camera')</button>
+        <button data-scope="scope.writePhotosAlbum" bindtap="authorizeApi">
+          authorize('scope.writePhotosAlbum')
+        </button>
+        <button data-scope="scope.userLocation" bindtap="authorizeApi">
+          authorize('scope.userLocation')
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

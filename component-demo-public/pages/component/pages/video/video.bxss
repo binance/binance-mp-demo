@@ -1,0 +1,22 @@
+video {
+  width: 345px;
+}
+
+.bnui-cells {
+  margin: 20px 15px 0;
+  text-align: left;
+}
+.bnui-label {
+  width: 5em;
+}
+.auto-rotate-container {
+  margin: 20px 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.video-container {
+  margin: 11px 3px;
+  display: flex;
+  justify-content: center;
+}

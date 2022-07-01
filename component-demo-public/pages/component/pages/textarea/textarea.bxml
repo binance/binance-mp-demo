@@ -1,0 +1,289 @@
+<view class="container">
+  <head title="textarea"></head>
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="bnui-cells__title">
+        autoFocus with selection(5,7)
+      </view>
+      <view class="bnui-cells bnui-cells_after-title">
+        <view class="bnui-cell bnui-cell_textarea">
+          <textarea
+            class="bnui-textarea"
+            auto-focus
+            value="{{inputValue4}}"
+            selection-start="{{5}}"
+            selection-end="{{7}}"
+            bindinput="onInputValue4Input"
+            bindfocus="onInputValue4Focus"
+            bindblur="onInputValue4Blur"
+            bindtap="onInputValue4Click"
+            bind:longpress="onInputValue4Longpress"
+            bindconfirm="onInputValue4Confirm"
+            bindkeyboardheightchange="onInputValue4KeyboardHeightChange"
+            bindlinechange="onInputValue4LineChange"
+            placeholder="Please input"
+          />
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="bnui-cells__title">cursor=6 when focus</view>
+      <view class="bnui-cells bnui-cells_after-title">
+        <view class="bnui-cell bnui-cell_textarea">
+          <textarea
+            class="bnui-textarea"
+            value="{{inputValue4}}"
+            cursor="{{6}}"
+            bindinput="onInputValue4Input"
+            placeholder="Please input"
+          />
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="bnui-cells__title">lineCount</view>
+      <view class="bnui-cells bnui-cells_after-title">
+        <view class="bnui-cell bnui-cell_textarea">
+          <textarea
+            bindlinechange="onLineCountLineChange"
+            class="bnui-textarea"
+            placeholder="Please input"
+          />
+        </view>
+      </view>
+      <view>lineCount: {{lineCount}}</view>
+    </view>
+
+    <view class="page-section">
+      <view class="bnui-cells__title">
+        autoHeight with padding, maxHeight, minHeight
+      </view>
+      <view class="bnui-cells bnui-cells_after-title">
+        <view class="bnui-cell bnui-cell_textarea">
+          <textarea
+            autoHeight
+            placeholder="autoHeight1"
+            style="background-color: var(--bnui-BG-1)"
+            maxlength="{{-1}}"
+            class="bnui-textarea"
+          />
+          <textarea
+            autoHeight
+            placeholder="autoHeight2"
+            style="height: 200;padding: 8.5px 10px;max-height: 150;min-height: 30;background-color: var(--bnui-BG-1)"
+            maxlength="{{-1}}"
+            class="bnui-textarea"
+          />
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="bnui-cells__title">autoHeight - with value</view>
+      <view class="bnui-cells bnui-cells_after-title">
+        <view class="bnui-cell bnui-cell_textarea">
+          <textarea
+            autoHeight
+            placeholder="Please input"
+            value="{{inputValue5}}"
+            bindinput="onInputValue5Input"
+            maxlength="{{-1}}"
+            class="bnui-textarea"
+          />
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="bnui-cells__title">styling</view>
+      <view style="margin-bottom: 24px">
+        <textarea
+          class="textarea-bg"
+          style="font-size: 16px,height: 70px;background-color: var(--bnui-BG-1);color: var(--bnui-FG-1);padding: 13px"
+          placeholder="Please input"
+        />
+      </view>
+
+      <textarea
+        placeholder="textarea without padding/margin"
+        style="background-color: var(--bnui-BG-1); color: var(--bnui-FG-1)"
+      />
+      <textarea
+        class="textarea-margin"
+        placeholder="textarea with margin"
+      />
+      <textarea
+        class="textarea-padding"
+        placeholder="textarea with padding"
+      />
+      <textarea
+        class="textarea-textAlign"
+        placeholder="textarea with textAlign"
+      />
+      <textarea
+        placeholder="textarea with minHeight"
+        style="height: 12;min-height: 16;font-size: 11;margin-top: 24;background-color: var(--bnui-BG-1);color: var(--bnui-FG-1)"
+        disableDefaultPadding
+      />
+    </view>
+
+    <view class="page-section">
+      <view class="bnui-cells__title">placeholder</view>
+      <view class="bnui-cells bnui-cells_after-title">
+        <view class="bnui-cell bnui-cell_textarea">
+          <textarea placeholder="placeholder" class="bnui-textarea" />
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="bnui-cells__title">
+        placeholderStyle="color: red"
+      </view>
+      <view class="bnui-cells bnui-cells_after-title">
+        <view class="bnui-cell bnui-cell_textarea">
+          <textarea
+            placeholder="placeholder"
+            placeholderStyle="color: red;"
+            class="bnui-textarea textarea-bg"
+          />
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="bnui-cells__title">
+        placeholderClass="custom-placeholder"
+      </view>
+      <view class="bnui-cells bnui-cells_after-title">
+        <view class="bnui-cell bnui-cell_textarea">
+          <textarea
+            placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+            placeholderClass="custom-placeholder"
+            class="bnui-textarea"
+          />
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="bnui-cells__title">maxlength = 10</view>
+      <view class="bnui-cells bnui-cells_after-title">
+        <view class="bnui-cell bnui-cell_textarea">
+          <textarea
+            maxlength="{{10}}"
+            placeholder="Please input"
+            class="bnui-textarea"
+          />
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="bnui-cells__title">maxlength = -1</view>
+      <view class="bnui-cells bnui-cells_after-title">
+        <view class="bnui-cell bnui-cell_textarea">
+          <textarea
+            maxlength="{{-1}}"
+            placeholder="Please input"
+            class="bnui-textarea"
+          />
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="bnui-cells__title">disabled</view>
+      <view class="bnui-cells bnui-cells_after-title">
+        <view class="bnui-cell bnui-cell_textarea">
+          <textarea
+            disabled
+            placeholder="Please input"
+            style="cursor: not-allowed"
+            class="bnui-textarea"
+          />
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="bnui-cells__title">
+        Controlled textarea：{{textareaValue}}
+        <textarea value="{{textareaValue}}" placeholder="Please input" />
+      </view>
+      <view class="bnui-cells bnui-cells_after-title">
+        <view class="bnui-cell bnui-cell_textarea">
+          <textarea
+            value="{{textareaValue}}"
+            bindinput={onTextareaValueInput}
+            placeholder="Please input"
+            class="bnui-textarea"
+          />
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="bnui-cells__title">
+        Controlled input：
+        <Button
+          bindtap="onInputValue3Click"
+        >
+          Set to foobar
+        </Button>
+      </view>
+      <view class="bnui-cells bnui-cells_after-title">
+        <view class="bnui-cell bnui-cell_textarea">
+          <textarea
+            value="{{inputValue3}}"
+            bindinput="onInputValue3Click"
+            placeholder="Please input"
+            class="bnui-textarea"
+          />
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="bnui-cells__title">confirmType</view>
+      <view class="bnui-cells bnui-cells_after-title">
+        <view class="bnui-cell bnui-cell_textarea">
+          <picker
+            mode="selector"
+            range="{{confirmTypes}}"
+            value="{{confirmType}}"
+            bindchange="onConfirmTypeChange"
+          >
+            <view class="bnui-input">
+              Select a confirmType:&nbsp;
+              {{confirmTypes[confirmType] ? confirmTypes[confirmType] : ""}}
+            </view>
+          </picker>
+        </view>
+        <view class="bnui-cell bnui-cell_textarea">
+          <textarea
+            confirmType="{{confirmTypes[confirmType]}}"
+            placeholder="apply confirmType"
+            class="bnui-textarea"
+          />
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="bnui-cells__title">cursorSpacing={100}</view>
+      <view class="bnui-cells bnui-cells_after-title">
+        <view class="bnui-cell bnui-cell_input">
+          <textarea
+            placeholder="Please input"
+            cursorSpacing="{{100}}"
+            class="bnui-textarea"
+          />
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>

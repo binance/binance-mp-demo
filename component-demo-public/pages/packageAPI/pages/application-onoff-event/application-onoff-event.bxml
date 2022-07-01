@@ -1,0 +1,13 @@
+<!-- <ThemeProvider> -->
+<view>
+  <view>
+    <head title='Application Event' />
+  </view>
+  <view>
+    <button bindtap="setSomeErr">trigger Error</button>
+  </view>
+  <view>
+    <button bindtap="setUnhandledRejection">trigger UnhandledRejection</button>
+  </view>
+</view>
+<!-- </ThemeProvider> -->

@@ -1,0 +1,29 @@
+<view class="container">
+  <head title="text"></head>
+  <view class="page-section tc">
+    <view class="page-body">
+      <view class="page-section">
+        <text
+          id="text"
+          bindtap="textClick"
+          bind:longpress="textLongpress"
+        >
+          text
+        </text>
+      </view>
+    </view>
+
+    <view class="page-body">
+      <view class="page-section">
+        <text
+          id="text"
+          bindtap="text2Click"
+          bind:longpress="text2Longpress"
+          userSelect
+        >
+          with user-select props
+        </text>
+      </view>
+    </view>
+  </view>
+</view>

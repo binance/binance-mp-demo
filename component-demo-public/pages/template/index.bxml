@@ -1,0 +1,1 @@
+<template name="inner"><view bindtap="{{ item.handler }}">模板嵌套(动态事件绑定) </view><view bindtap="handleClick">模板嵌套（静态事件绑定） </view></template>

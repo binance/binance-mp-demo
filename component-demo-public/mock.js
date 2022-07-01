@@ -1,0 +1,1 @@
+console.log(`[TEST] do nothing test the issue of babel require`)

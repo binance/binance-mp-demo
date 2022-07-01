@@ -1,0 +1,57 @@
+<view>
+	<view bn:if="{{dispaySetTabbar}}">
+    <!-- TODO: set-tab-bar to be done -->
+		<set-tab-bar bindtap="toggleSetTabbar">
+		</set-tab-bar>
+	</view>
+	<view bn:else class="index">
+		<view class="index-hd">
+			<view class="index-desc">
+				Mini Program API Demos
+			</view>
+		</view>
+		<view class="kind-list">
+      <block bn:for="{{list}}" bn:key="index" >
+        <view class="kind-list-item" bindtap="kindToggle" data-id="{{item.id}}">
+          <view class="{{list[index].open ? 'kind-list-item-hd kind-list-item-hd-show' : 'kind-list-item-hd'}}">
+            <view class="kind-list-text">
+              {{item.name}}
+            </view>
+            <image class="kind-list-img" src="{{list[index].image}}">
+            </image>
+          </view>
+          <view class="kind-list-item-bd {{ list[index].open ? 'kind-list-item-bd-show' : ''}}">
+            <view class="navigator-box {{ list[index].open ? 'navigator-box-show' : ''}}">
+              <block bn:for="{{list[index].pages}}" bn:for-item="page" bn:for-index="pIdx">
+                <view>
+                  <view bn:if="{{ page.url == '@set-tab-bar'}}">
+                    <view
+                        class='navigator'
+                        bn:key="{{page.title}}"
+                        bindtap="toggleSetTabbar"
+                      >
+                        <view class='navigator-text'>
+                          {{page.title}}
+                        </view>
+                        <view class='navigator-arrow'></view>
+                    </view>
+                  </view>
+                  <view bn:else>
+                    <navigator url="{{'pages/packageAPI/pages/' + list[index].pages[pIdx].url }}" class="navigator">
+                      <view class="navigator-text">
+                        {{page.title}}
+                      </view>
+                      <view class="navigator-arrow">
+                      </view>
+                    </navigator>
+                  </view>
+                </view>
+              </block>
+            </view>
+          </view>
+        </view>
+      </block>
+		</view>
+    <view class='index-ft' />
+	</view>
+</view>

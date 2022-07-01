@@ -1,0 +1,23 @@
+<view>
+  <head title="NetworkStatus"></head>
+  <view>
+    <view class='network-center'>
+      <view>
+        <button bindtap="onNetworkStatusChange">
+          onNetworkStatusChange
+        </button>
+      </view>
+      <view>
+        <button bindtap="offNetworkStatusChange">
+          offNetworkStatusChange
+        </button>
+      </view>
+      <view>
+        <button bindtap="getNetworkType">getNetworkType</button>
+      </view>
+      <view class='network-response'>
+        <Text>{{showData}}</Text>
+      </view>
+    </view>
+  </view>
+</view>

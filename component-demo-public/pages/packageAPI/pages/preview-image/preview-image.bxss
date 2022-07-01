@@ -1,0 +1,13 @@
+.previewImage-center {
+  text-align: center;
+  /* white-space: pre; */
+}
+
+.previewImage-img {
+  width: 80px;
+  height: 80px;
+}
+
+.previewImage-response {
+  word-wrap: break-word;
+}

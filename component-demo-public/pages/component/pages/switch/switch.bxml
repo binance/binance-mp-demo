@@ -1,0 +1,56 @@
+<view class="container">
+  <head title="switch"></head>
+  <view class="page-body">
+    <view class="page-section page-section-gap">
+      <view class="page-section-title">Default Style</view>
+      <view class="body-view">
+        <switch
+          checked
+          bindchange="switch1Change"
+          bindtap="switch1Click"
+          bind:longpress="switch1Longpress"
+        ></switch>
+        <switch
+          checked
+          bindchange="switch2Change"
+          bindtap="switch2Click"
+          bind:longpress="switch2Longpress"
+        ></switch>
+      </view>
+      <view class="page-section-title">disabled</view>
+      <switch value="cb" disabled checked></switch>
+      <switch value="cb" disabled></switch>
+      <view class="page-section-title">Controlled</view>
+      <switch
+        value="cb"
+        checked="{{checked}}"
+        bindtap="switchClick"
+        bind:longpress="switchLongpress"
+        bindchange="switchChange"
+      ></switch>
+      Checked
+      <button
+        bindtap="onToggleClick"
+      >
+        Toggle checked
+      </button>
+    </view>
+    <view class="page-section">
+      <view class="page-section-title">Recommended Style</view>
+      <view class="bnui-cells bnui-cells_after-title">
+        <view class="bnui-cell bnui-cell_switch">
+          <view class="bnui-cell__bd">Opening</view>
+          <view class="bnui-cell__ft">
+            <switch checked></switch>
+          </view>
+        </view>
+        <view class="bnui-cell bnui-cell_switch">
+          <view class="bnui-cell__bd">Closed</view>
+          <view class="bnui-cell__ft">
+            <switch></switch>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

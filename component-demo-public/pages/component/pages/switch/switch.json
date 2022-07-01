@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "switch",
+  "usingComponents": {
+    "head": "../../../../components/head/head"
+  }
+}

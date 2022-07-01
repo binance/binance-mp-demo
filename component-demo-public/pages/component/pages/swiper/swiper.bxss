@@ -1,0 +1,24 @@
+.bn-swiper-item {
+  background: red;
+}
+.options_line {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.options_btn {
+  margin-top: 0;
+}
+
+.options_input {
+  width: 100px;
+  border: 1px solid #282828;
+  border-radius: 4px;
+  padding: 2px 12px;
+  line-height: 1.6;
+  font-size: 14px;
+  font-weight: normal;
+  box-sizing: border-box;
+}

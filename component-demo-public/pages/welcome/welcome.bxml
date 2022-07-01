@@ -1,0 +1,19 @@
+<view class="welcome">
+	<view>
+		<view class="info">
+			<text>
+				Welcome MiniProgram, this is a mini app.
+			</text>
+		</view>
+		<view>
+			<text bindtap="goToView">
+				Go to view page
+			</text>
+		</view>
+		<view>
+			<text bindtap="goToAbout">
+				Go to about page
+			</text>
+		</view>
+	</view>
+</view>

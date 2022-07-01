@@ -1,0 +1,29 @@
+.page-section {
+  margin-bottom: 10px;
+}
+
+.custom-placeholder {
+  color: blue;
+}
+
+.textarea-bg {
+  width: 120px;
+  border: 1px solid var(--bnui-FG-1);
+  margin-left: 24px;
+}
+
+.textarea-margin {
+  margin: 24px;
+  background-color: var(--bnui-BG-1);
+  color: var(--bnui-FG-1);
+}
+
+.textarea-padding {
+  padding: 24px;
+  background-color: var(--bnui-BG-1);
+  color: var(--bnui-FG-1);
+}
+
+.textarea-textAlign {
+  text-align: right;
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "video",
+  "usingComponents": {
+    "head": "../../../../components/head/head"
+  }
+}

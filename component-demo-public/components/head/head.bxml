@@ -1,0 +1,7 @@
+<view class="page-head">
+  <view class="page-head-title" bindtap="onClick">
+    {{title}}
+  </view>
+  <view class="page-head-line"></view>
+  <view class="page-head-desc" bn-if="{{!desc}}">{{desc}}</view>
+</view>

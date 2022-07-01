@@ -1,0 +1,11 @@
+<view>
+  <head title='PreviewImage'></head>
+  <view>
+    <view class='previewImage-center'>
+      <view>
+        <image bindtap="previewImage" src="{{previewImageOptions.current}}" />
+        <text>tap to preview images</text>
+      </view>
+    </view>
+  </view>
+</view>

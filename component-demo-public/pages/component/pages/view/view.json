@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "View",
+  "usingComponents": {
+    "head": "../../../../components/head/head"
+  }
+}
