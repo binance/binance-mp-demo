@@ -1,0 +1,99 @@
+.themeContext {
+  color: var(--bnui-FG-0);
+}
+
+.themeContext-dark {
+  --bnui-BG-0: #191919;
+  --bnui-BG-1: #1f1f1f;
+  --bnui-BG-2: #232323;
+  --bnui-BG-3: #2f2f2f;
+  --bnui-BG-4: #606060;
+  --bnui-BG-5: #2c2c2c;
+  --bnui-FG-0: hsla(0, 0%, 100%, 0.8);
+  --bnui-FG-HALF: hsla(0, 0%, 100%, 0.6);
+  --bnui-FG-1: hsla(0, 0%, 100%, 0.5);
+  --bnui-FG-2: hsla(0, 0%, 100%, 0.3);
+  --bnui-FG-3: hsla(0, 0%, 100%, 0.05);
+  --bnui-RED: #fa5151;
+  --bnui-ORANGE: #c87d2f;
+  --bnui-YELLOW: #cc9c00;
+  --bnui-GREEN: #74a800;
+  --bnui-LIGHTGREEN: #28b561;
+  --bnui-BRAND: #07c160;
+  --bnui-BLUE: #10aeff;
+  --bnui-INDIGO: #1196ff;
+  --bnui-PURPLE: #8183ff;
+  --bnui-WHITE: hsla(0, 0%, 100%, 0.8);
+  --bnui-LINK: #7d90a9;
+  --bnui-TEXTGREEN: #259c5c;
+  --bnui-FG: #fff;
+  --bnui-BG: #000;
+  --bnui-TAG-TEXT-ORANGE: rgba(250, 157, 59, 0.6);
+  --bnui-TAG-BACKGROUND-ORANGE: rgba(250, 157, 59, 0.1);
+  --bnui-TAG-TEXT-GREEN: rgba(6, 174, 86, 0.6);
+  --bnui-TAG-BACKGROUND-GREEN: rgba(6, 174, 86, 0.1);
+  --bnui-TAG-TEXT-BLUE: rgba(16, 174, 255, 0.6);
+  --bnui-TAG-BACKGROUND-BLUE: rgba(16, 174, 255, 0.1);
+  --bnui-TAG-TEXT-BLACK: hsla(0, 0%, 100%, 0.5);
+  --bnui-TAG-BACKGROUND-BLACK: hsla(0, 0%, 100%, 0.05);
+  --bnui-BTN-DISABLED-FONT-COLOR: hsla(0, 0%, 100%, 0.2);
+  --bnui-BTN-DEFAULT-BG: hsla(0, 0%, 100%, 0.08);
+  --bnui-BTN-DEFAULT-COLOR: hsla(0, 0%, 100%, 0.8);
+  --bnui-BTN-DEFAULT-ACTIVE-BG: hsla(0, 0%, 100%, 0.126);
+  --bnui-DIALOG-LINE-COLOR: hsla(0, 0%, 100%, 0.1);
+  --bnui-BG-COLOR-ACTIVE: #373737;
+}
+.container {
+  margin-bottom: 300px;
+}
+
+.myCanvas {
+  height: 200px;
+  width: 200px;
+  background-color: azure;
+}
+
+.state-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.state-wrapper > * {
+  width: 200px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  white-space: nowrap;
+}
+.title {
+  font-size: 18px;
+}
+
+.notSupported {
+  color: red;
+}
+
+.myCanvas {
+  height: 400px;
+  width: 300px;
+}
+
+.myCanvas_textBaseline {
+  height: 500px;
+  width: 500px;
+}
+
+.myCanvas_ContainerSize {
+  height: 150px;
+  width: 150px;
+}

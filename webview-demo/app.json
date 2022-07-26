@@ -1,0 +1,36 @@
+{
+  "darkmode": true,
+  "entryPage": "pages/web-view/web-view",
+  "pages": [
+    "pages/web-view/web-view",
+    "pages/web-view-custom-nav/web-view-custom-nav"
+  ],
+  "tabBar": {
+    "custom": false,
+    "color": "@tabFontColor",
+    "selectedColor": "@tabSelectedColor",
+    "backgroundColor": "@tabBgColor",
+    "borderStyle": "@tabBorderStyle",
+    "position": "bottom",
+    "list": [
+      {
+        "iconPath": "image/icon_component.png",
+        "selectedIconPath": "image/icon_component_HL.png",
+        "pagePath": "pages/web-view/web-view",
+        "text": "normal"
+      },
+      {
+        "iconPath": "image/icon_API.png",
+        "selectedIconPath": "image/icon_API_HL.png",
+        "pagePath": "pages/web-view-custom-nav/web-view-custom-nav",
+        "text": "custom-nav"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "Mini Program",
+    "navigationBarBackgroundColor": "@navBgColor",
+    "navigationBarTextStyle": "@navTxtStyle"
+  }
+}
