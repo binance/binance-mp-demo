@@ -22,13 +22,13 @@ Page({
   },
   onTextareaValueInput(e) {
     this.setData({
-      textareaValue: e.target.value
+      textareaValue: e.detail.value
     })
     console.log(`[onTextareaValueInput] textarea`, e)
   },
   onInputValue3Click(e) {
     this.setData({
-      inputValue3: e.target.value
+      inputValue3: e.detail.value
     })
     console.log("[Textarea] Click", e)
   },

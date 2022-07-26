@@ -1,6 +1,7 @@
 Page({
   data: {
-    deeplink: '/mp/app?appId=cNjQgR7tZB7VffLsQvc3YM&rev=006a05ebf14db3e4a8e69cb6bc8b2589&channel=published&startPagePath=cGFnZXMvcGFja2FnZUFQSS9wYWdlcy9uYXZpZ2F0ZS10by1tcC1kZWVwbGluay9uYXZpZ2F0ZS10by1tcC1kZWVwbGluaw&startPageQuery=Zm9vPWJhciZiYXI9Zm9v&extraData=eyJkZXYiOnRydWV9',
+    deeplink:
+      '/mp/app?appId=cNjQgR7tZB7VffLsQvc3YM&rev=006a05ebf14db3e4a8e69cb6bc8b2589&channel=published&startPagePath=cGFnZXMvcGFja2FnZUFQSS9wYWdlcy9uYXZpZ2F0ZS10by1tcC1kZWVwbGluay9uYXZpZ2F0ZS10by1tcC1kZWVwbGluaw&startPageQuery=Zm9vPWJhciZiYXI9Zm9v&extraData=eyJkZXYiOnRydWV9',
     toMPPayload: {
       appId: 'cNjQgR7tZB7VffLsQvc3YM',
       path: 'pages/packageAPI/pages/navigate-to-mp-deeplink/navigate-to-mp-deeplink?foo=bar&bar=foo',
@@ -20,7 +21,7 @@ Page({
   },
   setDeeplink(e) {
     this.setData({
-      deeplink: e.detail.value,
+      deeplink: e.detail.value
     })
   },
   setToMPPayload(e) {
@@ -32,7 +33,7 @@ Page({
       const payload = JSON.parse(e.detail.value)
 
       this.setData({
-        toMPPayload: payload,
+        toMPPayload: payload
       })
     } catch (error) {
       console.error(error)
@@ -42,8 +43,7 @@ Page({
     bn.navigateTo({ url: this.data.deeplink, target: 'deeplink' })
   },
   navigateToMiniProgram() {
-    bn
-      .navigateToMiniProgram({ ...this.data.toMPPayload })
+    bn.navigateToMiniProgram({ ...this.data.toMPPayload })
       .then(res => {
         console.log(`[navigateToMiniProgram] success`, res)
       })
@@ -52,8 +52,7 @@ Page({
       })
   },
   navigateBackMiniProgram() {
-    bn
-      .navigateBackMiniProgram({ extraData: this.data.toMPPayload.extraData })
+    bn.navigateBackMiniProgram({ extraData: this.data.toMPPayload.extraData })
       .then(res => {
         console.log(`[navigateBackMiniProgram] success`, res)
       })
@@ -65,7 +64,7 @@ Page({
     bn.exitMiniProgram()
   },
   buttonClick(e) {
-     console.log(`[Button] onClick`, e)
+    console.log(`[Button] onClick`, e)
   },
   deeplinkNavSuccess(e) {
     console.log(`[deeplink] onSuccess`, e)
@@ -91,4 +90,43 @@ Page({
   mpNavTap(e) {
     console.log(`[miniProgram] onClick`, e)
   },
+  base64Encode(encodeStr) {
+    /**
+     * https://www.base64url.com/
+     */
+    const b64u =
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_' // base64url dictionary
+
+    function base64_encode_data(data, len, b64x) {
+      let dst = ''
+      let i
+
+      for (i = 0; i <= len - 3; i += 3) {
+        dst += b64x.charAt(data.charCodeAt(i) >>> 2)
+        dst += b64x.charAt(
+          ((data.charCodeAt(i) & 3) << 4) | (data.charCodeAt(i + 1) >>> 4)
+        )
+        dst += b64x.charAt(
+          ((data.charCodeAt(i + 1) & 15) << 2) | (data.charCodeAt(i + 2) >>> 6)
+        )
+        dst += b64x.charAt(data.charCodeAt(i + 2) & 63)
+      }
+
+      if (len % 3 == 2) {
+        dst += b64x.charAt(data.charCodeAt(i) >>> 2)
+        dst += b64x.charAt(
+          ((data.charCodeAt(i) & 3) << 4) | (data.charCodeAt(i + 1) >>> 4)
+        )
+        dst += b64x.charAt((data.charCodeAt(i + 1) & 15) << 2)
+      } else if (len % 3 == 1) {
+        dst += b64x.charAt(data.charCodeAt(i) >>> 2)
+        dst += b64x.charAt((data.charCodeAt(i) & 3) << 4)
+      }
+
+      return dst
+    }
+
+    const utf8str = unescape(encodeURIComponent(encodeStr))
+    return base64_encode_data(utf8str, utf8str.length, b64u)
+  }
 })

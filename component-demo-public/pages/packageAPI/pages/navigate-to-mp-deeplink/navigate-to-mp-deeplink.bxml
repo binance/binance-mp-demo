@@ -1,86 +1,87 @@
-<view class="container">
-  <head title="Deeplink"></head>
-
-  <view class='page-body tc'>
-    <text class='bf-center'>
-      Please input deeplink:
-    </text>
-    <view class='weui-cells weui-cells_after-title'>
-      <view class='weui-cell weui-cell_textarea'>
-        <textarea
-          class='weui-textarea deeplink-textarea'
-          value="{{deeplink}}"
-          bindinput="setDeeplink"
-          maxlength="-1"
-        />
+<theme-context>
+  <view class="container">
+    <head title="Deeplink"></head>
+    <view class='page-body tc'>
+      <text class='bf-center'>
+        Please input deeplink:
+      </text>
+      <view class='weui-cells weui-cells_after-title'>
+        <view class='weui-cell weui-cell_textarea'>
+          <textarea
+            class='weui-textarea deeplink-textarea'
+            value="{{deeplink}}"
+            bindinput="setDeeplink"
+            maxlength="-1"
+          />
+        </view>
+      </view>
+      <view class='bf-center'>
+        <navigator
+          url="{{deeplink}}"
+          target='deeplink'
+          bindsuccess="deeplinkNavSuccess"
+          bindfail="deeplinkNavFail"
+          bindcomplete="deeplinkNavComplete"
+          bindtap="deeplinkNavTap"
+        >
+          <button bindtap="buttonClick">
+            via Navigator Component
+          </button>
+        </navigator>
+        <view class='hr'></view>
+        <button bindtap="navigateToDeeplink">
+          via mpService.navigateTo api
+        </button>
       </view>
     </view>
-    <view class='bf-center'>
-      <navigator
-        url="{{deeplink}}"
-        target='deeplink'
-        bindsuccess="deeplinkNavSuccess"
-        bindfail="deeplinkNavFail"
-        bindcomplete="deeplinkNavComplete"
-        bindtap="deeplinkNavTap"
-      >
-        <button bindtap="buttonClick">
-          via Navigator Component
+
+    <view class='hr'></view>
+
+    <head title='MiniProgram'></head>
+    <view class='page-body tc'>
+      <text class='bf-center'>
+        Please input payload:
+      </text>
+      <view class='weui-cells weui-cells_after-title'>
+        <view class='weui-cell weui-cell_textarea'>
+          <textarea
+            class='weui-textarea mppayload-textarea'
+            maxlength="-1"
+            auto-height
+            value="{{toMppPayloadJson}}"
+            bindinput="setToMPPayload"
+          />
+        </view>
+      </view>
+      <view class='bf-center'>
+        <navigator
+          app-id="{{toMPPayload.appId}}"
+          path="{{toMPPayload.path}}"
+          extra-data="{{toMPPayload.extraData}}"
+          version="{{toMPPayload.envVersion}}"
+          type="{{toMPPayload.type}}"
+          rev="{{toMPPayload.rev}}"
+          target='miniProgram'
+          bindsuccess="mpNavSuccess"
+          bindfail="mpNavFail"
+          bindcomplete="mpNavComplete"
+          bindtap="mpNavTap"
+        >
+          <button bindtap="buttonClick">
+            via Navigator Component
+          </button>
+        </navigator>
+        <view class='hr'></view>
+        <button bindtap="navigateToMiniProgram">
+          via mpService.navigateToMiniProgram api
         </button>
-      </navigator>
-      <view class='hr'></view>
-      <button bindtap="navigateToDeeplink">
-        via mpService.navigateTo api
-      </button>
-    </view>
-  </view>
 
-  <view class='hr'></view>
+        <button bindtap="navigateBackMiniProgram">
+          via mpService.navigateBackMiniProgram api
+        </button>
 
-  <head title='MiniProgram'></head>
-  <view class='page-body tc'>
-    <text class='bf-center'>
-      Please input payload:
-    </text>
-    <view class='weui-cells weui-cells_after-title'>
-      <view class='weui-cell weui-cell_textarea'>
-        <textarea
-          class='weui-textarea mppayload-textarea'
-          maxlength="-1"
-          auto-height
-          value="{{toMppPayloadJson}}"
-          bindinput="setToMPPayload"
-        />
+        <button bindtap="exitMiniProgram">exitMiniProgram</button>
       </view>
     </view>
-    <view class='bf-center'>
-      <navigator
-        app-id="{{toMPPayload.appId}}"
-        path="{{toMPPayload.path}}"
-        extra-data="{{toMPPayload.extraData}}"
-        version="{{toMPPayload.envVersion}}"
-        type="{{toMPPayload.type}}"
-        rev="{{toMPPayload.rev}}"
-        target='miniProgram'
-        bindsuccess="mpNavSuccess"
-        bindfail="mpNavFail"
-        bindcomplete="mpNavComplete"
-        bindtap="mpNavTap"
-      >
-        <button bindtap="buttonClick">
-          via Navigator Component
-        </button>
-      </navigator>
-      <view class='hr'></view>
-      <button bindtap="navigateToMiniProgram">
-        via mpService.navigateToMiniProgram api
-      </button>
-
-      <button bindtap="navigateBackMiniProgram">
-        via mpService.navigateBackMiniProgram api
-      </button>
-
-      <button bindtap="exitMiniProgram">exitMiniProgram</button>
-    </view>
   </view>
-</view>
+</theme-context>

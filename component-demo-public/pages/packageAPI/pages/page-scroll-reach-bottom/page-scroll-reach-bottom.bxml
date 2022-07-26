@@ -1,41 +1,43 @@
-<view>
-  <head title='PageScroll'></head>
+<theme-context>
   <view>
-    <view class='scroll-center'>
-      <view>
-        <input
-          class='scroll-input'
-          value="{{data}}"
-          bindinput="onInputData"
-          placeholder='Please input scrollTop'
-          maxlength='-1'
-        />
-      </view>
-      <view>
-        <input
-          class='scroll-input'
-          value="{{durationData}}"
-          bindinput="onInputDuration"
-          placeholder='Please input duration'
-          maxlength='-1'
-        />
-      </view>
+    <head title='PageScroll'></head>
+    <view>
+      <view class='scroll-center'>
+        <view>
+          <input
+            class='scroll-input'
+            value="{{data}}"
+            bindinput="onInputData"
+            placeholder='Please input scrollTop'
+            maxlength='-1'
+          />
+        </view>
+        <view>
+          <input
+            class='scroll-input'
+            value="{{durationData}}"
+            bindinput="onInputDuration"
+            placeholder='Please input duration'
+            maxlength='-1'
+          />
+        </view>
 
-      <view>
-        <button bindtap="pageScrollTo">pageScrollTo {{data}}</button>
-      </view>
+        <view>
+          <button bindtap="pageScrollTo">pageScrollTo {{data}}</button>
+        </view>
 
-      <view>
-        <button bindtap="pageScrollToBox">pageScrollTo box1</button>
-      </view>
+        <view>
+          <button bindtap="pageScrollToBox">pageScrollTo box1</button>
+        </view>
 
-      <view class='scroll-box-1'>
-        <text>box1</text>
-      </view>
+        <view class='scroll-box-1'>
+          <text>box1</text>
+        </view>
 
-      <view class='scroll-box-2'>
-        <text>box2</text>
+        <view class='scroll-box-2'>
+          <text>box2</text>
+        </view>
       </view>
     </view>
   </view>
-</view>
+</theme-context>

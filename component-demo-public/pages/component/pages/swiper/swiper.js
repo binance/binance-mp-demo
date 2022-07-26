@@ -9,15 +9,15 @@ Page({
     indicatorActiveColor: 'black', // *
     current: 0,
     easingFunction: this.easingFunction,
-    interval: 3000,
-    duration: 1000,
     displayMultipleItems: 1,
     indicatorColorInput: 'white',
     indicatorActiveColorInput: 'black',
     currentInput: 0,
     easingFunctionInput: 'linear',
+    interval: 3000,
     intervalInput: 3000,
-    durationInput: 1000,
+    duration: 200,
+    durationInput: 200,
     displayMultipleItemsInput: 1
   },
   onLoad(query) {
@@ -82,7 +82,7 @@ Page({
     })
   },
   onIntervalinputInput(e) {
-    this.setData({ intervalInput: e.detail.value })
+    this.setData({ intervalInput: Number(e.detail.value) })
   },
   onIntervalinputClick() {
     this.setData({
@@ -90,7 +90,7 @@ Page({
     })
   },
   onDurationinputInput(e) {
-    this.setData({ durationInput: e.detail.value })
+    this.setData({ durationInput: Number(e.detail.value) })
   },
   onDurationinputClick() {
     this.setData({

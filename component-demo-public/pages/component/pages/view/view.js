@@ -1,8 +1,16 @@
 Page({
   data: {
+    a: {
+      b: {
+        c: 0
+      }
+    }
   },
   onLoad(query) {
     console.log('onload', this, query)
+    this.setData({
+      "a.b.c": 1
+    })
   },
 
   onShow() {

@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "API" 
+  "usingComponents": {
+    "theme-context": "../../../components/theme-context/theme-context"
+  },
+  "navigationBarTitleText": "API"
 }

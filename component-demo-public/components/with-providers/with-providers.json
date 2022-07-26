@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "theme-provider": "../theme-context/theme-context"
+  }
+}

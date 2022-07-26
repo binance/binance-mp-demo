@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "text",
   "usingComponents": {
-    "head": "../../../../components/head/head"
+    "head": "../../../../components/head/head",
+    "theme-context": "../../../../components/theme-context/theme-context"
   }
 }

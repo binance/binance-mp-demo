@@ -1,0 +1,4 @@
+
+<view class="themeContext themeContext-{{theme}}">
+  <slot></slot>
+</view>

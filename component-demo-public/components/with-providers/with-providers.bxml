@@ -1,0 +1,5 @@
+<view>
+  <theme-provider>
+    <slot></slot>
+  </theme-provider>
+</view>

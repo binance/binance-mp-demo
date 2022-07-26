@@ -19,7 +19,8 @@ Page({
         id: 'form',
         name: 'Form',
         open: false,
-        pages: ['radio', 'switch', 'textarea'],
+        // 'radio',
+        pages: [ 'switch', 'textarea'],
         image: 'pages/tabbar/component/resources/kind/form.png'
       },
       {

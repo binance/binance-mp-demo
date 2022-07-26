@@ -1,206 +1,207 @@
-<view class="container">
-  <head title="swiper"></head>
-  <view class="page-body">
-    <view class="page-section page-section-gap">
-      <view class="page-section-title">Default Style</view>
-      <view class="body-view"></view>
-      {{JSON.stringify(bgColorGroups)}}
-      <swiper
-        indicator-dots="{{indicatorDots}}"
-        autoplay="{{isAutoplay}}"
-        indicator-color="{{indicatorColor}}"
-        indicator-active-color="{{indicatorActiveColor}}"
-        current="{{current}}"
-        easing-function="{{easingFunction}}"
-        interval="{{interval}}"
-        duration="{{duration}}"
-        circular="{{circular}}"
-        vertical="{{vertical}}"
-        display-multiple-items="{{displayMultipleItems}}"
-        bindchange="{{onChange}}"
-        bindtransition="{{onTransition}}"
-        bindanimationfinish="{{onAnimationfinish}}"
-      >
-        <block bn:for="{{bgColorGroups}}" bn:key="*this">
-          <swiper-item style="{{'background-color:' + item}}">
-            <view>
-              {{item}}
-            </view>
-          </swiper-item>
-        </block>
-      </swiper>
-
-
-      <view class="options_line" style="margin-top: 10px;">
-        <button
-          class="options_btn"
-          bindtap="onAutoPlayChange"
+<theme-context>
+  <view class="container">
+    <head title="swiper"></head>
+    <view class="page-body">
+      <view class="page-section page-section-gap">
+        <view class="page-section-title">Default Style</view>
+        <view class="body-view"></view>
+        <swiper
+          indicator-dots="{{indicatorDots}}"
+          autoplay="{{isAutoplay}}"
+          indicator-color="{{indicatorColor}}"
+          indicator-active-color="{{indicatorActiveColor}}"
+          current="{{current}}"
+          easing-function="{{easingFunction}}"
+          interval="{{interval}}"
+          duration="{{duration}}"
+          circular="{{circular}}"
+          vertical="{{vertical}}"
+          display-multiple-items="{{displayMultipleItems}}"
+          bindchange="onChange"
+          bindtransition="onTransition"
+          bindanimationfinish="onAnimationfinish"
         >
-          {{isAutoplay ? "stop automatically" : "play automatically"}}
-        </button>
-      </view>
+          <block bn:for="{{bgColorGroups}}" bn:key="*this">
+            <swiper-item style="{{'background-color:' + item}}">
+              <view>
+                {{item}}
+              </view>
+            </swiper-item>
+          </block>
+        </swiper>
 
-      <view class="options_line">
-        <button
-          class="options_btn"
-          bindtap="onCircularChange"
-        >
-          {{circular ? "stop circular" : "play circular"}}
-        </button>
-      </view>
-      <view class="options_line">
-        <button
-          class="options_btn"
-          bindtap="onVerticalChange"
-        >
-          {{vertical ? "horizontal" : "vertical"}}
-        </button>
-      </view>
 
-      <view class="options_line">
-        <button
-          class="options_btn"
-          bindtap="onIndicatorDotsChange"
-        >
-          {{indicatorDots
-            ? `hide indicatorDots`
-            : `show indicatorDots`}}
-        </button>
-      </view>
-      <view class="options_line">
-        indicatorColor:
-        <input
-          class="options_input"
-          value="{{indicatorColorInput}}"
-          bindinput="onIndicatorColorInput"
-          placeholder="Please input indicatorColor"
-          maxlength="{{-1}}"
-        />
-        <button
-          class="options_btn"
-          bindtap="onIndicatorColorClick"
-        >
-          update
-        </button>
-      </view>
+        <view class="options_line" style="margin-top: 10px;">
+          <button
+            class="options_btn"
+            bindtap="onAutoPlayChange"
+          >
+            {{isAutoplay ? "stop automatically" : "play automatically"}}
+          </button>
+        </view>
 
-      <view class="options_line">
-        indicatorActiveColor:
-        <input
-          class="options_input"
-          value="{{indicatorActiveColorInput}}"
-          bindinput="onIndicatorActiveColorInput"
-          placeholder="Please input indicatorColor"
-          maxlength="{{-1}}"
-        />
-        <button
-          class="options_btn"
-          bindtap="onindicatorActiveColorClick"
+        <view class="options_line">
+          <button
+            class="options_btn"
+            bindtap="onCircularChange"
+          >
+            {{circular ? "stop circular" : "play circular"}}
+          </button>
+        </view>
+        <view class="options_line">
+          <button
+            class="options_btn"
+            bindtap="onVerticalChange"
+          >
+            {{vertical ? "horizontal" : "vertical"}}
+          </button>
+        </view>
+
+        <view class="options_line">
+          <button
+            class="options_btn"
+            bindtap="onIndicatorDotsChange"
+          >
+            {{indicatorDots
+              ? `hide indicatorDots`
+              : `show indicatorDots`}}
+          </button>
+        </view>
+        <view class="options_line">
+          indicatorColor:
+          <input
+            class="options_input"
+            value="{{indicatorColorInput}}"
+            bindinput="onIndicatorColorInput"
+            placeholder="Please input indicatorColor"
+            maxlength="{{-1}}"
+          />
+          <button
+            class="options_btn"
+            bindtap="onIndicatorColorClick"
+          >
+            update
+          </button>
+        </view>
+
+        <view class="options_line">
+          indicatorActiveColor:
+          <input
+            class="options_input"
+            value="{{indicatorActiveColorInput}}"
+            bindinput="onIndicatorActiveColorInput"
+            placeholder="Please input indicatorColor"
+            maxlength="{{-1}}"
+          />
+          <button
+            class="options_btn"
+            bindtap="onindicatorActiveColorClick"
+          >
+            update
+          </button>
+        </view>
+
+        <view class="options_line">
+          current:
+          <input
+            class="options_input"
+            value="{{currentInput}}"
+            bindinput="onCurrentinputInput"
+            placeholder="Please input current"
+            maxlength="{{-1}}"
+          />
+          <button
+            class="options_btn"
+            bindtap="onCurrentinputClick"
+          >
+            update
+          </button>
+        </view>
+
+        <view class="options_line">
+          easingFunction:
+          <input
+            class="options_input"
+            value="{{easingFunctionInput}}"
+            bindinput="onEasingFunctioninputInput"
+            placeholder="Please input easingFunction"
+            maxlength="{{-1}}"
+          />
+          <button
+            class="options_btn"
+            bindtap="onEasingFunctioninputClick"
+          >
+            update
+          </button>
+        </view>
+
+        <view class="options_line">
+          interval:
+          <input
+            class="options_input"
+            value="{{intervalInput}}"
+            bindinput="onIntervalinputInput"
+            placeholder="Please input interval"
+            maxlength="{{-1}}"
+          />
+          <button
+            class="options_btn"
+            bindtap="onIntervalinputClick"
+          >
+            update
+          </button>
+        </view>
+
+        <view class="options_line">
+          duration:
+          <input
+            class="options_input"
+            value="{{durationInput}}"
+            bindinput="onDurationinputInput"
+            placeholder="Please input duration"
+            maxlength="{{-1}}"
+          />
+          <button
+            class="options_btn"
+            bindtap="onDurationinputClick"
+          >
+            update
+          </button>
+        </view>
+
+        <view class="options_line">
+          displayMultipleItems:
+          <input
+            class="options_input"
+            value="{{displayMultipleItemsInput}}"
+            bindinput="onDisplayMultipleItemsinputInput"
+            placeholder="Please input displayMultipleItems"
+            maxlength="{{-1}}"
+          />
+          <button
+            class="options_btn"
+            bindtap="onDisplayMultipleItemsinputClick"
+          >
+            update
+          </button>
+        </view>
+
+        <view
+          class="options_line"
+          bindtap="onAddBgColorGroupsClick"
         >
-          update
-        </button>
-      </view>
+          <button class="options_btn">add a black swiper item</button>
+        </view>
 
-      <view class="options_line">
-        current:
-        <input
-          class="options_input"
-          value="{{currentInput}}"
-          bindinput="onCurrentinputInput"
-          placeholder="Please input current"
-          maxlength="{{-1}}"
-        />
-        <button
-          class="options_btn"
-          bindtap="onCurrentinputClick"
+        <view
+          class="options_line"
+          bindtap="onRemoveBgColorGroupsClick"
         >
-          update
-        </button>
-      </view>
-
-      <view class="options_line">
-        easingFunction:
-        <input
-          class="options_input"
-          value="{{easingFunctionInput}}"
-          bindinput="onEasingFunctioninputInput"
-          placeholder="Please input easingFunction"
-          maxlength="{{-1}}"
-        />
-        <button
-          class="options_btn"
-          bindtap="onEasingFunctioninputClick"
-        >
-          update
-        </button>
-      </view>
-
-      <view class="options_line">
-        interval:
-        <input
-          class="options_input"
-          value="{{intervalInput}}"
-          bindinput="onIntervalinputInput"
-          placeholder="Please input interval"
-          maxlength="{{-1}}"
-        />
-        <button
-          class="options_btn"
-          bindtap="onIntervalinputClick"
-        >
-          update
-        </button>
-      </view>
-
-      <view class="options_line">
-        duration:
-        <input
-          class="options_input"
-          value="{{durationInput}}"
-          bindinput="onDurationinputInput"
-          placeholder="Please input duration"
-          maxlength="{{-1}}"
-        />
-        <button
-          class="options_btn"
-          bindtap="onDurationinputClick"
-        >
-          update
-        </button>
-      </view>
-
-      <view class="options_line">
-        displayMultipleItems:
-        <input
-          class="options_input"
-          value="{{displayMultipleItemsInput}}"
-          bindinput="onDisplayMultipleItemsinputInput"
-          placeholder="Please input displayMultipleItems"
-          maxlength="{{-1}}"
-        />
-        <button
-          class="options_btn"
-          bindtap="onDisplayMultipleItemsinputClick"
-        >
-          update
-        </button>
-      </view>
-
-      <view
-        class="options_line"
-        bindtap="onAddBgColorGroupsClick"
-      >
-        <button class="options_btn">add a black swiper item</button>
-      </view>
-
-      <view
-        class="options_line"
-        bindtap="onRemoveBgColorGroupsClick"
-      >
-        <button class="options_btn">
-          remove the last swiper item
-        </button>
+          <button class="options_btn">
+            remove the last swiper item
+          </button>
+        </view>
       </view>
     </view>
   </view>
-</view>
+</theme-context>

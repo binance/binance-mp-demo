@@ -8,12 +8,6 @@ body {
 }
 
 
-.cnb-placeholder {
-  /*
-    height: var(--mp-navigator-height);
-  */
-}
-
 .cnb-wrapper {
   width: 100%;
 }
@@ -21,7 +15,6 @@ body {
 .cnb-container {
   position: relative;
   padding: 0 10px;
-  padding-top: 20px;
   height: var(--mp-navigator-height);
   display: flex;
   align-items: center;

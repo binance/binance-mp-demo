@@ -1,3 +1,4 @@
+<theme-context>
 <view class="about">
 	<view>
 		<view class="info">
@@ -17,3 +18,4 @@
 		</view>
 	</view>
 </view>
+</theme-context>

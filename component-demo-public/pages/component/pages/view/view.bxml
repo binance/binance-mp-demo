@@ -1,46 +1,48 @@
- <view class="container">
-  <head title="title" desc="desc"></head>
-  <view class="page-body">
-    <view class="page-section">
-      <view class="page-section-title">
-        <text>flex-direction: row</text>
-        <text> Horizontal Layout</text>
-      </view>
-      <view class="page-section-spacing">
-        <view class="flex-wrp" style="flex-direction:row;">
-          <view class="flex-item demo-text-1"></view>
-          <view class="flex-item demo-text-2"></view>
-          <view class="flex-item demo-text-3"></view>
+<theme-context>
+  <view class="container" bn:if="{{a.b.c}}">
+    <head title="title" desc="desc"></head>
+    <view class="page-body">
+      <view class="page-section">
+        <view class="page-section-title">
+          <text>flex-direction: row</text>
+          <text> Horizontal Layout</text>
+        </view>
+        <view class="page-section-spacing">
+          <view class="flex-wrp" style="flex-direction:row;">
+            <view class="flex-item demo-text-1"></view>
+            <view class="flex-item demo-text-2"></view>
+            <view class="flex-item demo-text-3"></view>
+          </view>
         </view>
       </view>
-    </view>
-    <view class="page-section">
-      <view class="page-section-title">
-        <text>flex-direction: column</text>
-        <text>Vertical Layout</text>
-      </view>
-      <view class="flex-wrp" style="flex-direction:column;">
-        <view class="flex-item flex-item-V demo-text-1"></view>
-        <view class="flex-item flex-item-V demo-text-2"></view>
-        <view class="flex-item flex-item-V demo-text-3"></view>
-      </view>
-    </view>
-    <view class="page-section">
-      <view class="page-section-title">onClick / onLongPress</view>
-      <view class="flex-wrp" style="flex-direction:column;">
-        <view
-          bindtap="onTapView"
-          bind:longpress="onLongPress"
-          bind:touchstart="onTouchStart"
-          bind:touchend="onTouchEnd"
-          bind:touchmove="onTouchMove"
-          bind:touchcancel="onTouchCancel"
-          class="flex-item flex-item-V demo-text-1"
-          hover-class="view-hoverClass"
-        >
-          tap me
+      <view class="page-section">
+        <view class="page-section-title">
+          <text>flex-direction: column</text>
+          <text>Vertical Layout</text>
         </view>
+        <view class="flex-wrp" style="flex-direction:column;">
+          <view class="flex-item flex-item-V demo-text-1"></view>
+          <view class="flex-item flex-item-V demo-text-2"></view>
+          <view class="flex-item flex-item-V demo-text-3"></view>
+        </view>
+      </view>
+      <view class="page-section">
+        <view class="page-section-title">onClick / onLongPress</view>
+        <view class="flex-wrp" style="flex-direction:column;">
+          <view
+            bindtap="onTapView"
+            bind:longpress="onLongPress"
+            bind:touchstart="onTouchStart"
+            bind:touchend="onTouchEnd"
+            bind:touchmove="onTouchMove"
+            bind:touchcancel="onTouchCancel"
+            class="flex-item flex-item-V demo-text-1"
+            hover-class="view-hoverClass"
+          >
+            tap me
+          </view>
+      </view>
+    </view>
     </view>
   </view>
-  </view>
- </view>
+</theme-context>

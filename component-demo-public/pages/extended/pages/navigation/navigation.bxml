@@ -1,34 +1,36 @@
-<view class="container">
-  <view bn:if="{{show}}" class="cnb-placeholder">
-    <view class="cnb-wrapper">
-      <view
-        class="cnb-container"
-        style="{{ 'color:' + color + ';' + 'background:' + background + ';padding-top:' + paddingTop + 'px;' }}"
-      >
-        <view class="cnb-title-wrapper" style="{{'padding-top:' + paddingTop + 'px'}}">
-          <view class="cnb-title">
-            <view bn:if="{{loading}}" class="bnui-loading cnb-loading"></view>
-            {{title}}
+<theme-context>
+  <view class="container">
+    <view bn:if="{{show}}" class="cnb-placeholder">
+      <view class="cnb-wrapper">
+        <view
+          class="cnb-container"
+          style="{{ 'color:' + color + ';' + 'background:' + background + ';padding-top:' + paddingTop + 'px;' }}"
+        >
+          <view class="cnb-title-wrapper" style="{{'padding-top:' + paddingTop + 'px'}}">
+            <view class="cnb-title">
+              <view bn:if="{{loading}}" class="bnui-loading cnb-loading"></view>
+              {{title}}
+            </view>
           </view>
-        </view>
-        <view bn:if="{{back}}">
-          <view class="cnb-icon-wrapper">
-            <icon
-              type="back-arrow"
-              color="{{color}}"
-              bindtap="onNavigateBack"
-            />
+          <view bn:if="{{back}}">
+            <view class="cnb-icon-wrapper">
+              <icon
+                type="back-arrow"
+                color="{{color}}"
+                bindtap="onNavigateBack"
+              />
+            </view>
           </view>
+          <view></view>
         </view>
-        <view></view>
       </view>
     </view>
+    <head title="Custom NavigationBar"></head>
+    <button bindtap="onSetLoading">Toggle loading</button>
+    <button bindtap="onSetShow">Show / Hide</button>
+    <button bindtap="onSetColor">Change color</button>
+    <button bindtap="onSetBackground">
+      Change background
+    </button>
   </view>
-  <head title="Custom NavigationBar"></head>
-  <button bindtap="onSetLoading">Toggle loading</button>
-  <button bindtap="onSetShow">Show / Hide</button>
-  <button bindtap="onSetColor">Change color</button>
-  <button bindtap="onSetBackground">
-    Change background
-  </button>
-</view>
+</theme-context>

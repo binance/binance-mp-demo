@@ -1,3 +1,6 @@
 {
+  "usingComponents": {
+    "theme-context": "../../components/theme-context/theme-context"
+  },
   "navigationBarTitleText": "About"
 }

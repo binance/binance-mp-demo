@@ -14,7 +14,6 @@
     "pages/tabbar/extended/index": {
       "packages": ["pages/extended"],
       "network": "all"
-
     },
     "pages/tabbar/API/index": {
       "packages": ["packageAPI"]
@@ -71,9 +70,7 @@
     {
       "root": "pages/extended",
       "name": "pages/component",
-      "pages": [
-        "pages/navigation/navigation"
-      ]
+      "pages": ["pages/navigation/navigation"]
     },
     {
       "root": "pages/packageAPI",
@@ -85,6 +82,8 @@
         "pages/animation-scroll-view/animation-scroll-view",
         "pages/application-onoff-event/application-onoff-event",
         "pages/authorize/authorize",
+        "pages/get-phone-number/get-phone-number",
+        "pages/get-email-address/get-email-address",
         "pages/background-fetch/background-fetch",
         "pages/navigate-to-mp-deeplink/navigate-to-mp-deeplink",
         "pages/navigation-bar/navigation-bar",
@@ -95,5 +94,6 @@
     },
     { "root": "pages/about", "pages": ["about"], "independent": true },
     { "root": "pages/welcome", "pages": ["welcome"], "independent": true }
-  ]
+  ],
+  "themeLocation": "./theme.json"
 }

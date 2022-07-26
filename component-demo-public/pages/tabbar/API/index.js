@@ -46,6 +46,14 @@ Page({
             title: 'Application Event',
             url: 'application-onoff-event/application-onoff-event'
           },
+          {
+            title: 'Get phone number',
+            url: 'get-phone-number/get-phone-number'
+          },
+          {
+            title: 'Get email address',
+            url: 'get-email-address/get-email-address'
+          },
       //     {
       //       title: 'Web3 Provider',
       //       url: 'web3-provider/web3-provider'

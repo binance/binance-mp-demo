@@ -1,17 +1,17 @@
-<!-- <ThemeProvider> -->
-<view>
+<theme-context>
   <view>
-    <head title="reLaunch" />
-  </view>
+    <view>
+      <head title="reLaunch" />
+    </view>
 
-  <view>
-    <button bindtap="relaunchIndex">reLaunch to index</button>
-  </view>
+    <view>
+      <button bindtap="relaunchIndex">reLaunch to index</button>
+    </view>
 
-  <view>
-    <button bindtap="relaunchApi">
-      reLaunch to navigate-to-mp-deeplink
-    </button>
+    <view>
+      <button bindtap="relaunchApi">
+        reLaunch to navigate-to-mp-deeplink
+      </button>
+    </view>
   </view>
-</view>
-<!-- </ThemeProvider> -->
+</theme-context>

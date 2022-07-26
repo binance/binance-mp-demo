@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "web-view",
   "usingComponents": {
+    "theme-context": "../../../../components/theme-context/theme-context"
   },
   "navigationStyle": "custom"
 }

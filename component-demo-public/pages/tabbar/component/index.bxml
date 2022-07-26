@@ -1,43 +1,45 @@
-<view class="index">
-  <view class="index-hd">
-    <view
-      class="index-desc"
-    >
-      Mini Program Component Demos
-    </view>
-  </view>
-  <view class="kind-list">
-    <view class="kind-list-item"
-      bn:for="{{list}}"
-      bn:key="index"
-      data-id="{{item.id}}"
-      bindtap="kindToggle"
-      >
+<theme-context>
+  <view class="index">
+    <view class="index-hd">
       <view
-        class="{{list[index].open ? 'kind-list-item-hd kind-list-item-hd-show' : 'kind-list-item-hd'}}"
+        class="index-desc"
       >
-        <view class="kind-list-text">{{item.name}}</view>
-        <image class="kind-list-img" src="{{list[index].image}}"></image>
+        Mini Program Component Demos
       </view>
-      <view
-        class="kind-list-item-bd {{ list[index].open ? 'kind-list-item-bd-show' : ''}}"
-      >
+    </view>
+    <view class="kind-list">
+      <view class="kind-list-item"
+        bn:for="{{list}}"
+        bn:key="index"
+        data-id="{{item.id}}"
+        bindtap="kindToggle"
+        >
         <view
-          class="navigator-box {{ list[index].open ? 'navigator-box-show' : ''}}"
+          class="{{list[index].open ? 'kind-list-item-hd kind-list-item-hd-show' : 'kind-list-item-hd'}}"
+        >
+          <view class="kind-list-text">{{item.name}}</view>
+          <image class="kind-list-img" src="{{list[index].image}}"></image>
+        </view>
+        <view
+          class="kind-list-item-bd {{ list[index].open ? 'kind-list-item-bd-show' : ''}}"
         >
           <view
-            bn:for="{{list[index].pages}}"
-            bn:for-item="page">
-            <navigator
-              url="{{'pages/component/pages/' + page + '/' + page }}"
-              class="navigator"
-            >
-              <view class="navigator-text">{{page}}</view>
-              <view class="navigator-arrow"></view>
-            </navigator>
+            class="navigator-box {{ list[index].open ? 'navigator-box-show' : ''}}"
+          >
+            <view
+              bn:for="{{list[index].pages}}"
+              bn:for-item="page">
+              <navigator
+                url="{{'pages/component/pages/' + page + '/' + page }}"
+                class="navigator"
+              >
+                <view class="navigator-text">{{page}}</view>
+                <view class="navigator-arrow"></view>
+              </navigator>
+            </view>
           </view>
         </view>
       </view>
     </view>
   </view>
-</view>
+</theme-context>

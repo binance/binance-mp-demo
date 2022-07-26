@@ -1,41 +1,43 @@
-<view>
-  <head title='NavigationBar'></head>
-  <view class='page-body'>
-    <view class='page-section'>
-      <view class='weui-cells__title'>Change Title</view>
-      <view class='weui-cells weui-cells_after-title'>
-        <view class='weui-cell weui-cell_Input'>
-          <input
-            class='weui-Input'
-            bindinput="setTitle"
-            placeholder='Title'
-          ></input>
+<theme-context>
+  <view>
+    <head title='NavigationBar'></head>
+    <view class='page-body'>
+      <view class='page-section'>
+        <view class='weui-cells__title'>Change Title</view>
+        <view class='weui-cells weui-cells_after-title'>
+          <view class='weui-cell weui-cell_Input'>
+            <input
+              class='weui-Input'
+              bindinput="setTitle"
+              placeholder='Title'
+            ></input>
+          </view>
         </view>
       </view>
-    </view>
-    <view class='page-section'>
-      <view class='weui-cells__title'>Change Color</view>
-      <view class='weui-cells weui-cells_after-title'>
-        <view class='weui-cell'>
-          <button
-            type='primary'
-            bindtap="setColor"
-          >
-            Set Color
-          </button>
+      <view class='page-section'>
+        <view class='weui-cells__title'>Change Color</view>
+        <view class='weui-cells weui-cells_after-title'>
+          <view class='weui-cell'>
+            <button
+              type='primary'
+              bindtap="setColor"
+            >
+              Set Color
+            </button>
+          </view>
         </view>
-      </view>
-      <view class='weui-cells__title'>Change Color</view>
-      <view class='weui-cells weui-cells_after-title'>
-        <view class='weui-cell'>
-          <button
-            type='primary'
-            bindtap="setColorWithAnimation"
-          >
-            Set Color with Animation
-          </button>
+        <view class='weui-cells__title'>Change Color</view>
+        <view class='weui-cells weui-cells_after-title'>
+          <view class='weui-cell'>
+            <button
+              type='primary'
+              bindtap="setColorWithAnimation"
+            >
+              Set Color with Animation
+            </button>
+          </view>
         </view>
       </view>
     </view>
   </view>
-</view>
+</theme-context>
