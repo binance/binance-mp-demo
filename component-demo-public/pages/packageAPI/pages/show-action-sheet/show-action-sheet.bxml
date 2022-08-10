@@ -1,0 +1,38 @@
+<theme-context>
+  <view>
+    <Head title='ShowActionSheet' />
+    <view>
+      <view class='show-action-sheet-center'>
+        <view class='show-action-sheet-line'>
+          <text>alertText: </text>
+          <input
+            class='show-action-sheet-input'
+            value="{{alertText}}"
+            bindinput="handleSetAlertText"
+            placeholder='Please input itemColor'
+            maxlength="{{-1}}"
+          />
+        </view>
+
+        <view class='show-action-sheet-line'>
+          <text>itemColor: </text>
+          <input
+            class='show-action-sheet-input'
+            value="{{itemColor}}"
+            bindinput="handleSetItemColor"
+            placeholder='Please input itemColor'
+            maxlength="{{-1}}"
+          />
+        </view>
+
+        <view>
+          <button bindtap="showActionSheet">showActionSheet</button>
+        </view>
+
+        <view style="width: 100%;">
+          <text style="width: 100%;">{{data}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</theme-context>

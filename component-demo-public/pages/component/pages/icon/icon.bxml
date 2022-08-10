@@ -1,0 +1,54 @@
+<theme-context>
+  <view class="container">
+    <head title="icon"></head>
+    <view class="page-section tc">
+      <view class="page-body">
+        <view class="page-section">
+          <view bn:for="{{icons}}" bn:key="index">
+            <view key="{{index}}" id="{{item}}" class="icon-wrapper">
+              <icon
+                type="{{item}}"
+                data-icon="{{item}}"
+                bindtap="handleTap"
+                bind:longpress="handleLongpress"
+                bind:touchstart="handleTouchstart"
+                bind:touchmove="handleTouchmove"
+                bind:touchend="handleTouchend"
+                bind:touchcancel="handleTouchCancel"
+                color="#f0b90b"
+              >
+              </icon>
+              <icon
+                type="{{item}}"
+                data-icon="{{item}}"
+                size="1em"
+                bindtap="handleTap"
+                bind:longpress="handleLongpress"
+                bind:touchstart="handleTouchstart"
+                bind:touchmove="handleTouchmove"
+                bind:touchend="handleTouchend"
+                bind:touchcancel="handleTouchCancel"
+                color="#f0b90b"
+              >
+              </icon>
+              <icon
+                type="{{item}}"
+                data-icon="{{item}}"
+                size="{{32}}"
+                bindtap="handleTap"
+                bind:longpress="handleLongpress"
+                bind:touchstart="handleTouchstart"
+                bind:touchmove="handleTouchmove"
+                bind:touchend="handleTouchend"
+                bind:touchcancel="handleTouchCancel"
+                color="#f0b90b"
+              >
+              </icon>
+              &nbsp;{{item}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</theme-context>

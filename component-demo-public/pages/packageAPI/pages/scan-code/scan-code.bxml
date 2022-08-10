@@ -1,0 +1,30 @@
+<theme-context>
+  <view>
+    <head title='ScanCode' />
+    <view>
+      <view className='scan-code-center'>
+        <view>
+          <input
+            className='scan-code-input'
+            value="{{data}}"
+            bindinput="onInput"
+            placeholder='Please input'
+            maxlength="{{-1}}"
+          />
+          <text>
+            Please fill in the scene format in the input. If you are multiple
+            scenes, please use ','.
+          </text>
+        </view>
+
+        <view>
+          <button bindtap="scanCode">scanCode</button>
+        </view>
+
+        <view className='scan-code-response'>
+          <text style="width: 100%;">{{scanCodeRes}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</theme-context>

@@ -1,0 +1,10 @@
+<theme-context>
+  <view>
+    <view>
+      <view style="display: flex; flex-direction: column;">
+        <button bindtap="onClickOn">setKeepScreenOn=true</button>
+        <button bindtap="onClickOff">setKeepScreenOn=false</button>
+      </view>
+    </view>
+  </view>
+</theme-context>

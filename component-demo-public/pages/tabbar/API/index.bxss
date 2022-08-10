@@ -165,8 +165,27 @@
   height: auto;
 }
 
-
 .bnui-agree__link {
   display: inline;
   color: var(--bnui-LINK);
+}
+
+.tabBar-input-wrapper > * {
+  margin-right: 8px;
+  height: 32px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.tabBar-input-wrapper input {
+  flex: 1;
+}
+
+.small-text {
+  line-break: anywhere;
+  padding: 0 16px 16px 16px;
+  display: block;
+  font-size: 14px;
 }

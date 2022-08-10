@@ -10,10 +10,10 @@ Page({
           //   title: 'Binance Login',
           //   url: 'login/login'
           // },
-      //     {
-      //       title: 'Payment',
-      //       url: 'request-payment/request-payment'
-      //     },
+          {
+            title: 'Payment',
+            url: 'request-payment/request-payment'
+          },
       //     {
       //       title: 'Monitor',
       //       url: 'monitor/monitor'
@@ -86,26 +86,26 @@ Page({
             title: 'Navigation Bar',
             url: 'navigation-bar/navigation-bar'
           },
-      //     {
-      //       title: 'Pull to refresh',
-      //       url: 'pull-down-refresh/pull-down-refresh'
-      //     },
-      //     {
-      //       title: 'Set TabBar',
-      //       url: '@set-tab-bar'
-      //     },
-      //     {
-      //       title: 'Show Toast',
-      //       url: 'show-toast/show-toast'
-      //     },
+          {
+            title: 'Pull to refresh',
+            url: 'pull-down-refresh/pull-down-refresh'
+          },
+          {
+            title: 'Set TabBar',
+            url: '@set-tab-bar'
+          },
+          {
+            title: 'Show Toast',
+            url: 'show-toast/show-toast'
+          },
       //     {
       //       title: 'Show Dialog',
       //       url: 'kyc-show-dialog/kyc-show-dialog'
       //     },
-      //     {
-      //       title: 'Show Action Sheet',
-      //       url: 'show-action-sheet/show-action-sheet'
-      //     },
+          {
+            title: 'Show Action Sheet',
+            url: 'show-action-sheet/show-action-sheet'
+          },
       //     {
       //       title: 'Theme',
       //       url: 'theme/theme'
@@ -149,34 +149,34 @@ Page({
       //   ],
       //   image:'pages/tabbar/API/resources/kind/performance.png'
       // },
-      // {
-      //   id: 'networking',
-      //   name: 'Networking',
-      //   open: false,
-      //   pages: [
-      //     {
-      //       title: 'Request',
-      //       url: 'request/request'
-      //     },
-      //     {
-      //       title: 'Private Request',
-      //       url: 'private-request/private-request'
-      //     },
-      //     {
-      //       title: 'Download / Upload',
-      //       url: 'download-upload/download-upload'
-      //     },
-      //     {
-      //       title: 'WebSocket',
-      //       url: 'websocket/websocket'
-      //     },
-      //     {
-      //       title: 'createBufferUrl',
-      //       url: 'create-buffer-url/create-buffer-url'
-      //     }
-      //   ],
-      //   image: 'pages/tabbar/API/resources/kind/api.png'
-      // },
+      {
+        id: 'networking',
+        name: 'Networking',
+        open: false,
+        pages: [
+          {
+            title: 'Request',
+            url: 'request/request'
+          },
+          {
+            title: 'Private Request',
+            url: 'private-request/private-request'
+          },
+          // {
+          //   title: 'Download / Upload',
+          //   url: 'download-upload/download-upload'
+          // },
+          // {
+          //   title: 'WebSocket',
+          //   url: 'websocket/websocket'
+          // },
+          // {
+          //   title: 'createBufferUrl',
+          //   url: 'create-buffer-url/create-buffer-url'
+          // }
+        ],
+        image: 'pages/tabbar/API/resources/kind/api.png'
+      },
       {
         id: 'storage',
         name: 'Storage',
@@ -222,22 +222,22 @@ Page({
             title: 'Network',
             url: 'network/network'
           },
-      //     {
-      //       title: 'ScanCode',
-      //       url: 'scan-code/scan-code'
-      //     },
-      //     {
-      //       title: 'Sensor',
-      //       url: 'sensor/sensor'
-      //     },
+          {
+            title: 'ScanCode',
+            url: 'scan-code/scan-code'
+          },
+          {
+            title: 'Sensor',
+            url: 'sensor/sensor'
+          },
       //     {
       //       title: 'MemoryWarning',
       //       url: 'memory-warning/memory-warning'
       //     },
-      //     {
-      //       title: 'SetKeepScreenOn',
-      //       url: 'set-keep-screen-on/set-keep-screen-on'
-      //     },
+          {
+            title: 'SetKeepScreenOn',
+            url: 'set-keep-screen-on/set-keep-screen-on'
+          },
       //     {
       //       title: 'Location',
       //       url: 'location/location'
@@ -266,23 +266,25 @@ Page({
             title: 'PreviewImage',
             url: 'preview-image/preview-image'
           },
-      //     {
-      //       title: 'SaveImageToPhotosAlbum',
-      //       url: 'save-image-to-photos-album/save-image-to-photos-album'
-      //     },
-      //     {
-      //       title: 'FileSystemManager',
-      //       url: 'read-file/read-file'
-      //     },
-      //     {
-      //       title: 'InnerAudio',
-      //       url: 'inner-audio/inner-audio'
-      //     }
+          {
+            title: 'SaveImageToPhotosAlbum',
+            url: 'save-image-to-photos-album/save-image-to-photos-album'
+          },
+          {
+            title: 'FileSystemManager',
+            url: 'read-file/read-file'
+          },
+          // {
+          //   title: 'InnerAudio',
+          //   url: 'inner-audio/inner-audio'
+          // }
         ],
         image: 'pages/tabbar/API/resources/kind/media.png'
       }
     ],
-    dispaySetTabbar: false
+    dispaySetTabbar: false,
+    apiText: 'API 接口',
+    isTabBarVisible: true,
   },
   onShow: function () {
     if (typeof this.getTabBar === 'function' && this.getTabBar()) {
@@ -306,5 +308,50 @@ Page({
     this.setData({
       list: nextList
     })
-  }
+  },
+  // for set-tab-bar demo
+  setTabBarItemRemoteIcon() {
+    bn.setTabBarItem({
+      index: 0,
+      iconPath: 'https://github.githubassets.com/images/icons/emoji/tada.png'
+    })
+  },
+  setTabBarItemLocalIcon() {
+    bn.setTabBarItem({
+      index: 0,
+      iconPath: 'image/icon_API.png'
+    })
+  },
+  setTabBarItemWithText() {
+    bn.setTabBarItem({
+      index: 2,
+      text: this.data.apiText
+    })
+  },
+  setAPIText(e) {
+    this.setData({
+      apiText: e.detail.value
+    })
+  },
+  setTabBarVisible(visible) {
+    this.setData({
+      isTabBarVisible: visible
+    })
+  },
+  toggleTabbar(animation) {
+    console.log('toggle tabbar')
+    if (this.data.isTabBarVisible) {
+      bn.hideTabBar({ animation })
+      this.setTabBarVisible(false)
+    } else {
+      bn.showTabBar({ animation })
+      this.setTabBarVisible(true)
+    }
+  },
+  toggleTabbarWithAnimation() {
+    this.toggleTabbar(true)
+  },
+  toggleTabbarWithoutAnimation() {
+    this.toggleTabbar(false)
+  },
 })

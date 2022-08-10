@@ -9,7 +9,7 @@
           </button>
         </view>
         <view style="width: 100%;">
-          <text style="width: 100%;">{{data}}</text>
+          <text style="width: 100%;" user-select>{{data}}</text>
         </view>
       </view>
     </view>

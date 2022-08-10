@@ -1,0 +1,58 @@
+<theme-context>
+  <view class="container">
+    <head title="rich-text"></head>
+    <view class="page-section tc">
+      <view class="page-body">
+        <view class="rich-text-picker">
+          <picker
+            mode="selector"
+            range="{{SPACE_RANGE}}"
+            value="{{rangeIndex}}"
+            bindchange="onPickChange"
+          >
+            <view class="bnui-input">
+              Select a space:&nbsp;
+              {{space || "default"}}
+            </view>
+          </picker>
+        </view>
+
+        <view class="page-section">
+          <view class="page-section-title">HTML string</view>
+          <view class="rich-text-textarea-wrapper">
+            <textarea
+              value="{{html}}"
+              bindinput="onTextareaInput"
+              maxlength="{{3000}}"
+            />
+          </view>
+          <view class="rich-text-wrp">
+            <rich-text
+              nodes="{{html}}"
+              space="{{space}}"
+              bindtap="onRichTextTap"
+              bind:longpress="onRichTextLongPress"
+            ></rich-text>
+          </view>
+        </view>
+
+        <view class="page-section">
+          <view class="page-section-title">Nodes</view>
+          <view class="rich-text-textarea-wrapper">
+            <textarea
+              value="{{nodesStr}}"
+              bindinput="onNodesChange"
+              maxlength="{{3000}}"
+            />
+          </view>
+          <view class="rich-text-wrp">
+            <rich-text
+              nodes="{{nodes}}"
+              space="{{space || undefined}}"
+            ></rich-text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</theme-context>

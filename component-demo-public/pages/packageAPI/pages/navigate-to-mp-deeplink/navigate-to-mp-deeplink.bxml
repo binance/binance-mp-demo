@@ -5,13 +5,13 @@
       <text class='bf-center'>
         Please input deeplink:
       </text>
-      <view class='weui-cells weui-cells_after-title'>
-        <view class='weui-cell weui-cell_textarea'>
+      <view class='bnui-cells bnui-cells_after-title'>
+        <view class='bnui-cell bnui-cell_textarea'>
           <textarea
-            class='weui-textarea deeplink-textarea'
+            class='bnui-textarea deeplink-textarea'
             value="{{deeplink}}"
             bindinput="setDeeplink"
-            maxlength="-1"
+            maxlength="{{-1}}"
           />
         </view>
       </view>
@@ -42,11 +42,11 @@
       <text class='bf-center'>
         Please input payload:
       </text>
-      <view class='weui-cells weui-cells_after-title'>
-        <view class='weui-cell weui-cell_textarea'>
+      <view class='bnui-cells bnui-cells_after-title'>
+        <view class='bnui-cell bnui-cell_textarea'>
           <textarea
-            class='weui-textarea mppayload-textarea'
-            maxlength="-1"
+            class='bnui-textarea mppayload-textarea'
+            maxlength="{{-1}}"
             auto-height
             value="{{toMppPayloadJson}}"
             bindinput="setToMPPayload"

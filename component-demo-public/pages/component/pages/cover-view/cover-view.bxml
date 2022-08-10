@@ -1,0 +1,94 @@
+<theme-context>
+  <view class='container'>
+    <head title='CoverView'></head>
+
+    <view class='page-section tc'>
+      <view class='page-body'>
+        <view>
+          <view>
+            <canvas
+              type="2d"
+              class='myCanvas'
+              bindtouchstart="onTouchStart"
+              bindtouchmove="onTouchMove"
+              bindtouchend="onTouchEnd"
+              bindlongtap="onLongTap"
+              disable-scroll
+            ></canvas>
+            <view class='state-wrapper'>
+              <view>
+                Position X = <view>{{positionX}}</view>
+              </view>
+              <view>
+                Position Y = <view>{{positionY}}</view>
+              </view>
+              <view>
+                Direction = <view>{{direction}}</view>
+              </view>
+              <view>
+                X = <view>{{x}}</view>
+              </view>
+              <view>
+                Y = <view>{{y}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='cover-view-wrapper'>
+          <cover-view
+            style="background-color: #87ceebcc; padding: 12px; width: 40%"
+            bindtap="onClickOutside1Coverview"
+            hover-class="cover-view-wrapper-hover"
+          >
+            Outside 1
+            <cover-view class='flex-wrp' style="flex-direction: row">
+              <cover-view
+                class='flex-item cover-view-1'
+                bindtap="onClickCoverview1"
+                hover-class='cover-view-hover-1'
+              >
+                1
+              </cover-view>
+              <cover-view
+                class='flex-item cover-view-2'
+                bindtap="onClickCoverview2"
+                hover-class='cover-view-hover-2'
+              >
+                2
+                <cover-view
+                  class='flex-item cover-view-4'
+                  bindtap="onClickCoverview4"
+                >
+                  4
+                  <cover-view
+                    class='flex-item cover-view-5'
+                    bindtap="onClickCoverview5"
+                  >
+                    5
+                  </cover-view>
+                </cover-view>
+              </cover-view>
+              <cover-view
+                class='flex-item cover-view-3'
+                style="padding-top: 10px"
+                hover-class='cover-view-hove-3'
+                bindtap="onClickCoverview3"
+              >
+                3
+              </cover-view>
+            </cover-view>
+            <cover-image
+              class='cover-image'
+              src="{{imageUrl}}"
+              bindtap="onCoverimageClick"
+              bindload="onCoverimageLoad"
+              binderror="onCoverimageError"
+            >
+              CoverImage
+            </cover-image>
+          </cover-view>
+        </view>
+      </view>
+    </view>
+  </view>
+</theme-context>

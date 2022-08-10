@@ -5,14 +5,14 @@ Page({
         id: 'view',
         name: 'View',
         open: false,
-        pages: ['view', 'swiper'],
+        pages: ['view', 'swiper', 'scroll-view', 'cover-view'],
         image: 'pages/tabbar/component/resources/kind/view.png'
       },
       {
         id: 'content',
         name: 'Content',
         open: false,
-        pages: ['text'],
+        pages: ['text', 'icon', 'rich-text'],
         image: 'pages/tabbar/component/resources/kind/content.png'
       },
       {
@@ -20,14 +20,14 @@ Page({
         name: 'Form',
         open: false,
         // 'radio',
-        pages: [ 'switch', 'textarea'],
+        pages: [ 'checkbox', 'form', 'switch', 'textarea', 'picker', 'radio', 'slider'],
         image: 'pages/tabbar/component/resources/kind/form.png'
       },
       {
         id: 'media',
         name: 'Media',
         open: false,
-        pages: ['video'],
+        pages: ['video', 'image'],
         image: 'pages/tabbar/component/resources/kind/media.png'
       },
       {

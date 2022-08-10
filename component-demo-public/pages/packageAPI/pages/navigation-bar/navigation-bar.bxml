@@ -3,11 +3,11 @@
     <head title='NavigationBar'></head>
     <view class='page-body'>
       <view class='page-section'>
-        <view class='weui-cells__title'>Change Title</view>
-        <view class='weui-cells weui-cells_after-title'>
-          <view class='weui-cell weui-cell_Input'>
+        <view class='bnui-cells__title'>Change Title</view>
+        <view class='bnui-cells bnui-cells_after-title'>
+          <view class='bnui-cell bnui-cell_Input'>
             <input
-              class='weui-Input'
+              class='bnui-Input'
               bindinput="setTitle"
               placeholder='Title'
             ></input>
@@ -15,9 +15,9 @@
         </view>
       </view>
       <view class='page-section'>
-        <view class='weui-cells__title'>Change Color</view>
-        <view class='weui-cells weui-cells_after-title'>
-          <view class='weui-cell'>
+        <view class='bnui-cells__title'>Change Color</view>
+        <view class='bnui-cells bnui-cells_after-title'>
+          <view class='bnui-cell'>
             <button
               type='primary'
               bindtap="setColor"
@@ -26,9 +26,9 @@
             </button>
           </view>
         </view>
-        <view class='weui-cells__title'>Change Color</view>
-        <view class='weui-cells weui-cells_after-title'>
-          <view class='weui-cell'>
+        <view class='bnui-cells__title'>Change Color</view>
+        <view class='bnui-cells bnui-cells_after-title'>
+          <view class='bnui-cell'>
             <button
               type='primary'
               bindtap="setColorWithAnimation"

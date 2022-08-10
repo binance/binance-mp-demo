@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "theme-context": "../../../components/theme-context/theme-context"
+    "theme-context": "../../../components/theme-context/theme-context",
+    "head": "../../../components/head/head"
   },
   "navigationBarTitleText": "API"
 }

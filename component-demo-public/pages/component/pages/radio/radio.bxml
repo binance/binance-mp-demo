@@ -1,0 +1,85 @@
+<view class="container">
+  <head title="radio"></head>
+  <view class="page-body">
+    <view class="page-section page-section-gap">
+      <view class="page-section page-section-gap">
+        <view class="page-section-title">Default Style</view>
+        <radio
+          value="cb"
+          checked
+          bindtap="onRadioTap"
+          bind:longpress="onRadioLongPress"
+        ></radio>
+        <radio
+          value="cb"
+          bindtap="onRadioTap"
+          bind:longpress="onRadioLongPress"
+        ></radio>
+
+        <view class="page-section-title">With label</view>
+        <label
+          class="radio"
+          bindtap="onLabelClick"
+        >
+          <radio
+            value="cb"
+            checked
+            bindtap="onRadioTap"
+            bind:longpress="onRadioLongPress"
+          ></radio>
+          Checked
+        </label>
+        <label class="radio">
+          <radio value="cb"></radio>Unchecked
+        </label>
+        <view class="page-section-title">disabled</view>
+        <label class="radio">
+          <radio value="cb" disabled checked></radio>Checked
+        </label>
+        <label class="radio">
+          <radio value="cb" disabled></radio>Unchecked
+        </label>
+
+        <view class="page-section-title">Controlled</view>
+        <label
+          class="radio"
+          bindtap="onControlledLabelTap"
+        >
+          <radio value="cb" checked="{{checked}}"></radio>
+          Checked
+        </label>
+        <button
+          bindtap="onControlledButtonTap"
+        >
+          Toggle checked
+        </button>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="page-section-title">Recommended Styl</view>
+      <view class="bnui-cells bnui-cells_after-title">
+        <radio-group
+          bindchange="radioChange"
+          bindtap="onRadioGroupTap"
+        >
+          <label
+            class="bnui-cell bnui-check__label"
+            bn:for="{{items}}"
+            bn:key="index"
+            bindtap="onLabelClick"
+          >
+            <view class="bnui-cell__hd">
+              <radio
+                value="{{item.value}}"
+                checked={{item.checked}}
+                bindtap="onItemsRadioTap"
+                bind:longpress="onItemsRadioLongpress"
+              ></radio>
+            </view>
+            <view class="bnui-cell__bd">{{item.name}}</view>
+          </label>
+        </radio-group>
+      </view>
+    </view>
+  </view>
+</view>

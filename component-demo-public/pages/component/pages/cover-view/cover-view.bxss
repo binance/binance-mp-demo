@@ -1,0 +1,92 @@
+.page-body {
+  position: relative;
+}
+
+.cover-view-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.cover-image {
+  height: 75px;
+  opacity: 0.8;
+}
+
+.flex-wrp {
+  display: flex;
+}
+
+.flex-item {
+  width: 60px;
+  height: 60px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.cover-view-1 {
+  background: rgba(26, 173, 25, 1);
+  z-index: 1;
+}
+
+.cover-view-2 {
+  background: rgba(39, 130, 215, 1);
+  margin-left: -20px;
+  margin-top: 10px;
+}
+
+.cover-view-3 {
+  background: rgba(255, 255, 255, 1);
+  margin-left: -20px;
+  margin-top: 20px;
+}
+
+.cover-view-4 {
+  background: yellow;
+  margin-left: -20px;
+  z-index: 100;
+}
+
+.cover-view-5 {
+  background: darkorange;
+  z-index: 100;
+}
+
+.cover-view-wrapper-hover {
+  color: red;
+}
+
+.cover-view-hover-1 {
+  font-size: 17px;
+}
+
+.cover-view-hover-2 {
+  z-index: 2;
+}
+
+.cover-view-hove-3 {
+  z-index: -1;
+}
+
+.container {
+  margin-bottom: 300px;
+}
+
+.state-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.state-wrapper > * {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+}

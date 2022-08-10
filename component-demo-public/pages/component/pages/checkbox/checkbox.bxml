@@ -1,0 +1,98 @@
+<theme-context>
+  <view class='container'>
+    <head title='checkbox'></head>
+    <view class='page-body'>
+      <view class='page-section page-section-gap'>
+        <view class='page-section-title'>Default Style</view>
+        <checkbox
+          value='cb'
+          checked
+          bindtap="handleClickCheckbox"
+          bind:longpress="handleLongpressCheckbox"
+        ></checkbox>
+        <checkbox
+          value='cb'
+          bindtap="handleClickCheckbox"
+          bind:longpress="handleLongpressCheckbox"
+        ></checkbox>
+
+        <view class='page-section-title'>With Label</view>
+        <label
+          class='checkbox'
+          bindtap="handleClickLabel"
+          bind:longpress="handleLongpressLabel"
+        >
+          <checkbox
+            value='cb'
+            checked
+            bindtap="handleClickCheckbox"
+            bind:longpress="handleLongpressCheckbox"
+          ></checkbox>
+          Checked
+        </label>
+        <label
+          class='checkbox'
+          bindtap="handleClickLabel"
+          bind:longpress="handleLongpressLabel"
+        >
+          <checkbox
+            value='cb'
+            bindtap="handleClickCheckbox"
+            bind:longpress="handleLongpressCheckbox"
+          ></checkbox>
+          Unchecked
+        </label>
+        <view class='page-section-title'>disabled</view>
+        <label class='checkbox'>
+          <checkbox value='cb' disabled checked></checkbox>Checked
+        </label>
+        <label class='checkbox'>
+          <checkbox value='cb' disabled></checkbox>Unchecked
+        </label>
+
+        <view class='page-section-title'>Controlled</view>
+
+        <label
+          class='radio'
+          bindtap="toggleChecked"
+        >
+          <checkbox value='cb' checked={{checked}}></checkbox>
+          Checked
+        </label>
+        <button
+          bindtap="toggleChecked"
+        >
+          Toggle checked
+        </button>
+      </view>
+      <view class='page-section'>
+        <view class='page-section-title'>Recommended style</view>
+        <view class='bnui-cells bnui-cells_after-title'>
+          <checkbox-group
+            bindchange="checkboxChange"
+            bindtap="handleClickCheckboxGroup"
+          >
+            <view bn:for="{{items}}" bn:key="index">
+              <label
+                class='bnui-cell bnui-check__label'
+                key="{{item.value}}"
+                bindtap="handleClickLabel"
+                bind:longpress="handleLongpressLabel"
+              >
+                <view class='bnui-cell__hd'>
+                  <checkbox
+                    value="{{item.value}}"
+                    checked="{{item.checked}}"
+                    bindtap="handleClickCheckbox"
+                    bind:longpress="handleLongpressCheckbox"
+                  ></checkbox>
+                </view>
+                <view class='bnui-cell__bd'>{{item.name}}</view>
+              </label>
+            </view>
+          </checkbox-group>
+        </view>
+      </view>
+    </view>
+  </view>
+</theme-context>

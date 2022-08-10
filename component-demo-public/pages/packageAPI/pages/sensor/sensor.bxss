@@ -1,0 +1,6 @@
+.sensor-center {
+  text-align: center;
+}
+.sensor-response {
+  word-wrap: break-word;
+}

@@ -1,0 +1,25 @@
+.page-section-ctn {
+  text-align: center;
+}
+
+.image {
+  margin-top: 15px;
+  width: 345px;
+  height: 225px;
+}
+
+.image-block-area {
+  height: 1500px;
+}
+
+.image-lazy-load {
+  width: 250px;
+  height: 250px;
+}
+
+.background-image {
+  background-image: url('https://public.bnbstatic.com/static/images/common/ogImage.jpg');
+  height: 250px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,46 @@
+<theme-context>
+  <view class='container'>
+    <head title='Image'></head>
+    <view class='page-body'>
+      <view class='page-section page-section-gap'>
+        <view class='page-section-title'>Local Image</view>
+        <view class='page-section-ctn'>
+          <image
+            id='image'
+            class='image'
+            src="{{localImage}}"
+            bindtap="onClick"
+            bind:longpress="onLongPress"
+            bindload="onLoad"
+            binderror="onError"
+          />
+        </view>
+      </view>
+
+      <view class='page-section page-section-gap'>
+        <view class='page-section-title'>Internet Image</view>
+        <view class='page-section-ctn'>
+          <image class='image' src="{{imageUrl}}" />
+        </view>
+      </view>
+
+      <view class='page-section page-section-gap'>
+        <view class='page-section-title'>
+          Internet Image (CSS background-image)
+        </view>
+        <view class='page-section-ctn'>
+          <view class='background-image' />
+        </view>
+      </view>
+
+      <view class='page-section page-section-gap'>
+        <view class='image-block-area' />
+        <image
+          class='image-lazy-load'
+          lazyLoad="{{true}}"
+          src="{{lazyImageUrl}}"
+        />
+      </view>
+    </view>
+  </view>
+</theme-context>

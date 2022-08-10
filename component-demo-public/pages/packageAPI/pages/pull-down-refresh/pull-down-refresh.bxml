@@ -1,0 +1,10 @@
+<theme-context>
+  <view class="container">
+    <view
+      class="btn"
+      bindtap="onClick"
+    >
+      Stop refresh
+    </view>
+  </view>
+</theme-context>

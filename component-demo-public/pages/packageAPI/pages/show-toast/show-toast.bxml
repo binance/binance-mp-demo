@@ -1,0 +1,59 @@
+<theme-context>
+  <view>
+    <head title='ShowToast' />
+    <view>
+      <view class='show-toast-center'>
+        <view class='show-toast-line'>
+          <text>title: </text>
+          <input
+            class='show-toast-input'
+            value="{{title}}"
+            bindinput="handleSetTitle"
+            placeholder='Please input title'
+            maxlength="{{-1}}"
+          />
+        </view>
+
+        <view class='show-toast-line'>
+          <text>icon: </text>
+          <input
+            class='show-toast-input'
+            value="{{icon}}"
+            bindinput="handleSetIcon"
+            placeholder='Please input icon'
+            maxlength="{{-1}}"
+          />
+          <text>
+            you can input these value: 'success' | 'loading' | 'none' |
+            'error'
+          </text>
+        </view>
+
+        <view class='show-toast-line'>
+          <text>duration(ms): </text>
+          <input
+            class='show-toast-input'
+            value="{{duration}}"
+            bindinput="handleSetDuration"
+            placeholder='Please input duration number'
+            maxlength="{{-1}}"
+          />
+          <text>you can input number here</text>
+        </view>
+
+        <view>
+          <button bindtap="showToast">showToast</button>
+        </view>
+        <view>
+          <button bindtap="hideToast">hideToast</button>
+        </view>
+        <view>
+          <button bindtap="showLoading">showLoading</button>
+        </view>
+        <view>
+          <button bindtap="hideLoading">hideLoading</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</theme-context>

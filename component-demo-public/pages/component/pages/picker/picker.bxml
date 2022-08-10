@@ -1,0 +1,142 @@
+<theme-context>
+  <view class="container">
+    <head title="picker"></head>
+    <view class="page-body">
+      <view class="page-section">
+        <view class="bnui-cells__title">Selector - array</view>
+        <view class="bnui-cells bnui-cells_after-title">
+          <view class="bnui-cell bnui-cell_input">
+            <view class="bnui-cell__hd">
+              <view class="bnui-label">Current</view>
+            </view>
+            <view class="bnui-cell__bd">
+              <picker
+                bindchange="pickerChange"
+                bindcancel="pickerCancel"
+                bindtap="pickerTap"
+                bind:longpress="pickerLongPress"
+                value="{{index}}"
+                range="{{array}}"
+                mode="selector"
+              >
+                <view class="bnui-input">{{array[index]}}</view>
+              </picker>
+            </view>
+          </view>
+        </view>
+
+        <view class="bnui-cells__title">Selector - objectArray</view>
+        <view class="bnui-cells bnui-cells_after-title">
+          <view class="bnui-cell bnui-cell_input">
+            <view class="bnui-cell__hd">
+              <view class="bnui-label">Current</view>
+            </view>
+            <view class="bnui-cell__bd">
+              <picker
+                bindchange="pickerChange"
+                bindcancel="pickerCancel"
+                value="{{index}}"
+                range="{{objectArray}}"
+                mode="selector"
+                rangeKey="name"
+                bindtap="pickerTap"
+                bind:longpress="pickerLongPress"
+              >
+                <view class="bnui-input">{{objectArray[index].name}}</view>
+              </picker>
+            </view>
+          </view>
+        </view>
+
+        <view class="bnui-cells__title">Time picker</view>
+        <view class="bnui-cells bnui-cells_after-title">
+          <view class="bnui-cell bnui-cell_input">
+            <view class="bnui-cell__hd">
+              <view class="bnui-label">Current</view>
+            </view>
+            <view class="bnui-cell__bd">
+              <picker
+                mode="time"
+                value="{{time}}"
+                start="09:01"
+                end="21:01"
+                bindchange="pickTime"
+              >
+                <view class="bnui-input">{{time}}</view>
+              </picker>
+            </view>
+          </view>
+        </view>
+
+        <view class="bnui-cells__title">Date picker</view>
+        <view class="bnui-cells bnui-cells_after-title">
+          <view class="bnui-cell bnui-cell_input">
+            <view class="bnui-cell__hd">
+              <view class="bnui-label">Current</view>
+            </view>
+            <view class="bnui-cell__bd">
+              <picker
+                mode="date"
+                value="{{date}}"
+                start="2020-09-01"
+                end="2024-09-01"
+                bindchange="pickDate"
+              >
+                <view class="bnui-input">{{date}}</view>
+              </picker>
+            </view>
+          </view>
+        </view>
+
+        <view class="bnui-cells__title">multiSelector - array</view>
+        <view class="bnui-cells bnui-cells_after-title">
+          <view class="bnui-cell bnui-cell_input">
+            <view class="bnui-cell__hd">
+              <view class="bnui-label">Current</view>
+            </view>
+            <view class="bnui-cell__bd">
+              <picker
+                mode="multiSelector"
+                range="{{multiArray}}"
+                value="{{multiIndex}}"
+                bindchange="onMultipickerChange"
+                onColumnChange="onMultipickerColumnChange"
+              >
+                <view>
+                  {{multiArray[0][multiIndex[0]]}} ,
+                  {{multiArray[1][multiIndex[1]]}} ,
+                  {{multiArray[2][multiIndex[2]]}}
+                </view>
+              </picker>
+            </view>
+          </view>
+        </view>
+
+        <view class="bnui-cells__title">multiSelector - arrayObject</view>
+        <view class="bnui-cells bnui-cells_after-title">
+          <view class="bnui-cell bnui-cell_input">
+            <view class="bnui-cell__hd">
+              <view class="bnui-label">Current</view>
+            </view>
+            <view class="bnui-cell__bd">
+              <picker
+                mode="multiSelector"
+                range="{{multiArrayObject}}"
+                value="{{multiObjectIndex}}"
+                rangeKey="name"
+                bindchange="onMultiObjectpickerChange"
+                onColumnChange="onMultiObjectpickerColumnChange"
+              >
+                <view>
+                  {{multiArrayObject[0][multiObjectIndex[0]].name}} ,
+                  {{multiArrayObject[1][multiObjectIndex[1]].name}} ,
+                  {{multiArrayObject[2][multiObjectIndex[2]].name}}
+                </view>
+              </picker>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</theme-context>

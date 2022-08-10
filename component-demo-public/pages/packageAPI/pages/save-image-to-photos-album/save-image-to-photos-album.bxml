@@ -1,0 +1,25 @@
+<theme-context>
+  <view>
+    <head title="SaveImageToPhotosAlbum" />
+    <view>
+      <view class="saveImageToPhotosAlbum-center">
+        <view>
+          <button bindtap="chooseImage"> chooseImage </button>
+          <text>Choose picture to save it at local.</text>
+        </view>
+        <view>
+          <view bn:if="{{tempFilePaths}}" bn:for="{{tempFilePaths}}" bn:key="index">
+            <image class="saveImageToPhotosAlbum-img" src="{{item}}" />
+            <button
+              data-item="{{item}}"
+              bindtap="saveImageButton"
+            >
+              saveImageToPhotosAlbum
+            </button>
+            <text>save image to photos album</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</theme-context>

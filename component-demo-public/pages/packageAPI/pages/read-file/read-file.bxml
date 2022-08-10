@@ -1,0 +1,207 @@
+
+<theme-context>
+  <view>
+    <head title="readFile/readFileSync" />
+    <view>
+      <view>
+        <view>
+          <input
+            value="{{filePath}}"
+            bindinput="onPathInput"
+            placeholder="File Path"
+            maxlength="{{-1}}"
+          />
+        </view>
+        <view>
+          <input
+            value="{{encoding}}"
+            bindinput="onEncodingInput"
+            placeholder="Encoding"
+            maxlength="{{-1}}"
+          />
+        </view>
+        <view>
+          <radio-group class="group" bindchange="radioChange">
+            <radio value="json" checked>
+              json file
+            </radio>
+            <radio value="jpg">jpg file</radio>
+          </radio-group>
+          <button bindtap="readFile">readFile</button>
+          <button bindtap="readFileSync">readFileSync</button>
+        </view>
+
+        <view>
+          <text>{{fileContent}}</text>
+          <image bn:if="{{imageSrc}}" src="{{imageSrc}}" binderror="onImageError" />
+        </view>
+      </view>
+    </view>
+    <head title="writeFile/writeFileSync" />
+    <view>
+      <text>writeFile content:{{writeFileContent}}</text>
+      <text>writeFile message: {{writeFileMessage}}</text>
+      <view>
+        <view>
+          <text>Path: $userDataPath://foo.txt </text>
+          <button
+            bindtap="writeFileButtonClick"
+          >
+            writeFile
+          </button>
+          <button
+            bindtap="writeFileButtonSyncClick"
+          >
+            writeFileSync
+          </button>
+          <text>write array buffer, Path: $userDataPath://foo.jpg </text>
+          <button bindtap="writeJPGFile">writeJPGFile</button>
+          <button bindtap="writeJPGFileSync">writeJPGFileSync</button>
+            <image
+              bn:if="{{writeImageSrc}}"
+              src="{{writeImageSrc}}"
+              binderror="onImageError"
+            />
+          <text>fail no permission, Path: `/foo.txt`, no permission</text>
+          <button bindtap="writeLocalFileButtonClick">writeFile</button>
+          <button bindtap="writeLocalFileButtonSyncClick">
+            writeFileSync
+          </button>
+          <text>
+            fail no such file or directory, path:
+            `$userDataPath://foo/bar/a.txt`
+          </text>
+          <button
+            bindtap="writeATextFileButtonSyncClick"
+          >
+            writeFile
+          </button>
+          <button
+            bindtap="writeATextFileButtonClick"
+          >
+            writeFileSync
+          </button>
+        </view>
+      </view>
+    </view>
+    <head title="mkdir/mkdirSync" />
+    <view>
+      <text>mkdir message: {mkdirMessage}</text>
+      <view>
+        <view>
+          <text>
+            success, path: `$userDataPath://a/b/c/d`, recursive: true
+          </text>
+          <button
+            data-path="/a/b/c/d"
+            data-recursive="{{true}}"
+            bindtap="mkdirWriteFile"
+          >
+            mkdir
+          </button>
+          <text>
+            success, path: `$userDataPath://d/c/b/a`, recursive: true
+          </text>
+          <button
+            data-path="/d/c/b/a"
+            data-recursive="{{true}}"
+            bindtap="mkdirWriteFileSync"
+          >
+            mkdirSync
+          </button>
+          <text>fail, path: `$userDataPath://c/a/b/d`, recursive: false</text>
+          <button
+            data-path="/c/a/b/d"
+            bindtap="mkdirWriteFile"
+          >
+            mkdir
+          </button>
+          <button
+            data-path="/c/a/b/d"
+            bindtap="mkdirWriteFileSync"
+          >
+            mkdirSync
+          </button>
+          <text>fail, no permission, path: `/a/b/c/d` </text>
+          <button
+            data-path="/a/b/c/d"
+            bindtap="mkdirWriteFile">mkdir</button>
+          <button data-path="/a/b/c/d" bindtap="mkdirWriteFileSync">mkdirSync</button>
+          <text>
+            fail, file already exists, path: `$userDataPath://a/b/c/d`{" "}
+          </text>
+          <button
+            data-path="/a/b/c/d"
+            bindtap=mkdirWriteFile
+          >
+            mkdir
+          </button>
+          <button
+            data-path="/a/b/c/d"
+            bindtap="mkdirWriteFileSync"
+          >
+            mkdirSync
+          </button>
+        </view>
+      </view>
+    </view>
+    <head title="access/accessSync" />
+    <view>
+      <text>access message: {{accessMessage}}</text>
+      <view>
+        <view>
+          <text>
+            success, path: "pages/packageAPI/pages/read-file/text.json"
+          </text>
+          <button
+            data-path="pages/packageAPI/pages/read-file/text.json"
+            bindtap="access"
+          >
+            access
+          </button>
+          <button
+            data-path="pages/packageAPI/pages/read-file/text.json"
+            bindtap="accessSync"
+          >
+            accessSync
+          </button>
+          <text>fail, path: `pages/packageAPI/pages/read-file/foo-bar`</text>
+          <button
+            data-path="pages/packageAPI/pages/read-file/foo-bar"
+            bindtap="access"
+          >
+            access
+          </button>
+          <button
+            data-path="pages/packageAPI/pages/read-file/foo-bar"
+            bindtap="accessSync"
+          >
+            accessSync
+          </button>
+        </view>
+      </view>
+    </view>
+    <head title='copyFile/copyFileSync' />
+    <view>
+      <view>copyFile from /hello.txt to /test-hello.txt</view>
+      <button bindtap="copyFile">copyFile</button>
+      <view>dose test-hello.txt exists</view>
+      <view><button bindtap="checkFile"> check </button> {{copyStatus}}</view>
+      <view>copyFileSync from /hello.txt to /test-hello2.txt</view>
+      <button bindtap="copyFileSync">copySyncFile</button>
+      <view>dose test-hello2.txt exists</view>
+      <view><button bindtap="checkSyncFile"> check </button> {{copyStatus2}}</view>
+    </view>
+    <head title='unzip' />
+    <view class="section">
+      <view>unzip file 'unzip-test.zip' </view>
+      <button bindtap="unzipFile">unzip</button>
+      <view>dose unzip-test exists?</view>
+      <view>
+        <button bindtap="checkUnzip"> check </button> 
+        <view>{{zipStatus}}</view>
+      </view>
+    </view>
+  </view>
+
+</theme-context>

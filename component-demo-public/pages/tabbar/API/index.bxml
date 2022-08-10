@@ -1,59 +1,136 @@
 <theme-context>
-<view>
-	<view bn:if="{{dispaySetTabbar}}">
-    <!-- TODO: set-tab-bar to be done -->
-		<set-tab-bar bindtap="toggleSetTabbar">
-		</set-tab-bar>
-	</view>
-	<view bn:else class="index">
-		<view class="index-hd">
-			<view class="index-desc">
-				Mini Program API Demos
-			</view>
-		</view>
-		<view class="kind-list">
-      <block bn:for="{{list}}" bn:key="index" >
-        <view class="kind-list-item" bindtap="kindToggle" data-id="{{item.id}}">
-          <view class="{{list[index].open ? 'kind-list-item-hd kind-list-item-hd-show' : 'kind-list-item-hd'}}">
-            <view class="kind-list-text">
-              {{item.name}}
+  <view>
+    <view hidden="{{!dispaySetTabbar}}">
+      <view class='container'>
+        <head title='NavigationBar'></head>
+        <view class='page-body'>
+          <view class='page-section'>
+            <view class='bnui-cells bnui-cells_after-title'>
+              <button bindtap="toggleSetTabbar">Go Back</button>
             </view>
-            <image class="kind-list-img" src="{{list[index].image}}">
-            </image>
-          </view>
-          <view class="kind-list-item-bd {{ list[index].open ? 'kind-list-item-bd-show' : ''}}">
-            <view class="navigator-box {{ list[index].open ? 'navigator-box-show' : ''}}">
-              <block bn:for="{{list[index].pages}}" bn:for-item="page" bn:for-index="pIdx">
+            <view class='bnui-cells__title'>mpService.setTabBarItem</view>
+            <view class='bnui-cells bnui-cells_after-title'>
+              <view class='bnui-cell bnui-cell_Input tabBar-input-wrapper'>
+                <view>Set text</view>
+                <input class='bnui-Input' value="{{apiText}}" bindinput="setAPIText" />
+                <button bindtap="setTabBarItemWithText">
+                  send
+                </button>
+              </view>
+              <text class='small-text'>{{`mpService.setTabBarItem({
+                index: 2,
+                text: ${apiText}
+                })`}}</text>
+            </view>
+
+            <view class='bnui-cells bnui-cells_after-title'>
+              <view class='bnui-cell bnui-cell_Input tabBar-input-wrapper'>
+                <view>Set iconPath</view>
+                <button bindtap="setTabBarItemLocalIcon">
+                  send
+                </button>
+              </view>
+              <text class='small-text'>{{`mpService.setTabBarItem({
+                index: 0,
+                iconPath: 'image/icon_API.png'
+                })`}}</text>
+            </view>
+
+            <view class='bnui-cells bnui-cells_after-title'>
+              <view class='bnui-cell bnui-cell_Input tabBar-input-wrapper'>
                 <view>
-                  <view bn:if="{{ page.url == '@set-tab-bar'}}">
-                    <view
-                        class='navigator'
-                        bn:key="{{page.title}}"
-                        bindtap="toggleSetTabbar"
-                      >
-                        <view class='navigator-text'>
-                          {{page.title}}
-                        </view>
-                        <view class='navigator-arrow'></view>
-                    </view>
-                  </view>
-                  <view bn:else>
-                    <navigator url="{{'pages/packageAPI/pages/' + list[index].pages[pIdx].url }}" class="navigator">
-                      <view class="navigator-text">
-                        {{page.title}}
-                      </view>
-                      <view class="navigator-arrow">
-                      </view>
-                    </navigator>
-                  </view>
+                  {{isTabBarVisible ? 'Hide' : 'Show'}} TabBar with out animation
                 </view>
-              </block>
+                <button bindtap="toggleTabbarWithoutAnimation">
+                  {{isTabBarVisible ? 'Hide' : 'Show'}} TabBar
+                </button>
+              </view>
+              <text class='small-text'>{{`mpService.${
+                isTabBarVisible ? 'hide' : 'show'
+                }TabBar({animation:false})`}}</text>
+            </view>
+
+            <view class='bnui-cells bnui-cells_after-title'>
+              <view class='bnui-cell bnui-cell_Input tabBar-input-wrapper'>
+                <view>
+                  {{isTabBarVisible ? 'Hide' : 'Show'}} TabBar with animation
+                </view>
+                <button bindtap="toggleTabbarWithAnimation">
+                  {{isTabBarVisible ? 'Hide' : 'Show'}} TabBar
+                </button>
+              </view>
+              <text class='small-text'>{{`mpService.${
+                isTabBarVisible ? 'hide' : 'show'
+                }TabBar({animation:true})`}}}</text>
+            </view>
+            <view class='bnui-cells bnui-cells_after-title'>
+              <view class='bnui-cell bnui-cell_Input tabBar-input-wrapper'>
+                <view>Set iconPath from internet</view>
+                <button bindtap="setTabBarItemRemoteIcon">
+                  send
+                </button>
+              </view>
+              <text class='small-text'>{{`mpService.setTabBarItem({
+                index: 0,
+                iconPath:
+                'https://github.githubassets.com/images/icons/emoji/tada.png'
+                })`}}</text>
             </view>
           </view>
         </view>
-      </block>
-		</view>
-    <view class='index-ft' />
-	</view>
-</view>
+      </view>
+    </view>
+    <view hidden="{{dispaySetTabbar}}" class="index">
+      <view class="index-hd">
+        <view class="index-desc">
+          Mini Program API Demos
+        </view>
+      </view>
+      <view class="index-bd">
+        <view class="kind-list">
+          <block bn:for="{{list}}" bn:key="index" >
+            <view class="kind-list-item" bindtap="kindToggle" data-id="{{item.id}}">
+              <view class="{{list[index].open ? 'kind-list-item-hd kind-list-item-hd-show' : 'kind-list-item-hd'}}">
+                <view class="kind-list-text">
+                  {{item.name}}
+                </view>
+                <image class="kind-list-img" src="{{list[index].image}}">
+                </image>
+              </view>
+              <view class="kind-list-item-bd {{ list[index].open ? 'kind-list-item-bd-show' : ''}}">
+                <view class="navigator-box {{ list[index].open ? 'navigator-box-show' : ''}}">
+                  <block bn:for="{{list[index].pages}}" bn:for-item="page" bn:for-index="pIdx">
+                    <view>
+                      <view bn:if="{{ page.url == '@set-tab-bar'}}">
+                        <view
+                            class='navigator'
+                            bn:key="{{page.title}}"
+                            bindtap="toggleSetTabbar"
+                          >
+                            <view class='navigator-text'>
+                              {{page.title}}
+                            </view>
+                            <view class='navigator-arrow'></view>
+                        </view>
+                      </view>
+                      <view bn:else>
+                        <navigator url="{{'pages/packageAPI/pages/' + list[index].pages[pIdx].url }}" class="navigator">
+                          <view class="navigator-text">
+                            {{page.title}}
+                          </view>
+                          <view class="navigator-arrow">
+                          </view>
+                        </navigator>
+                      </view>
+                    </view>
+                  </block>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+      <view class='index-ft' />
+    </view>
+  </view>
 </theme-context>

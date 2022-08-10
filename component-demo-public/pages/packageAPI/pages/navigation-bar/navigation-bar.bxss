@@ -1,5 +1,3 @@
-@import '../../../common/lib/weui.bxss';
-
 .page-section {
   margin-bottom: 10px;
 }

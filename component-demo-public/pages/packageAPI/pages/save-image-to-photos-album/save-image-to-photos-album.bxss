@@ -1,0 +1,13 @@
+.saveImageToPhotosAlbum-center {
+  text-align: center;
+  /* white-space: pre; */
+}
+
+.saveImageToPhotosAlbum-img {
+  width: 80px;
+  height: 80px;
+}
+
+.saveImageToPhotosAlbum-response {
+  word-wrap: break-word;
+}

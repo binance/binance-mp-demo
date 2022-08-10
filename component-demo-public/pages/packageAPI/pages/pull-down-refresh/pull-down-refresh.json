@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "下拉刷新",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "head": "../../../../components/head/head",
+    "theme-context": "../../../../components/theme-context/theme-context"
+  }
+}

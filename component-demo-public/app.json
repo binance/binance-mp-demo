@@ -20,7 +20,7 @@
     }
   },
   "tabBar": {
-    "custom": true,
+    "custom": false,
     "color": "@tabFontColor",
     "selectedColor": "@tabSelectedColor",
     "backgroundColor": "@tabBgColor",
@@ -64,7 +64,17 @@
         "pages/textarea/textarea",
         "pages/video/video",
         "pages/web-view/web-view",
-        "pages/web-view-custom-nav/web-view-custom-nav"
+        "pages/web-view-custom-nav/web-view-custom-nav",
+        "pages/picker/picker",
+        "pages/radio/radio",
+        "pages/scroll-view/scroll-view",
+        "pages/slider/slider",
+        "pages/rich-text/rich-text",
+        "pages/checkbox/checkbox",
+        "pages/cover-view/cover-view",
+        "pages/form/form",
+        "pages/icon/icon",
+        "pages/image/image"
       ]
     },
     {
@@ -89,7 +99,16 @@
         "pages/navigation-bar/navigation-bar",
         "pages/network/network",
         "pages/page-scroll-reach-bottom/page-scroll-reach-bottom",
-        "pages/preview-image/preview-image"
+        "pages/preview-image/preview-image",
+        "pages/pull-down-refresh/pull-down-refresh",
+        "pages/read-file/read-file",
+        "pages/request-payment/request-payment",
+        "pages/save-image-to-photos-album/save-image-to-photos-album",
+        "pages/show-toast/show-toast",
+        "pages/show-action-sheet/show-action-sheet",
+        "pages/set-keep-screen-on/set-keep-screen-on",
+        "pages/sensor/sensor",
+        "pages/scan-code/scan-code"
       ]
     },
     { "root": "pages/about", "pages": ["about"], "independent": true },

@@ -1,0 +1,84 @@
+<theme-context>
+  <view class="container">
+    <head title="slider"></head>
+    <view class="page-body">
+      <view class="page-section page-section-gap">
+        <view class="page-section-title">Set step</view>
+        <view class="body-view">
+          <slider
+            value="{{60}}"
+            bindchange="sliderChange"
+            step="{{5}}"
+            bindtap="sliderClick"
+            onLongPress="sliderLonePress"
+          ></slider>
+        </view>
+      </view>
+
+      <view class="page-section page-section-gap">
+        <view class="page-section-title">disabled</view>
+        <view class="body-view">
+          <slider
+            value="{{60}}"
+            bindchange="sliderChange"
+            step="{{5}}"
+            disabled
+          ></slider>
+        </view>
+      </view>
+
+      <view class="page-section page-section-gap">
+        <view class="page-section-title">Display current value</view>
+        <view class="body-view">
+          <slider
+            value="{{50}}"
+            bindchange="sliderChange"
+            show-value="{{true}}"
+          ></slider>
+        </view>
+      </view>
+      <view class="page-section page-section-gap">
+        <view class="page-section-title">Set min/max value</view>
+        <view class="body-view">
+          <slider
+            value="{{100}}"
+            bindchange="sliderChange"
+            min="{{50}}"
+            max="{{200}}"
+            show-value="{{true}}"
+          ></slider>
+        </view>
+      </view>
+
+      <view class="page-section page-section-gap">
+        <view class="page-section-title">controlled</view>
+        <view class="body-view">
+          <slider
+            value="{{controlledValue}}"
+            bindchange="onControlledValueChange"
+            min="{{50}}"
+            max="{{200}}"
+            show-value="{{true}}"
+          />
+
+          <slider
+            value="{{controlledValue}}"
+            bindchange="onControlledValueChange"
+            min="{{50}}"
+            max="{{200}}"
+            show-value="{{true}}"
+          />
+        </view>
+      </view>
+    </view>
+
+    <view style="margin: 24px;">
+      normal Taroslider
+      <slider />
+    </view>
+    <view style="position: relative;margin: 24; ">
+      with position: relative
+      <slider />
+    </view>
+  </view>
+</theme-context>

@@ -1,0 +1,168 @@
+<theme-context>
+  <view>
+    <head title='Sensor' />
+    <view>
+      <head title='compass' />
+      <view class='sensor-center'>
+        <view class='sensor-response'>
+          <text>compass result:{{showCompass}}</text>
+        </view>
+
+        <view>
+          <button
+            bindtap="startCompass"
+          >
+            startCompass
+          </button>
+        </view>
+
+        <view>
+          <button
+            bindtap="stopCompass"
+          >
+            stopCompass
+          </button>
+        </view>
+
+        <view>
+          <button bindtap="onCompassChange">onCompassChange</button>
+        </view>
+
+        <view>
+          <button bindtap="offCompassChange">offCompassChange</button>
+        </view>
+      </view>
+
+      <head title='Accelerometer' />
+      <view class='sensor-center'>
+        <view class='sensor-response'>
+          <text>Accelerometer result:{{showAccelerometer}}</text>
+        </view>
+
+        <view>
+          <button
+            bindtap="startAccelerometer"
+          >
+            startAccelerometer
+          </button>
+        </view>
+
+        <view>
+          <button
+            bindtap="stopAccelerometer"
+          >
+            stopAccelerometer
+          </button>
+        </view>
+
+        <view>
+          <button bindtap="onAccelerometerChange">
+            onAccelerometerChange
+          </button>
+        </view>
+
+        <view>
+          <button bindtap="offAccelerometerChange">
+            offAccelerometerChange
+          </button>
+        </view>
+      </view>
+
+      <head title='DeviceMotion' />
+      <view class='sensor-center'>
+        <view class='sensor-response'>
+          <text>DeviceMotion result:{{showDeviceMotion}}</text>
+        </view>
+
+        <view>
+          <button
+            bindtap="startDeviceMotionListening"
+          >
+            startDeviceMotionListening
+          </button>
+        </view>
+
+        <view>
+          <button
+            bindtap="stopDeviceMotionListening"
+          >
+            stopDeviceMotionListening
+          </button>
+        </view>
+
+        <view>
+          <button bindtap="onDeviceMotionChange">onDeviceMotionChange</button>
+        </view>
+
+        <view>
+          <button bindtap="offDeviceMotionChange">
+            offDeviceMotionChange
+          </button>
+        </view>
+      </view>
+
+      <head title='Gyroscope' />
+      <view class='sensor-center'>
+        <view class='sensor-response'>
+          <text>Gyroscope result:{{showGyroscope}}</text>
+        </view>
+
+        <view>
+          <button
+            bindtap="startGyroscope"
+          >
+            startGyroscope
+          </button>
+        </view>
+
+        <view>
+          <button
+            bindtap="stopGyroscope"
+          >
+            stopGyroscope
+          </button>
+        </view>
+
+        <view>
+          <button bindtap="onGyroscopeChange">onGyroscopeChange</button>
+        </view>
+
+        <view>
+          <button bindtap="offGyroscopeChange">offGyroscopeChange</button>
+        </view>
+      </view>
+
+      <head title='vibrate' />
+      <view class='sensor-center'>
+        <view>
+          <button
+            bindtap="vibrateShort"
+          >
+            vibrateShort
+          </button>
+        </view>
+
+        <view>
+          <button
+            bindtap="vibrateLong"
+          >
+            vibrateLong
+          </button>
+        </view>
+      </view>
+
+      <head title='device-orientation' />
+      <view class='sensor-center'>
+        <view class='sensor-response'>
+          <text>orientation result:{{showDeviceOrientation}}</text>
+        </view>
+        <view>
+          <button bindtap="onOrientationChange">onOrientationChange</button>
+        </view>
+        <view>
+          <button bindtap="offOrientationChange">offOrientationChange</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</theme-context>

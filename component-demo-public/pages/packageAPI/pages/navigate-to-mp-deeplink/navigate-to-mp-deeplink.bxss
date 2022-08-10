@@ -1,5 +1,3 @@
-@import url('../../../common/lib/weui.bxss');
-
 .hr {
   margin-bottom: 48px;
 }

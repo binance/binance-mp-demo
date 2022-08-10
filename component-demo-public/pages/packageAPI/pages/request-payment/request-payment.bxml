@@ -1,0 +1,21 @@
+<theme-context>
+  <view class="container">
+    <head title="Payment"></head>
+    <view class="page-body">
+      <view class="page-section">
+        <view>Payment Total</view>
+        <view class="price">1</view>
+        <view class="desc">{{state}}</view>
+        <view class="btn-area">
+          <button
+            type="primary"
+            bindtap="requestPayment"
+            loading="{{loading}}"
+          >
+            Start Payment
+          </button>
+        </view>
+      </view>
+    </view>
+  </view>
+</theme-context>
