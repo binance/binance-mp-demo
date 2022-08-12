@@ -54,9 +54,9 @@
           bindscroll="onScroll"
           scroll-into-view="{{scrollIntoView}}"
         >
-          <view class="scroll-view-item demo-text-1"></view>
-          <view class="scroll-view-item demo-text-2"></view>
-          <view class="scroll-view-item demo-text-3"></view>
+          <view id="demo1" class="scroll-view-item demo-text-1"></view>
+          <view id="demo2" class="scroll-view-item demo-text-2"></view>
+          <view id="demo3" class="scroll-view-item demo-text-3"></view>
         </scroll-view>
       </view>
     </view>
@@ -75,9 +75,9 @@
           bindscroll="onScroll"
           scroll-into-view="{{scrollIntoView}}"
         >
-          <view class="scroll-view-item_H demo-text-1"></view>
-          <view class="scroll-view-item_H demo-text-2"></view>
-          <view class="scroll-view-item_H demo-text-3"></view>
+          <view id="demo1" class="scroll-view-item_H demo-text-1"></view>
+          <view id="demo2" class="scroll-view-item_H demo-text-2"></view>
+          <view id="demo3" class="scroll-view-item_H demo-text-3"></view>
         </scroll-view>
       </view>
     </view>
@@ -112,7 +112,7 @@
           bindscrolltoupper="onScrollToUpper"
           bindscrolltolower="onScrollToLower"
           bindscroll="onScroll"
-          scrollLeft="{{25}}"
+          scroll-left="{{25}}"
           enhanced
           fastDeceleration
         >
@@ -131,7 +131,7 @@
           bindtap="onTap"
           bind:longpress="onLongpress"
           bindscroll="onScroll"
-          scrollTop="{{25}}"
+          scroll-top="{{25}}"
           enhanced
           fastDeceleration
         >

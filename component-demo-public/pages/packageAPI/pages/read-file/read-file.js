@@ -52,20 +52,19 @@ Page({
     }
   },
   readFileSync() {
+    console.log('readFileSync ==>');
     try {
       const encoding = this.data.encoding && this.data.encoding.trim()
       const fs = bn.getFileSystemManager()
       const res = fs.readFileSync(
-        filePath,
+        this.data.filePath,
         encoding || undefined
       )
       if (!encoding) {
         const url = bn.createBufferURL(res)
-        this.setData({ imgSrc: url })
-        this.setData({ fileContent: "" })
+        this.setData({ imageSrc: url, fileContent: "" })
       } else {
-        this.setData({ fileContent: res })
-        this.setData({ imgSrc: "" })
+        this.setData({ fileContent: res, imageSrc: "" })
       }
     } catch (error) {
       console.log('error: ', `error: ${JSON.stringify(error)}`)
@@ -89,13 +88,13 @@ Page({
   writeATextFileButtonSyncClick() {
     this.writeFile(bn.env.USER_DATA_PATH + "/foo/bar/a.txt")
   },
-  mkdirWriteFile() {
+  mkdirWriteFile(e) {
     const { path, recursive = false } = e.target.dataset
-    mkdirFile(bn.env.USER_DATA_PATH + path, recursive)
+    this.mkdirFile(bn.env.USER_DATA_PATH + path, recursive)
   },
-  mkdirWriteFileSync() {
+  mkdirWriteFileSync(e) {
     const { path, recursive = false } = e.target.dataset
-    mkdirFileSync(bn.env.USER_DATA_PATH + path, recursive)
+    this.mkdirFileSync(bn.env.USER_DATA_PATH + path, recursive)
   },
   writeFile(path, encoding) {
     const fs = bn.getFileSystemManager()

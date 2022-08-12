@@ -72,12 +72,12 @@
             `$userDataPath://foo/bar/a.txt`
           </text>
           <button
-            bindtap="writeATextFileButtonSyncClick"
+            bindtap="writeATextFileButtonClick"
           >
             writeFile
           </button>
           <button
-            bindtap="writeATextFileButtonClick"
+            bindtap="writeATextFileButtonSyncClick"
           >
             writeFileSync
           </button>
@@ -86,7 +86,7 @@
     </view>
     <head title="mkdir/mkdirSync" />
     <view>
-      <text>mkdir message: {mkdirMessage}</text>
+      <text>mkdir message: {{mkdirMessage}}</text>
       <view>
         <view>
           <text>
@@ -198,7 +198,7 @@
       <button bindtap="unzipFile">unzip</button>
       <view>dose unzip-test exists?</view>
       <view>
-        <button bindtap="checkUnzip"> check </button> 
+        <button bindtap="checkUnzip"> check </button>
         <view>{{zipStatus}}</view>
       </view>
     </view>

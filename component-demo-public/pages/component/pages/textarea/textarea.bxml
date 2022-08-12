@@ -263,8 +263,9 @@
             </picker>
           </view>
           <view class="bnui-cell bnui-cell_textarea">
+            <view class="{{confirmTypeVal}}"></view>
             <textarea
-              confirmType="{{confirmTypes[confirmType]}}"
+              confirm-type="{{confirmTypeVal}}"
               placeholder="apply confirmType"
               class="bnui-textarea"
             />
