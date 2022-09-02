@@ -1,0 +1,4 @@
+.center {
+  margin: 12px;
+  white-space: pre;
+}

@@ -1,0 +1,10 @@
+<page>
+  <view class="title">create buffer...</view>
+  <view class="title">gl.isBuffer</view>
+  <view>{{ isBuffer }}</view>
+  <view>call bufferData and bufferSubData</view>
+  <view>should draw a red triangle properly</view>
+  <canvas id="canvas-1"></canvas>
+  <view>data contains NaN, should draw a white triangle</view>
+  <canvas id="canvas-2"></canvas>
+</page>

@@ -1,0 +1,16 @@
+<theme-context>
+  <view>
+    <head title="Subscribe Message"></head>
+    <view class="subscribe-message info-block center">
+      <view class="form-item">
+        <text> template ids: </text>
+        <input class="id-input" type="text" value="{{ids}}" bindinput="handleInput" placeholder="input template ids"/>
+        <text> (split with camma)</text>
+      </view>
+      <button bindtap="requestSubscribeMessage"> Request Subscribe Message </button>
+      <block bn:if="{{hasInfo}}">
+        <textarea value="{{info}}" class="result"/>
+      </block>
+    </view>
+  </view>
+</theme-context>

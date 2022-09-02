@@ -1,0 +1,14 @@
+<theme-context>
+  <view>
+    <head title="MakePhoneCall" />
+    <view style="width: 100%;">
+      <view class="center">
+        <view>
+          <text style="width: 100%;">please input the phone number you want to call</text>
+          <input bindinput="handlePhoneNumberChange"></input>
+          <button type="primary" disabled="{{!phoneNumber}}" bindtap="makePhoneCall">makePhoneCall</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</theme-context>

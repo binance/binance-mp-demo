@@ -1,0 +1,4 @@
+<page>
+  <view>load model in ".gltf" format, try dragging the model</view>
+  <canvas id="canvas" style="height: 500px; width: 300px" bindtouchmove="onTouchMove" bindtouchstart="onTouchStart"></canvas>
+</page>

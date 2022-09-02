@@ -1,0 +1,10 @@
+.content {
+  color: white;
+  background-color: black;
+  white-space: pre-line;
+}
+
+.title {
+  font-weight: bold;
+  padding-top: 20px;
+}

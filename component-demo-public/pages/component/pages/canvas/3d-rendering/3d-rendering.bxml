@@ -1,0 +1,5 @@
+<page>
+  <view>draw to rotate</view>
+  <canvas id="canvas" style="height: 100vh; width: 100vw;"
+  bindtouchmove="onTouchMove" bindtouchstart="onTouchStart"></canvas>
+</page>

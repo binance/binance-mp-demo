@@ -1,0 +1,30 @@
+<page>
+  <view>
+    Vertex Shader:
+    <view class="content">{{vertexShader}}</view>
+  </view>
+  <view>
+    Fragment Shader:
+    <view class="content">{{fragmentShader}}</view>
+  </view>
+  <view class="title"> getShaderSource of vertex shader: </view>
+  <view>{{ vSource }}</view>
+  <view class="title"> getShaderSource of fragment shader:</view>
+  <view>{{ fSource }}</view>
+  <view class="title"> compileShader - vertexShader:</view>
+  <view>{{ vStatus ? "✅" : "❌" }}</view>
+  <view class="title"> compileShader - fragmentShader:</view>
+  <view>{{ fStatus ? "✅" : "❌" }}</view>
+  <view class="title"> info log of vertexShader (except nothing): </view>
+  <view>{{ vMessage }}</view>
+  <view class="title"> info log of fragmentShader (except nothing):</view>
+  <view>{{ fMessage }}</view>
+  <view class="title"> attachShader: </view>
+  <view>{{ linkStatus ? "✅" : "❌" }}</view>
+  <view class="title"> getAttachedShaders: </view>
+  <view>{{ attachedShader }} </view>
+  <view class="title"> detach shader...</view>
+  <view class="title"> getAttachedShaders: </view>
+  <view>{{ detachedShader }} </view>
+  <canvas id="canvas"></canvas>
+</page>

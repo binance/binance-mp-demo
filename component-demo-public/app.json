@@ -74,7 +74,17 @@
         "pages/cover-view/cover-view",
         "pages/form/form",
         "pages/icon/icon",
-        "pages/image/image"
+        "pages/image/image",
+        "pages/canvas/canvas",
+        "pages/canvas/texImage2D/texImage2D",
+        "pages/canvas/texSubImage2D/texSubImage2D",
+        "pages/canvas/shader/shader",
+        "pages/canvas/clear/clear",
+        "pages/canvas/bufferData/bufferData",
+        "pages/canvas/drawArray/drawArray",
+        "pages/canvas/drawElements/drawElements",
+        "pages/canvas/glsl-model/glsl-model",
+        "pages/canvas/3d-rendering/3d-rendering"
       ]
     },
     {
@@ -87,6 +97,7 @@
       "name": "packageAPI",
       "pages": [
         "pages/get-system-info/get-system-info",
+        "pages/make-phone-call/make-phone-call",
         "pages/navigate-in-mp/navigate-in-mp",
         "pages/animation/animation",
         "pages/animation-scroll-view/animation-scroll-view",
@@ -103,12 +114,14 @@
         "pages/pull-down-refresh/pull-down-refresh",
         "pages/read-file/read-file",
         "pages/request-payment/request-payment",
+        "pages/request-subscribe-message/request-subscribe-message",
         "pages/save-image-to-photos-album/save-image-to-photos-album",
         "pages/show-toast/show-toast",
         "pages/show-action-sheet/show-action-sheet",
         "pages/set-keep-screen-on/set-keep-screen-on",
         "pages/sensor/sensor",
-        "pages/scan-code/scan-code"
+        "pages/scan-code/scan-code",
+        "pages/canvas-to-temp-file-path/canvas-to-temp-file-path"
       ]
     },
     { "root": "pages/about", "pages": ["about"], "independent": true },

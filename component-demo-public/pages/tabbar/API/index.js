@@ -14,6 +14,10 @@ Page({
             title: 'Payment',
             url: 'request-payment/request-payment'
           },
+          {
+            title: 'Subscribe Message',
+            url: 'request-subscribe-message/request-subscribe-message'
+          },
       //     {
       //       title: 'Monitor',
       //       url: 'monitor/monitor'
@@ -30,46 +34,46 @@ Page({
             title: 'Authorize',
             url: 'authorize/authorize'
           },
-      //     {
-      //       title: 'Get user profile',
-      //       url: 'get-user-profile/get-user-profile'
-      //     },
-      //     {
-      //       title: 'Get app settings',
-      //       url: 'get-app-settings/get-app-settings'
-      //     },
-      //     {
-      //       title: 'Get app configs',
-      //       url: 'get-app-configs/get-app-configs'
-      //     },
+          //     {
+          //       title: 'Get user profile',
+          //       url: 'get-user-profile/get-user-profile'
+          //     },
+          //     {
+          //       title: 'Get app settings',
+          //       url: 'get-app-settings/get-app-settings'
+          //     },
+          //     {
+          //       title: 'Get app configs',
+          //       url: 'get-app-configs/get-app-configs'
+          //     },
           {
             title: 'Application Event',
             url: 'application-onoff-event/application-onoff-event'
           },
           {
-            title: 'Get phone number',
+            title: 'Get Phone Number',
             url: 'get-phone-number/get-phone-number'
           },
           {
-            title: 'Get email address',
+            title: 'Get Email Address',
             url: 'get-email-address/get-email-address'
-          },
-      //     {
-      //       title: 'Web3 Provider',
-      //       url: 'web3-provider/web3-provider'
-      //     },
-      //     {
-      //       title: 'Wallet Hub',
-      //       url: 'wallet-connector-context/wallet-connector-context'
-      //     },
-      //     {
-      //       title: 'CustomApi',
-      //       url: 'custom-api/custom-api'
-      //     },
-      //     {
-      //       title: 'handleError',
-      //       url: 'handle-error/handle-error'
-      //     }
+          }
+          //     {
+          //       title: 'Web3 Provider',
+          //       url: 'web3-provider/web3-provider'
+          //     },
+          //     {
+          //       title: 'Wallet Hub',
+          //       url: 'wallet-connector-context/wallet-connector-context'
+          //     },
+          //     {
+          //       title: 'CustomApi',
+          //       url: 'custom-api/custom-api'
+          //     },
+          //     {
+          //       title: 'handleError',
+          //       url: 'handle-error/handle-error'
+          //     }
         ],
         image: 'pages/tabbar/API/resources/kind/api.png'
       },
@@ -78,10 +82,10 @@ Page({
         name: 'User Interface',
         open: false,
         pages: [
-      //     {
-      //       title: 'Get BXML Node Info',
-      //       url: 'get-bxml-node-info/get-bxml-node-info'
-      //     },
+          //     {
+          //       title: 'Get BXML Node Info',
+          //       url: 'get-bxml-node-info/get-bxml-node-info'
+          //     },
           {
             title: 'Navigation Bar',
             url: 'navigation-bar/navigation-bar'
@@ -201,7 +205,7 @@ Page({
           {
             title: 'Navigate in MP ',
             url: 'navigate-in-mp/navigate-in-mp'
-          },
+          }
           // {
           //   title: 'Hide homeButton',
           //   url: 'hide-home-button/hide-home-button'
@@ -214,10 +218,10 @@ Page({
         name: 'Device',
         open: false,
         pages: [
-      //     {
-      //       title: 'ClipboardData',
-      //       url: 'clipboard-data/clipboard-data'
-      //     },
+          //     {
+          //       title: 'ClipboardData',
+          //       url: 'clipboard-data/clipboard-data'
+          //     },
           {
             title: 'Network',
             url: 'network/network'
@@ -229,6 +233,10 @@ Page({
           {
             title: 'Sensor',
             url: 'sensor/sensor'
+          },
+          {
+            title: 'MakePhoneCall',
+            url: 'make-phone-call/make-phone-call'
           },
       //     {
       //       title: 'MemoryWarning',
@@ -254,14 +262,18 @@ Page({
         name: 'Media',
         open: false,
         pages: [
-      //     {
-      //       title: 'ChooseImage',
-      //       url: 'choose-image/choose-image'
-      //     },
-      //     {
-      //       title: 'GetImageInfo',
-      //       url: 'get-image-info/get-image-info'
-      //     },
+          //     {
+          //       title: 'ChooseImage',
+          //       url: 'choose-image/choose-image'
+          //     },
+          //     {
+          //       title: 'GetImageInfo',
+          //       url: 'get-image-info/get-image-info'
+          //     },
+          {
+            title: 'CanvasToTempFilePath',
+            url: 'canvas-to-temp-file-path/canvas-to-temp-file-path'
+          },
           {
             title: 'PreviewImage',
             url: 'preview-image/preview-image'
@@ -297,7 +309,7 @@ Page({
     this.setData({
       dispaySetTabbar: !this.data.dispaySetTabbar
     })
-    console.log('toggleSetTabbar', this.data);
+    console.log('toggleSetTabbar', this.data)
   },
   kindToggle(e) {
     const { id } = e.currentTarget.dataset

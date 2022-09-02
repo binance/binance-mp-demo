@@ -1,0 +1,12 @@
+<page>
+  <view>drawElements(gl.POINTS) expect 4 small points</view>
+  <canvas id="canvas-1"></canvas>
+  <view>drawElements(gl.LINE_STRIP) expect 4 lines</view>
+  <canvas id="canvas-2"></canvas>
+  <view>drawElements(gl.LINE_LOOP) expect 5 lines</view>
+  <canvas id="canvas-3"></canvas>
+  <view>drawElements(gl.LINES) expect 3 lines</view>
+  <canvas id="canvas-4"></canvas>
+  <view>drawElements(gl.TRIANGLES) expect a rectangle</view>
+  <canvas id="canvas-5"></canvas>
+</page>

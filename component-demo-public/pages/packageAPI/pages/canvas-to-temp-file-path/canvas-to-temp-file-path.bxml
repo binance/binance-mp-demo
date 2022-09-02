@@ -1,0 +1,15 @@
+<theme-context>
+  <view>
+    <head title='CanvasToTempFilePath'></head>
+    <view>
+      <view>
+          <canvas class="canvas" canvas-id="canvas"></canvas>
+          <view>
+            <button bindtap="toFilePath"> toTempFilePath </button>
+            <text>filePath: {{tempFilePath}} </text>
+            <button bindtap="saveToAlbum">save to album</button>
+          </view>
+        </view>
+    </view>
+  </view>
+</theme-context>

@@ -3,7 +3,7 @@ Page({
     data: ''
   },
   getEmailAddress({ detail }) {
-    if (!detail.code) {
+    if (detail.code) {
       console.log('[getEmailAddesss] SUCCESS:', detail)
       this.setData({
         data: `[getEmailAddesss] SUCCESS: ${JSON.stringify(detail, null, 4)}`

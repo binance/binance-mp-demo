@@ -1,0 +1,10 @@
+<page>
+  <view>clearColor using red color</view>
+  <canvas id="canvas-1"></canvas>
+  <view>clearDepth depth = 0.5, z = 1.0(should be empty)</view>
+  <canvas id="canvas-2"></canvas>
+  <view>clearDepth depth = 1.0, z = 1.0(should be normal)</view>
+  <canvas id="canvas-3"></canvas>
+  <view>clearStencil </view>
+  <canvas id="canvas-4" style="width: 100px; height: 100px;"></canvas>
+</page>

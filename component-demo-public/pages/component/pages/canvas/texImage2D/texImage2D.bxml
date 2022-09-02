@@ -1,0 +1,8 @@
+<page>
+  <view>texImage2d with 6 parameter, data is image</view>
+  <canvas id="canvas-1" height="300" width="300"></canvas>
+  <view>texImage2d with 6 parameter, data is canvas</view>
+  <canvas id="canvas-2" height="300" width="300"></canvas>
+  <view>texImage2d with 9 parameter, data is buffer</view>
+  <canvas id="canvas-3" height="300" width="300"></canvas>
+</page>

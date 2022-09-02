@@ -1,0 +1,12 @@
+<page>
+  <view>drawArrays(gl.POINTS) expect three small points</view>
+  <canvas id="canvas-1"></canvas>
+  <view>drawArrays(gl.LINE_STRIP) expect two lines</view>
+  <canvas id="canvas-2"></canvas>
+  <view>drawArrays(gl.LINE_LOOP) expect three lines</view>
+  <canvas id="canvas-3"></canvas>
+  <view>drawArrays(gl.LINES) expect one line</view>
+  <canvas id="canvas-4"></canvas>
+  <view>drawArrays(gl.TRIANGLES) expect a triangle</view>
+  <canvas id="canvas-5"></canvas>
+</page>
