@@ -8,6 +8,13 @@ Page({
         pages: ['navigation'],
         image: 'pages/tabbar/extended/resources/kind/nav.png'
       },
+      {
+        id: 'polyfill',
+        name: 'Polyfill',
+        open: false,
+        pages: ['promise'],
+        image: 'pages/tabbar/extended/resources/kind/nav.png'
+      }
       // {
       //   id: 'eventChannel',
       //   name: 'Event Channel',

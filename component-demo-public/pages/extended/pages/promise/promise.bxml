@@ -1,0 +1,33 @@
+<theme-context>
+  <view class="container promise-polyfill">
+    <head title="Promise polyfill"></head>
+    <view class="cell">
+      <text>is polyfill: {{ isPolyfill }}</text>
+    </view>
+    <view class="cell">
+      <view>is expected: {{ isExpected }}</view>
+      <view class="result">
+        <text>tasks orders: </text>
+        <text>[</text>
+          <block bn:for="orders">
+            <text class="{{ item === expectedOrders[index] ? '' : 'del'}}">{{ item }}</text>
+            <text>{{ index === orders.length - 1 ? '' : ', ' }}</text>
+          </block>
+        <text>]</text>
+        </view>
+      <view class="result">
+        <text>expected orders: </text>
+        <text>[</text>
+          <block bn:for="expectedOrders">
+            <text class="{{ item === orders[index] ? '' : 'add'}}">{{ item }}</text>
+            <text>{{ index === expectedOrders.length - 1 ? '' : ', ' }}</text>
+          </block>
+        <text>]</text>
+      </view>
+    </view>
+    <view class="code-cell">
+      <view>code example: </view>
+    </view>
+    <textarea value="{{code}}" class="code" disabled/>
+  </view>
+</theme-context> 

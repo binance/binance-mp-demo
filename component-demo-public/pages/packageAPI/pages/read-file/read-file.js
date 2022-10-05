@@ -3,7 +3,7 @@ Page({
     bn.getFileSystemManager().writeFileSync(
       `${bn.env.USER_DATA_PATH}/hello.txt`,
       'hello world',
-      { encoding: 'utf-8' }
+      'utf-8'
     )
   },
   data: {
@@ -90,11 +90,11 @@ Page({
   },
   mkdirWriteFile(e) {
     const { path, recursive = false } = e.target.dataset
-    this.mkdirFile(bn.env.USER_DATA_PATH + path, recursive)
+    this.mkdirFile(bn.env.USER_DATA_PATH + path, Boolean(recursive))
   },
   mkdirWriteFileSync(e) {
     const { path, recursive = false } = e.target.dataset
-    this.mkdirFileSync(bn.env.USER_DATA_PATH + path, recursive)
+    this.mkdirFileSync(bn.env.USER_DATA_PATH + path, Boolean(recursive))
   },
   writeFile(path, encoding) {
     const fs = bn.getFileSystemManager()
@@ -270,7 +270,7 @@ Page({
   },
   checkUnzip() {
     try {
-      bn.getFileSystemManager().accessSync(`${bn.env.USER_DATA_PATH}/test-hello2.txt`)
+      bn.getFileSystemManager().accessSync(`${bn.env.USER_DATA_PATH}/unzip-test`)
       this.setData({
         zipStatus: 'true'
       })

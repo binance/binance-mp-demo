@@ -1,0 +1,17 @@
+.promise-polyfill .cell {
+  border-bottom: 1px solid lightgray;
+  padding: 16px;
+}
+.promise-polyfill .code-cell {
+  padding: 16px;
+}
+.promise-polyfill .code {
+  padding: 0 16px;
+  background: #eee;
+}
+.promise-polyfill .result .add {
+  background: #E6FFEC;
+}
+.promise-polyfill .result .del {
+  background: #FFEBE9;
+}
