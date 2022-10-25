@@ -82,6 +82,10 @@ Page({
         name: 'User Interface',
         open: false,
         pages: [
+          {
+            title: 'Create Intersection Observer',
+            url: 'create-intersection-observer/create-intersection-observer'
+          },
           //     {
           //       title: 'Get BXML Node Info',
           //       url: 'get-bxml-node-info/get-bxml-node-info'
