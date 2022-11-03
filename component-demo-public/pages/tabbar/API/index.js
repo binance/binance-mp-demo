@@ -141,6 +141,10 @@ Page({
           {
             title: 'Page Scroll',
             url: 'page-scroll-reach-bottom/page-scroll-reach-bottom'
+          },
+          {
+            title: 'Virtual List',
+            url: 'virtual-list/virtual-list'
           }
         ],
         image: 'pages/tabbar/API/resources/kind/api.png'
