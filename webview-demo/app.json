@@ -1,6 +1,6 @@
 {
   "darkmode": true,
-  "entryPagePath": "pages/web-view/web-view",
+  "entryPage": "pages/web-view/web-view",
   "pages": [
     "pages/web-view/web-view",
     "pages/web-view-custom-nav/web-view-custom-nav"
