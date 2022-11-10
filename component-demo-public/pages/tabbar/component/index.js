@@ -27,7 +27,7 @@ Page({
         id: 'media',
         name: 'Media',
         open: false,
-        pages: ['video', 'image','native-image','nft-image', 'canvas'],
+        pages: ['video', 'image', 'canvas'],
         image: 'pages/tabbar/component/resources/kind/media.png'
       },
       {

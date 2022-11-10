@@ -158,7 +158,7 @@ Page({
           gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE)
   
           // 配置纹理图像
-          gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image)
+          gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, image)
   
           // 将0号单元纹理传递给着色器中的取样器变量
           var u_Sampler = gl.getUniformLocation(program, 'u_Sampler')
