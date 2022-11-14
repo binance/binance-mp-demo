@@ -1,0 +1,9 @@
+.page-lazy-load {
+  margin-top: 1900px;
+}
+.background-image {
+  background-image: url('https://public.bnbstatic.com/static/images/common/ogImage.jpg');
+  height: 250px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
