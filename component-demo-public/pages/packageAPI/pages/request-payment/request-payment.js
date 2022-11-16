@@ -15,7 +15,7 @@ Page({
       url: 'https://nezha-mock.fe.qa1fdg.net/order',
       responseType: 'text',
       dataType: 'json',
-      success: async function (res) {
+      success: async  (res) => { // extends outer scope this
         const { timeStamp, certSn, merchantId, noncestr, paySign, prepayId } = res.data.data.option
         const paymentResult = await bn.requestPayment({
           certSn,
