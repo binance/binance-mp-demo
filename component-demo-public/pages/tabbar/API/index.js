@@ -82,10 +82,6 @@ Page({
         name: 'User Interface',
         open: false,
         pages: [
-          {
-            title: 'Create Intersection Observer',
-            url: 'create-intersection-observer/create-intersection-observer'
-          },
           //     {
           //       title: 'Get BXML Node Info',
           //       url: 'get-bxml-node-info/get-bxml-node-info'
@@ -141,10 +137,6 @@ Page({
           {
             title: 'Page Scroll',
             url: 'page-scroll-reach-bottom/page-scroll-reach-bottom'
-          },
-          {
-            title: 'Virtual List',
-            url: 'virtual-list/virtual-list'
           }
         ],
         image: 'pages/tabbar/API/resources/kind/api.png'
