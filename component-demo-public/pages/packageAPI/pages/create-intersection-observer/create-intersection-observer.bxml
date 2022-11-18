@@ -1,0 +1,23 @@
+<theme-context>
+<view class="container">
+  <view class="page-body">
+    <view class="page-section message">
+      <text bn:if="{{appear}}">
+        The ball is visible
+      </text>
+      <text bn:else>
+        The ball is hidden
+      </text>
+    </view>
+    <view class="page-section">
+      <scroll-view class="scroll-view" scroll-y>
+        <view class="scroll-area" style="{{appear ? 'background: #ccc' : ''}}">
+          <text class="notice">Scroll down to see the ball</text>
+          <view class="filling"></view>
+          <view class="ball"></view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>
+</theme-context>

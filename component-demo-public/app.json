@@ -1,6 +1,6 @@
 {
   "darkmode": true,
-  "entryPage": "pages/tabbar/component/index",
+  "entryPagePath": "pages/tabbar/component/index",
   "pages": [
     "pages/tabbar/component/index",
     "pages/tabbar/extended/index",
@@ -75,6 +75,8 @@
         "pages/form/form",
         "pages/icon/icon",
         "pages/image/image",
+        "pages/native-image/native-image",
+        "pages/nft-image/nft-image",
         "pages/canvas/canvas",
         "pages/canvas/texImage2D/texImage2D",
         "pages/canvas/texSubImage2D/texSubImage2D",
@@ -84,7 +86,8 @@
         "pages/canvas/drawArray/drawArray",
         "pages/canvas/drawElements/drawElements",
         "pages/canvas/glsl-model/glsl-model",
-        "pages/canvas/3d-rendering/3d-rendering"
+        "pages/canvas/3d-rendering/3d-rendering",
+        "pages/deprecated-canvas/deprecated-canvas"
       ]
     },
     {
@@ -124,7 +127,10 @@
         "pages/set-keep-screen-on/set-keep-screen-on",
         "pages/sensor/sensor",
         "pages/scan-code/scan-code",
-        "pages/canvas-to-temp-file-path/canvas-to-temp-file-path"
+        "pages/create-intersection-observer/create-intersection-observer",
+        "pages/canvas-to-temp-file-path/canvas-to-temp-file-path",
+        "pages/virtual-list/virtual-list",
+        "pages/on-add-to-favorites/on-add-to-favorites"
       ]
     },
     { "root": "pages/about", "pages": ["about"], "independent": true },

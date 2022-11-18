@@ -1,0 +1,26 @@
+.items {
+    box-sizing: border-box;
+    border-top: 1px solid #f0f0f0;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+.list,.start, .end {
+    box-sizing: border-box;
+    margin: 0;
+    max-height: 400px;
+  
+}
+.wrapper {
+       box-sizing: border-box;
+    height: 404px;
+    overflow: scroll;
+    border: 2px solid #0e0e0e;
+
+}
+
+.container {
+  height: 404px;
+  overflow: hidden;
+  margin-bottom: 0px
+}
