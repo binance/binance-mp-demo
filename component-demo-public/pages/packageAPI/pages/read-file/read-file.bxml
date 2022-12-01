@@ -125,8 +125,8 @@
           <text>fail, no permission, path: `/a/b/c/d` </text>
           <button
             data-path="/a/b/c/d"
-            bindtap="mkdirWriteFileFail">mkdir</button>
-          <button data-path="/a/b/c/d" bindtap="mkdirWriteFileSyncFail">mkdirSync</button>
+            bindtap="mkdirWriteFile">mkdir</button>
+          <button data-path="/a/b/c/d" bindtap="mkdirWriteFileSync">mkdirSync</button>
           <text>
             fail, file already exists, path: `$userDataPath://a/b/c/d`{" "}
           </text>

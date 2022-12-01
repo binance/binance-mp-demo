@@ -5,9 +5,6 @@
       <view class="center">
         <view>
           <button bindtap="getSystemInfo">getSystemInfo</button>
-          <button bindtap="getAppBaseInfo">getAppBaseInfo</button>
-          <button bindtap="getDeviceInfo">getDeviceInfo</button>
-          <button bindtap="getWindowInfo">getWindowInfo</button>
         </view>
         <view style="width: 100%;">
           <text style="width: 100%;">{{data}}</text>
