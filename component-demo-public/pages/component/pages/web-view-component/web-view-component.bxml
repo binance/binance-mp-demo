@@ -1,0 +1,37 @@
+<theme-context>
+  <view class="com-container">
+    <text>normal component:</text>
+    <view class="placeholder red"></view>
+  </view>
+  <view class="com-container">
+    <text>webview component1:</text>
+    <web-view-component
+      class="web-view"
+      src="https://www.binance.com/en/js-sdk-demo-ui/webview"
+    />
+  </view>
+  <view class="com-container">
+    <text>webview component2:</text>
+    <web-view-component
+      class="web-view"
+      src="https://www.binance.com/en/js-sdk-demo-ui/webview"
+    />
+  </view>
+  <view class="com-container">
+    <text>local html</text>
+    <web-view-component
+      class="web-view"
+      src="/pages/component/pages/web-view-component/test.html"
+    />
+  </view>
+  <view class="com-container">
+    <text>wrong url</text>
+    <web-view-component
+      class="web-view"
+      src="https://wrongurlexample"
+    />
+  </view>
+  <view>
+  The webview should be rendered the same way as normal component-similar size, same layout and in the same rendering flow.
+  </view>
+</theme-context>

@@ -11,34 +11,33 @@ Page({
       loading: true,
       state: ''
     })
-    const res = await bn.request({
+    bn.request({
       url: 'https://nezha-mock.fe.qa1fdg.net/order',
       responseType: 'text',
-      dataType: 'json'
+      dataType: 'json',
+      success: async  (res) => { // extends outer scope this
+        const { timeStamp, certSn, merchantId, noncestr, paySign, prepayId } = res.data.data.option
+        const paymentResult = await bn.requestPayment({
+          certSn,
+          nonceStr: noncestr,
+          package: `prepay_id=${prepayId}`,
+          merchantId,
+          paySign,
+          timeStamp
+        })
+    
+        if (paymentResult.status.toString() === '0') {
+          this.setData({
+            loading: false,
+            state: 'Payment Successful!'
+          })
+        } else {
+          this.setData({
+            loading: false,
+            state: 'Payment Failed'
+          })
+        }
+      }
     })
-
-    const { timeStamp, certSn, merchantId, noncestr, paySign, prepayId } = res
-      .data.data.option
-
-    const paymentResult = await bn.requestPayment({
-      certSn,
-      nonceStr: noncestr,
-      package: `prepay_id=${prepayId}`,
-      merchantId,
-      paySign,
-      timeStamp
-    })
-
-    if (paymentResult.status.toString() === '0') {
-      this.setData({
-        loading: false,
-        state: 'Payment Successful!'
-      })
-    } else {
-      this.setData({
-        loading: false,
-        state: 'Payment Failed'
-      })
-    }
   }
 })
