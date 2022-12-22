@@ -66,6 +66,7 @@
         "pages/web-view/web-view",
         "pages/web-view-component/web-view-component",
         "pages/web-view-custom-nav/web-view-custom-nav",
+        "pages/web-view-no-bounce/web-view-no-bounce",
         "pages/picker/picker",
         "pages/radio/radio",
         "pages/scroll-view/scroll-view",

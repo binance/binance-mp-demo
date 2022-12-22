@@ -38,6 +38,7 @@ Page({
           'web-view',
           'web-view-custom-nav',
           'web-view-component',
+          'web-view-no-bounce',
         ],
         image: 'pages/tabbar/component/resources/kind/open.png'
       }
