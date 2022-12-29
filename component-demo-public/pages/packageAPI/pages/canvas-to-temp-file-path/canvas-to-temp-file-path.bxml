@@ -3,7 +3,7 @@
     <head title='CanvasToTempFilePath'></head>
     <view>
       <view>
-          <deprecated-canvas class="canvas" canvas-id="canvas"></deprecated-canvas>
+          <canvas class="canvas" canvas-id="canvas"></canvas>
           <view>
             <button bindtap="toFilePath"> toTempFilePath </button>
             <text>filePath: {{tempFilePath}} </text>

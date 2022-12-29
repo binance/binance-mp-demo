@@ -7,7 +7,7 @@
         <view class='bnui-cells bnui-cells_after-title'>
           <view class='bnui-cell bnui-cell_Input'>
             <input
-              class='bnui-Input input'
+              class='bnui-Input'
               bindinput="setTitle"
               placeholder='Title'
             ></input>

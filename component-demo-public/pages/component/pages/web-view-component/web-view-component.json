@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "web-view-component",
-  "usingComponents": {
-    "theme-context": "../../../../components/theme-context/theme-context"
-  }
-}

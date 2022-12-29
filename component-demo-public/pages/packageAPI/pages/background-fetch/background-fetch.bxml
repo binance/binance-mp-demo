@@ -13,39 +13,39 @@
           </view>
         </view>
       </view>
-      <view class="bf-center">
+      <text class="bf-center">
         <button bindtap="setBackgroundFetchToken">
           bn.setBackgroundFetchToken
         </button>
-      </view>
+      </text>
     </view>
 
     <view class="page-body">
-      <view class="bf-center">
+      <text class="bf-center">
         <button bindtap="getBackgroundFetchToken">
           bn.getBackgroundFetchToken
         </button>
         <view class="page-section">token: {{token}}</view>
-      </view>
+      </text>
     </view>
 
     <view class="page-body">
-      <view class="bf-center">
+      <text class="bf-center">
         <button bindtap="getBackgroundFetchDataPeriodic">
           bn.getBackgroundFetchData - periodic
         </button>
-      </view>
+      </text>
 
-      <view class="bf-center">
+      <text class="bf-center">
         <button bindtap="getBackgroundFetchDataPre">
           bn.getBackgroundFetchData - pre
         </button>
-      </view>
+      </text>
     </view>
 
     <view class="page-body bf-logs">
       <view bn:for="{{logs}}" bn:key="index">
-        {{item.title}} - {{new Date(item.timeStamp).toLocaleString()}} <view>\n</view> {{item.data}}
+        {{item.title}} - {{new Date(item.timeStamp).toLocaleString()}} <text>\n</text> {{item.data}}
       </view>
     </view>
   </view>

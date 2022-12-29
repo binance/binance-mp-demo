@@ -27,7 +27,7 @@ Page({
         id: 'media',
         name: 'Media',
         open: false,
-        pages: ['video', 'image','native-image','nft-image', 'canvas', 'deprecated-canvas'],
+        pages: ['video', 'image', 'canvas'],
         image: 'pages/tabbar/component/resources/kind/media.png'
       },
       {
@@ -37,8 +37,6 @@ Page({
         pages: [
           'web-view',
           'web-view-custom-nav',
-          'web-view-component',
-          'web-view-no-bounce',
         ],
         image: 'pages/tabbar/component/resources/kind/open.png'
       }
@@ -65,15 +63,4 @@ Page({
       list: nextList
     })
   },
-  testRendererIdZero() {
-    const query = bn.createSelectorQuery()
-    query
-      .select('#test')
-      .fields({node: true, size: true})
-      .exec((res) => {
-        bn.showToast({
-          title: 'success!'
-        })
-      })
-  }
 })

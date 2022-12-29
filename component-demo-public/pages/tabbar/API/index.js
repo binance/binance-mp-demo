@@ -57,10 +57,6 @@ Page({
           {
             title: 'Get Email Address',
             url: 'get-email-address/get-email-address'
-          },
-          {
-            title: 'On Add To Favorites',
-            url: 'on-add-to-favorites/on-add-to-favorites'
           }
           //     {
           //       title: 'Web3 Provider',
@@ -78,7 +74,6 @@ Page({
           //       title: 'handleError',
           //       url: 'handle-error/handle-error'
           //     }
-          
         ],
         image: 'pages/tabbar/API/resources/kind/api.png'
       },
@@ -87,10 +82,6 @@ Page({
         name: 'User Interface',
         open: false,
         pages: [
-          {
-            title: 'Create Intersection Observer',
-            url: 'create-intersection-observer/create-intersection-observer'
-          },
           //     {
           //       title: 'Get BXML Node Info',
           //       url: 'get-bxml-node-info/get-bxml-node-info'
@@ -146,10 +137,6 @@ Page({
           {
             title: 'Page Scroll',
             url: 'page-scroll-reach-bottom/page-scroll-reach-bottom'
-          },
-          {
-            title: 'Virtual List',
-            url: 'virtual-list/virtual-list'
           }
         ],
         image: 'pages/tabbar/API/resources/kind/api.png'
