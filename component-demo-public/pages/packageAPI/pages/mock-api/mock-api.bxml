@@ -1,0 +1,8 @@
+<theme-context>
+  <view class="container">
+    <head title="Mock-API"></head>
+    <view class="mock-data">
+      {{ resData }}
+    </view>
+  </view>
+</theme-context>

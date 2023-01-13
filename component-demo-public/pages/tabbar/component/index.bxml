@@ -7,6 +7,7 @@
         Mini Program Component Demos
       </view>
     </view>
+    <button bindtap="testRendererIdZero" id="test">iOS-testRendererIdZero(expected to see success toast)</button>
     <view class="kind-list">
       <view class="kind-list-item"
         bn:for="{{list}}"

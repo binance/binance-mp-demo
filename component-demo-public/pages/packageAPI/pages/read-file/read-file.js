@@ -96,6 +96,14 @@ Page({
     const { path, recursive = false } = e.target.dataset
     this.mkdirFileSync(bn.env.USER_DATA_PATH + path, Boolean(recursive))
   },
+  mkdirWriteFileFail(e) {
+    const { path, recursive = false } = e.target.dataset
+    this.mkdirFile(path, Boolean(recursive))
+  },
+  mkdirWriteFileSyncFail(e) {
+    const { path, recursive = false } = e.target.dataset
+    this.mkdirFileSync(path, Boolean(recursive))
+  },
   writeFile(path, encoding) {
     const fs = bn.getFileSystemManager()
     const _this = this
