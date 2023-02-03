@@ -61,7 +61,7 @@ Page({
           {
             title: 'On Add To Favorites',
             url: 'on-add-to-favorites/on-add-to-favorites'
-          }
+          },
           //     {
           //       title: 'Web3 Provider',
           //       url: 'web3-provider/web3-provider'
@@ -78,6 +78,10 @@ Page({
           //       title: 'handleError',
           //       url: 'handle-error/handle-error'
           //     }
+          {
+            title: 'Binance Card Info',
+            url: 'binance-card-info/binance-card-info'
+          }
 
         ],
         image: 'pages/tabbar/API/resources/kind/api.png'
@@ -171,14 +175,14 @@ Page({
         name: 'Networking',
         open: false,
         pages: [
-          {
-            title: 'Request',
-            url: 'request/request'
-          },
-          {
-            title: 'Private Request',
-            url: 'private-request/private-request'
-          },
+          // {
+          //   title: 'Request',
+          //   url: 'request/request'
+          // },
+          // {
+          //   title: 'Private Request',
+          //   url: 'private-request/private-request'
+          // },
           // {
           //   title: 'Download / Upload',
           //   url: 'download-upload/download-upload'

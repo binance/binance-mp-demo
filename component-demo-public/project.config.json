@@ -10,5 +10,5 @@
     "minified": false
   },
   "compileType": "miniprogram",
-  "libVersion": "3.14.12"
+  "libVersion": "4.3.0"
 }

@@ -134,7 +134,8 @@
         "pages/create-intersection-observer/create-intersection-observer",
         "pages/canvas-to-temp-file-path/canvas-to-temp-file-path",
         "pages/virtual-list/virtual-list",
-        "pages/on-add-to-favorites/on-add-to-favorites"
+        "pages/on-add-to-favorites/on-add-to-favorites",
+        "pages/binance-card-info/binance-card-info"
       ]
     },
     { "root": "pages/about", "pages": ["about"], "independent": true },

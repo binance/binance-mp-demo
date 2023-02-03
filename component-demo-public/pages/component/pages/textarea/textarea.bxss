@@ -27,3 +27,7 @@
 .textarea-textAlign {
   text-align: right;
 }
+
+.transition {
+  transition: bottom 0.5s;
+}

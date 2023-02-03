@@ -1,6 +1,6 @@
 Page({
   data: {
-    resData: ""
+    resData: ''
   },
   onShow() {
     this.requestMockApi()
@@ -9,13 +9,10 @@ Page({
     const res = await bn.request({
       url: 'https://example.com/',
       responseType: 'text',
-      dataType: 'json',
+      dataType: 'json'
     })
-    console.log(res);
-    if (res.statusCode === 200) {
-      this.setData({
-        resData: JSON.stringify(res.data)
-      })
-    }
+    this.setData({
+      resData: JSON.stringify(res)
+    })
   }
 })

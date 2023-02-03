@@ -24,7 +24,7 @@ Page({
   },
   sendMessageToTwo() {
     bn.createSelectorQuery().select('#component2').context(function(res) {
-      console.log('henry send one')
+      console.log('henry send two')
       res.context.postMessage('test message to component 2')
     }).exec()
   },

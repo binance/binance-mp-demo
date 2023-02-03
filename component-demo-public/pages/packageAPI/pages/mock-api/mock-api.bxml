@@ -1,8 +1,15 @@
 <theme-context>
   <view class="container">
     <head title="Mock-API"></head>
-    <view class="mock-data">
-      {{ resData }}
+    <view>
+      <view>1. Enable mock</view>
+
+      <view>2. add mock item which interface is request and url is "https://example.com/"</view>
+      
+      <view>3. check whether the mock response as expected </view>
+      
+      
     </view>
+    <view class="mock-data">mock response: {{ resData }}</view>
   </view>
 </theme-context>

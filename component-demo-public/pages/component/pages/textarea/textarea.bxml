@@ -285,7 +285,18 @@
           </view>
         </view>
       </view>
-
+      <view class="page-section">
+      <button bindtap="transition">transition</button>
+        <view class="bnui-cells bnui-cells_after-title transition" style="{{bottom}}">
+          <view class="bnui-cell bnui-cell_input">
+            <textarea
+              placeholder="Please input"
+              cursorSpacing="{{100}}"
+              class="bnui-textarea"
+            />
+          </view>
+        </view>
+      </view>
     </view>
   </view>
 </theme-context>
