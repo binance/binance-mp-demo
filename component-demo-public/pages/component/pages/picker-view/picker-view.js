@@ -2,6 +2,8 @@ Page({
   data: {
     message: '',
     value: '',
+    uncontrolValue: '',
+    val: [1,1,1],
     years: ['2022', '2023'],
     month: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
     day: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
@@ -13,7 +15,16 @@ Page({
     this.setData({
       value: this.data.years[e.detail.value[0]] + '-'
           + this.data.month[e.detail.value[1]] + '-'
-          + this.data.day[e.detail.value[2]]
+          + this.data.day[e.detail.value[2]],
+      val: [...e.detail.value]
+    })
+  },
+  uncontrolPickerChange(e) {
+    console.log(e)
+    this.setData({
+      uncontrolValue: this.data.years[e.detail.value[0]] + '-'
+          + this.data.month[e.detail.value[1]] + '-'
+          + this.data.day[e.detail.value[2]],
     })
   },
   pickerStart() {
