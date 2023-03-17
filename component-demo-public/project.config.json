@@ -2,7 +2,7 @@
   "miniprogramRoot": "./",
   "projectname": "public-nezha-component-demo",
   "description": "A Nezha mini-program project",
-  "appid": "6UtyC3hzTzd6MziWrwX4jY",
+  "appid": "bYdqJJ7ZS4X387N5M6WQfQ",
   "setting": {
     "urlCheck": true,
     "es6": false,
@@ -10,5 +10,8 @@
     "minified": false
   },
   "compileType": "miniprogram",
-  "libVersion": "4.3.0"
+  "libVersion": "4.7.0-dev.2",
+  "msv": [
+    "4.0.0"
+  ]
 }

@@ -20,7 +20,7 @@ Page({
         name: 'Form',
         open: false,
         // 'radio',
-        pages: [ 'checkbox', 'form', 'switch', 'textarea', 'picker', 'picker-view', 'radio', 'slider'],
+        pages: [ 'checkbox', 'form', 'switch', 'textarea', 'picker', 'picker-view', 'radio', 'slider', 'editor'],
         image: 'pages/tabbar/component/resources/kind/form.png'
       },
       {

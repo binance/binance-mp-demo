@@ -90,7 +90,8 @@
         "pages/canvas/drawElements/drawElements",
         "pages/canvas/glsl-model/glsl-model",
         "pages/canvas/3d-rendering/3d-rendering",
-        "pages/deprecated-canvas/deprecated-canvas"
+        "pages/deprecated-canvas/deprecated-canvas",
+        "pages/editor/editor"
       ]
     },
     {
