@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Button } from "@binance/mp-components";
+import { View, Text, Button } from "@binance/bmp-components";
 import moment from "moment";
 import "./weather.css";
 

@@ -1,9 +1,31 @@
-.page {
-  background-color: #eeeeee;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.h1 {
+  font-size: 32px;
+  font-weight: bold;
   color: black;
+  margin: 20px;
+}
+
+.list {
+  width: 100%;
+  border-top: 1px solid #e6e8ea;
+}
+
+.list-item {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #e6e8ea;
+  color: black;
+  cursor: pointer;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.list-item:after {
+  content: "›";
+}
+
+.list-item:hover {
+  background: #efefef;
 }

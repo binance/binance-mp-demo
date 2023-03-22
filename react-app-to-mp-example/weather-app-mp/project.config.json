@@ -2,12 +2,13 @@
   "miniprogramRoot": ".bmp/build",
   "projectname": "weather-app-mp",
   "description": "A Binance mini-program project",
-  "appid": "weather-app-mp-appid",
+  "appid": "you-should-create-an-app-id-on-mpp",
   "setting": {
     "urlCheck": true,
     "es6": false,
     "postcss": false,
     "minified": false
   },
-  "compileType": "miniprogram"
+  "compileType": "miniprogram",
+  "libVersion": "3.14.2"
 }

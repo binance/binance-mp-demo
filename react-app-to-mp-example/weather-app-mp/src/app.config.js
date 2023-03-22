@@ -7,7 +7,7 @@ export default {
   entryPagePath: "pages/IndexPage",
 
   // the list of the pages
-  pages: ["pages/IndexPage"],
+  pages: ["pages/IndexPage", "pages/DetailPage"],
 
   window: {
     backgroundTextStyle: "light",

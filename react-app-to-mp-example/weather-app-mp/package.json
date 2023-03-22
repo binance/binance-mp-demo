@@ -9,7 +9,6 @@
     "moment": "^2.29.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -35,9 +34,10 @@
     ]
   },
   "devDependencies": {
-    "@binance/babel-preset-bmp": "^1.0.1",
-    "@binance/mp-cli": "^1.2.14",
-    "@binance/mp-components": "^1.0.1",
-    "@binance/mp-service": "^1.0.4"
+    "@binance/babel-preset-bmp": "^1.0.11",
+    "@binance/bmp-api": "^1.0.39",
+    "@binance/bmp-components": "^1.0.5",
+    "@binance/bmp-react": "^1.0.3",
+    "@binance/mp-cli": "^2.4.54"
   }
 }

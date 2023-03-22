@@ -1,43 +1,28 @@
-import React, { useEffect, useState, useCallback } from "react";
-import { View, Text } from "@binance/mp-components";
-import mpService from "@binance/mp-service";
-import WeatherCard from "../components/weather";
-import { REACT_APP_API_URL, REACT_APP_API_KEY } from "../constants";
+import React from "react";
+import { View, Text, Navigator } from "@binance/bmp-components";
 
 import "./IndexPage.css";
 
 function IndexPage() {
-  const [data, setData] = useState([]);
-  const lat = 1.364917;
-  const long = 103.822872;
-
-  const fetchData = useCallback(async () => {
-    // For all the mpServices apis, please read:
-    // https://developers.binance.com/docs/mini-program/framework/api
-    await mpService
-      .request({
-        url: `${REACT_APP_API_URL}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${REACT_APP_API_KEY}`,
-      })
-      .then(({ data }) => {
-        console.log(data);
-        setData(data);
-      });
-  }, []);
-
-  useEffect(() => {
-    fetchData();
-  }, [fetchData]);
-
-  // For all the mp-components, please read:
-  // https://developers.binance.com/docs/mini-program/framework/components
-
   return (
-    <View className="page">
-      {typeof data.main != "undefined" ? (
-        <WeatherCard weatherData={data} onRefresh={fetchData} />
-      ) : (
-        <Text>Loading...</Text>
-      )}
+    <View className="page-index">
+      <Text className="h1"> City List </Text>
+      <View className="list">
+        {/* <Navigator /> is a component like the <a /> element in html,
+                which provides props: url to navigate to a certain page.
+                The url can use get parameter to pass data to the targe pages.
+             */}
+        <Navigator url="pages/DetailPage?city=shanghai" className="list-item">
+          Shanghai
+        </Navigator>
+        <Navigator url="pages/DetailPage?city=hongkong" className="list-item">
+          Hongkong
+        </Navigator>
+
+        <Navigator url="pages/DetailPage?city=beijing" className="list-item">
+          Beijing
+        </Navigator>
+      </View>
     </View>
   );
 }
