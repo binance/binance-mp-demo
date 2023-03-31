@@ -15,7 +15,3 @@ Same as `bmp-components-demo`, but `component-demo-public` is built on top of te
 ## Example: Migrate a React app to Mini Program app
 
 `react-app-to-mp-example` shows how to migrate a React app to the Binance Mini Program app.
-
-## Web Application Demo
-
-`web-application-demo` shows how to create a web application , and to integrate with the JS-SDK
