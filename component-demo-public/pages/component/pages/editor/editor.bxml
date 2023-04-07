@@ -1,5 +1,4 @@
-<theme-context>
-<view class="container" >
+<view class="wrapper"   style="{{editorStyle}}">
   <editor
     id="editor"
     placeholder="write something..."
@@ -9,12 +8,12 @@
     bindfocus="bindfocus"
     bindblur="bindblur"
     bindselectionupdate="bindselectionupdate"
-    style="{{editorStyle}}"
+
     ></editor>
 </view>
 
 
-<view class="toolbar" catchtap="format"  style="{{toolbarStyle}}">
+<view class="toolbar" catchtouchend="format"  style="{{toolbarStyle}}">
   <i class="iconfont icon-charutupian" catchtouchend="insertImage"></i>
   <i class="iconfont icon-format-header-2 {{formats.header == 2 ? 'ql-active' : ''}}" data-name="header" data-value="{{2}}"></i>
   <i class="iconfont icon-format-header-3 {{formats.header == 3 ? 'ql-active' : ''}}" data-name="header" data-value="{{3}}"></i>
@@ -28,4 +27,3 @@
   <image style="width: 20px; margin-top: -5px;" src="{{redoSvg}}" catchtouchend="redo" />
 
 </view>
-</theme-context>

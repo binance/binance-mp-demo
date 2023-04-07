@@ -3,7 +3,7 @@ Page({
         formats: {},
         readOnly: false,
         placeholder: '开始输入...',
-        editorStyle:"height: 300px",
+        editorStyle: "height: calc(100% - 50px)",
         toolbarStyle: "bottom: 0px",
         isIOS: false,
         hashSvg: '',
@@ -19,6 +19,7 @@ Page({
        const url = bn.createBufferURL(this.fs.readFileSync(path), { extension: 'svg'})
        return url
       },
+  
       onLoad() {
         this.fs = bn.getFileSystemManager()
         this.setData({
@@ -40,14 +41,17 @@ Page({
         let keyboardHeight = 0
         bn.onKeyboardHeightChange(res => {
           if (res.height === keyboardHeight) return
-          const duration = res.height > 0 ? res.duration * 1000 : 0
+          const duration = res.height > 0 ? 150 : 0
           keyboardHeight = res.height
           setTimeout(() => {
             bn.pageScrollTo({
               scrollTop: 0,
               success() {
                 that.updatePosition(keyboardHeight)
-                that.editorCtx.scrollIntoView()
+                setTimeout(() => {
+                  that.editorCtx.scrollIntoView()
+                }, duration)
+               
               }
             })
           }, duration)
@@ -59,7 +63,8 @@ Page({
         // 2.62.0 issue with getSystemInfoSync
         const { windowHeight } = bn.getWindowInfo()
         let editorHeight = keyboardHeight > 0 ? (windowHeight - keyboardHeight - toolbarHeight) : windowHeight
-        this.setData({ editorStyle: `height:${editorHeight}px`, toolbarStyle: `bottom: ${this.data.isIOS ? keyboardHeight : 0}px` })
+        console.log('--👀---updatePosition: ', editorHeight)
+        this.setData({ editorStyle: `height:${ editorHeight}px`, toolbarStyle: `bottom: ${this.data.isIOS ? keyboardHeight : 0}px` })
       },
       calNavigationBarAndStatusBar() {
         const systemInfo = bn.getWindowInfo()

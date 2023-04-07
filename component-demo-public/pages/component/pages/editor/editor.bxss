@@ -2,7 +2,7 @@
 .ql-active {
   color: #22C704;
 }
-.container {
+.wrapper {
   position: absolute; 
   top: 0; 
   left: 0; 
