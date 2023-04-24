@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "nft-image",
-  "usingComponents": {
-    "head": "../../../../components/head/head",
-    "theme-context": "../../../../components/theme-context/theme-context"
-  }
-}

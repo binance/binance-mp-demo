@@ -26,6 +26,7 @@ Page({
     bn.saveImageToPhotosAlbum({ filePath: this.data.tempFilePath })
   },
   onLoad() {
+    setTimeout(() => {
       const query = bn.createSelectorQuery()
       query
         .select(`.canvas`)
@@ -36,5 +37,6 @@ Page({
           ctx.font = 'bold 48px serif'
           ctx.strokeText('Hello world', 50, 100)
         })
+    }, 100)
   }
 })

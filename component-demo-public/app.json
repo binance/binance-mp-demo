@@ -1,6 +1,6 @@
 {
   "darkmode": true,
-  "entryPagePath": "pages/tabbar/component/index",
+  "entryPage": "pages/tabbar/component/index",
   "pages": [
     "pages/tabbar/component/index",
     "pages/tabbar/extended/index",
@@ -64,11 +64,8 @@
         "pages/textarea/textarea",
         "pages/video/video",
         "pages/web-view/web-view",
-        "pages/web-view-component/web-view-component",
         "pages/web-view-custom-nav/web-view-custom-nav",
-        "pages/web-view-no-bounce/web-view-no-bounce",
         "pages/picker/picker",
-        "pages/picker-view/picker-view",
         "pages/radio/radio",
         "pages/scroll-view/scroll-view",
         "pages/slider/slider",
@@ -78,8 +75,6 @@
         "pages/form/form",
         "pages/icon/icon",
         "pages/image/image",
-        "pages/native-image/native-image",
-        "pages/nft-image/nft-image",
         "pages/canvas/canvas",
         "pages/canvas/texImage2D/texImage2D",
         "pages/canvas/texSubImage2D/texSubImage2D",
@@ -89,9 +84,7 @@
         "pages/canvas/drawArray/drawArray",
         "pages/canvas/drawElements/drawElements",
         "pages/canvas/glsl-model/glsl-model",
-        "pages/canvas/3d-rendering/3d-rendering",
-        "pages/deprecated-canvas/deprecated-canvas",
-        "pages/editor/editor"
+        "pages/canvas/3d-rendering/3d-rendering"
       ]
     },
     {
@@ -119,7 +112,6 @@
         "pages/navigate-to-mp-deeplink/navigate-to-mp-deeplink",
         "pages/navigation-bar/navigation-bar",
         "pages/network/network",
-        "pages/mock-api/mock-api",
         "pages/page-scroll-reach-bottom/page-scroll-reach-bottom",
         "pages/preview-image/preview-image",
         "pages/pull-down-refresh/pull-down-refresh",
@@ -132,11 +124,7 @@
         "pages/set-keep-screen-on/set-keep-screen-on",
         "pages/sensor/sensor",
         "pages/scan-code/scan-code",
-        "pages/create-intersection-observer/create-intersection-observer",
-        "pages/canvas-to-temp-file-path/canvas-to-temp-file-path",
-        "pages/virtual-list/virtual-list",
-        "pages/on-add-to-favorites/on-add-to-favorites",
-        "pages/binance-card-info/binance-card-info"
+        "pages/canvas-to-temp-file-path/canvas-to-temp-file-path"
       ]
     },
     { "root": "pages/about", "pages": ["about"], "independent": true },
