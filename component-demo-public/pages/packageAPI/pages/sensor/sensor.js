@@ -1,3 +1,4 @@
+let handlers = {}
 Page({
   data: {
     showCompass: '',
@@ -32,34 +33,39 @@ Page({
     })
   },
   onCompassChange() {
-    bn.onCompassChange(this.onoffCompassEvent.bind(this))
+    handlers.onoffCompassEvent = this.onoffCompassEvent.bind(this)
+    bn.onCompassChange(handlers.onoffCompassEvent)
   },
   offCompassChange() {
-    bn.offCompassChange(this.onoffCompassEvent.bind(this))
+    bn.offCompassChange(handlers.onoffCompassEvent)
   },
   onAccelerometerChange() {
-    bn.onAccelerometerChange(this.onoffAccelerometerEvent.bind(this))
+    handlers.onoffAccelerometerEvent = this.onoffAccelerometerEvent.bind(this)
+    bn.onAccelerometerChange(handlers.onoffAccelerometerEvent)
   },
   offAccelerometerChange() {
-    bn.offAccelerometerChange(this.onoffAccelerometerEvent.bind(this))
+    bn.offAccelerometerChange(handlers.onoffAccelerometerEvent)
   },
   onDeviceMotionChange() {
-    bn.onDeviceMotionChange(this.onoffDeviceMotionEvent.bind(this))
+    handlers.onoffDeviceMotionEvent = this.onoffDeviceMotionEvent.bind(this)
+    bn.onDeviceMotionChange(handlers.onoffDeviceMotionEvent)
   },
   offDeviceMotionChange() {
-    bn.offDeviceMotionChange(this.onoffDeviceMotionEvent.bind(this))
+    bn.offDeviceMotionChange(handlers.onoffDeviceMotionEvent)
   },
   onGyroscopeChange() {
-    bn.onGyroscopeChange(this.onoffGyroscopeEvent.bind(this))
+    handlers.onoffGyroscopeEvent = this.onoffGyroscopeEvent.bind(this) 
+    bn.onGyroscopeChange(handlers.onoffGyroscopeEvent)
   },
   offGyroscopeChange() {
-    bn.offGyroscopeChange(this.onoffGyroscopeEvent.bind(this))
+    bn.offGyroscopeChange(handlers.onoffGyroscopeEvent)
   },
   onOrientationChange() {
-    bn.onDeviceOrientationChange(this.onoffDeviceOrientationEvent.bind(this))
+    handlers.onoffDeviceOrientationEvent = this.onoffDeviceOrientationEvent.bind(this)
+    bn.onDeviceOrientationChange(handlers.onoffDeviceOrientationEvent)
   },
   offOrientationChange() {
-    bn.offDeviceOrientationChange(this.onoffDeviceOrientationEvent.bind(this))
+    bn.offDeviceOrientationChange(handlers.onoffDeviceOrientationEvent)
   },
   startCompass() {
     bn.startCompass()

@@ -1,5 +1,3 @@
-import * as Mock from './mock'
-
 // test + 1 // test not defined error with native catch
 
 App({
