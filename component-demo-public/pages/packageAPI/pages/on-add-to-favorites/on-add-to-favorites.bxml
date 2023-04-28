@@ -1,0 +1,13 @@
+<theme-context>
+  <view>
+    <head title='Favorite' />
+    <view>
+    <text>message: {{ message }}</text>
+    <view></view>
+    <text>listen to add to Favorite event</text>
+    <button bindtap="listen">listen</button>
+    <text> un-listen to add to Favorite event</text>
+    <button bindtap="unlisten">unlisten</button>
+    </view>
+  </view>
+</theme-context>

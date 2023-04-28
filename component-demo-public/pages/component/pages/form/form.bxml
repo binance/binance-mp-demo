@@ -1,129 +1,25 @@
 <theme-context>
   <view class='container'>
-    <head title='form'></head>
-    <view class='page-body'>
-      <form bindsubmit="formSubmit" bindreset="formReset">
-        <view class='page-section page-section-gap'>
-          <view class='page-section-title'>switch</view>
-          <switch name='switch'></switch>
+    <view class='page-section-title'>DeprecatedInput</view>
+    <view class='bnui-cells bnui-cells_after-title'>
+      <view class='bnui-cell bnui-cell_input'>
+        <view class='bnui-cell__bd'>
+          <deprecated-input
+            autoFocus
+            enterkeyhint='search'
+            data-compname="DeprecatedInput"
+            class='bnui-input'
+            name='DeprecatedInput'
+            placeholder='This is a DeprecatedInput box'
+            bindinput="handleInput"
+            bindfocus="handleFocus"
+            bindblur="handleBlur"
+            bindtap="handClick"
+            bindconfirm="handleConfirm"
+            bindkeyboardheightchange="handleKeyboardHeightChange"
+          />
         </view>
-        <view class='page-section page-section-gap'>
-          <view class='page-section-title'>radio</view>
-          <radio-group name='radio-group'>
-            <label>
-              <radio value='radio1'></radio>Item 1
-            </label>
-            <label>
-              <radio value='radio2'></radio>Item 2
-            </label>
-          </radio-group>
-        </view>
-        <view class='page-section page-section-gap'>
-          <view class='page-section-title'>checkbox</view>
-          <checkbox-group name='checkbox-group'>
-            <label>
-              <checkbox value='checkbox1' checked></checkbox>Item 1
-            </label>
-            <label>
-              <checkbox value='checkbox2'></checkbox>Item 2
-            </label>
-          </checkbox-group>
-        </view>
-        <view class='page-section page-section-gap'>
-          <view class='page-section-title'>slider</view>
-          <slider value="{{50}}" name='slider' show-value></slider>
-        </view>
-        <view class='page-section'>
-          <view class='page-section-title'>input</view>
-          <view class='bnui-cells bnui-cells_after-title'>
-            <view class='bnui-cell bnui-cell_input'>
-              <view class='bnui-cell__bd'>
-                <input
-                  class='bnui-input'
-                  data-compname="Input"
-                  name='input'
-                  placeholder='This is a input box'
-                  bindinput="handleInput"
-                  bindfocus="handleFocus"
-                  bindblur="handleBlur"
-                  bindtap="handClick"
-                  bindconfirm="handleConfirm"
-                  bindkeyboardheightchange="handleKeyboardHeightChange"
-                ></input>
-              </view>
-            </view>
-          </view>
-          <view class='page-section-title'>DeprecatedInput</view>
-          <view class='bnui-cells bnui-cells_after-title'>
-            <view class='bnui-cell bnui-cell_input'>
-              <view class='bnui-cell__bd'>
-                <deprecated-input
-                  enterkeyhint='search'
-                  data-compname="DeprecatedInput"
-                  class='bnui-input'
-                  name='DeprecatedInput'
-                  placeholder='This is a DeprecatedInput box'
-                  bindinput="handleInput"
-                  bindfocus="handleFocus"
-                  bindblur="handleBlur"
-                  bindtap="handClick"
-                  bindconfirm="handleConfirm"
-                  bindkeyboardheightchange="handleKeyboardHeightChange"
-                />
-              </view>
-            </view>
-          </view>
-        </view>
-
-        <view class='page-section'>
-          <view class='page-section-title'>textarea</view>
-          <view class='bnui-cells bnui-cells_after-title'>
-            <view class='bnui-cell bnui-cell_textarea'>
-              <view class='bnui-cell__bd'>
-                <textarea
-                  class='bnui-textarea'
-                  name='textarea'
-                  data-compname="Textarea"
-                  placeholder='This is a textarea box'
-                  bindinput="handleInput"
-                  bindfocus="handleFocus"
-                  bindblur="handleBlur"
-                  bindtap="handClick"
-                  bindconfirm="handleConfirm"
-                  bindkeyboardheightchange="handleKeyboardHeightChange"
-                ></textarea>
-              </view>
-            </view>
-          </view>
-          <view class='page-section-title'>DeprecatedTextArea</view>
-          <view class='bnui-cells bnui-cells_after-title'>
-            <view class='bnui-cell bnui-cell_textarea'>
-              <view class='bnui-cell__bd'>
-                <deprecated-textarea
-                  enterkeyhint='search'
-                  class='bnui-textarea'
-                  name='DeprecatedTextArea'
-                  data-compname="DeprecatedTextArea"
-                  placeholder='This is a DeprecatedTextArea box'
-                  bindinput="handleInput"
-                  bindfocus="handleFocus"
-                  bindblur="handleBlur"
-                  bindtap="handClick"
-                  bindconfirm="handleConfirm"
-                  bindkeyboardheightchange="handleKeyboardHeightChange"
-                />
-              </view>
-            </view>
-          </view>
-        </view>
-
-        <view class='btn-area'>
-          <button type='primary' form-type='submit'>
-            Submit
-          </button>
-          <button form-type='reset'>Reset</button>
-        </view>
-      </form>
+      </view>
     </view>
   </view>
 </theme-context>

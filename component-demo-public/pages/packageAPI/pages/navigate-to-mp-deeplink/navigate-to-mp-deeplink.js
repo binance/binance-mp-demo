@@ -1,7 +1,7 @@
 Page({
   data: {
     deeplink:
-      '/mp/app?appId=cNjQgR7tZB7VffLsQvc3YM&rev=006a05ebf14db3e4a8e69cb6bc8b2589&channel=published&startPagePath=cGFnZXMvcGFja2FnZUFQSS9wYWdlcy9uYXZpZ2F0ZS10by1tcC1kZWVwbGluay9uYXZpZ2F0ZS10by1tcC1kZWVwbGluaw&startPageQuery=Zm9vPWJhciZiYXI9Zm9v&extraData=eyJkZXYiOnRydWV9',
+    'bnc://app.binance.com/mp/app?appId=bqpqWKnedCqoZ3wVcx4z98',
     toMPPayload: {
       appId: 'cNjQgR7tZB7VffLsQvc3YM',
       path: 'pages/packageAPI/pages/navigate-to-mp-deeplink/navigate-to-mp-deeplink?foo=bar&bar=foo',
