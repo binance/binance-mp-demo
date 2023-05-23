@@ -5,5 +5,6 @@
     bindload="onWebViewLoad"
     binderror="onWebViewError"
     bindmessage="onWebViewMessage"
+    injected="{{injected}}"
   />
 </theme-context>

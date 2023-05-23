@@ -7,8 +7,8 @@ App({
     // throw new Error('onLaunch error')
   },
   onThemeChange(payload) {
-    const {theme} =  bn.getSystemInfoSync()
-    // console.error('onThemeChange', theme, payload)
+    const { theme } = bn.getSystemInfoSync()
+    console.log('onThemeChange', theme, payload)
   },
   onError(error) {
     console.log('onError', error)
@@ -21,5 +21,5 @@ App({
     console.log('App onShow', payload)
     // Promise.reject('onShow Promise error')
     // throw new Error('onShow error')
-  },
+  }
 })

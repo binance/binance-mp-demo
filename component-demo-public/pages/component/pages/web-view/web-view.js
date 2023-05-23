@@ -1,6 +1,6 @@
 Page({
   data: {
-
+    injected: ["./a.js", "./b.js"]
   },
   onLoad(query) {
     console.log('onload', this, query)

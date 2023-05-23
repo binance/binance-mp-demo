@@ -99,7 +99,8 @@
       "name": "pages/component",
       "pages": [
         "pages/navigation/navigation",
-        "pages/promise/promise"
+        "pages/promise/promise",
+        "pages/bns/bns"
       ]
     },
     {

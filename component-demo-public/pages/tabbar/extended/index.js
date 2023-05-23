@@ -14,6 +14,13 @@ Page({
         open: false,
         pages: ['promise'],
         image: 'pages/tabbar/extended/resources/kind/nav.png'
+      },
+      {
+        id: 'bns',
+        name: 'Bns',
+        open: false,
+        pages: ['bns'],
+        image: 'pages/tabbar/extended/resources/kind/nav.png'
       }
       // {
       //   id: 'eventChannel',

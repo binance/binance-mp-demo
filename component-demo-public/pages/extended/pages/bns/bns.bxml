@@ -1,0 +1,19 @@
+<theme-context>
+  <view class="container">
+    <head title="bns"></head>
+    <bns module="foo" src="./foo.js"></bns>
+    <bns module="bar">
+      module.exports = {
+            changeToRed(e, instance) {
+                instance.setClass('red');
+            },
+            changeToBlue(e, instance) {
+                instance.setClass('blue')
+            },
+        }
+    </bns>
+    <view bindtap="foo.changeTo20Px">Click to change font-size to 20px</view>
+    <view bindtap="bar.changeToRed">Click to change color to red</view>
+    <view bindtap="bar.changeToBlue">Click to color to blue</view>
+  </view>
+</theme-context>

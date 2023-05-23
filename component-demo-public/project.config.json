@@ -10,7 +10,7 @@
     "minified": false
   },
   "compileType": "miniprogram",
-  "libVersion": "4.7.0-dev.2",
+  "libVersion": "4.9.0",
   "msv": [
     "4.0.0"
   ]
