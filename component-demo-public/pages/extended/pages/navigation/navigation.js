@@ -28,7 +28,6 @@ Page({
      */
   },
   onSetLoading() {
-    console.log();
     this.setData({
       loading: !this.data.loading
     })
