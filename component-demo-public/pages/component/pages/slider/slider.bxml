@@ -54,6 +54,7 @@
         <view class="page-section-title">controlled</view>
         <view class="body-view">
           <slider
+            id="slider"
             value="{{controlledValue}}"
             bindchange="onControlledValueChange"
             min="{{50}}"

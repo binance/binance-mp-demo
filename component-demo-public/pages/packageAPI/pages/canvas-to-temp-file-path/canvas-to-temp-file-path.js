@@ -12,13 +12,14 @@ Page({
         bn.canvasToTempFilePath({
           canvas,
           success: (res) => {
+            console.log('canvasToTempFilePath result:',res)
             this.setData({
               tempFilePath: res.tempFilePath
             })
           },
-           fail(err) {
-             console.error(err)
-           }
+          fail(err) {
+            console.error(err)
+          }
         })
       })
   },

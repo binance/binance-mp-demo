@@ -45,7 +45,7 @@
           class="radio"
           bindtap="onControlledLabelTap"
         >
-          <radio value="cb" checked="{{checked}}"></radio>
+          <radio class="controlled-radio" value="cb" checked="{{checked}}"></radio>
           Checked
         </label>
         <button

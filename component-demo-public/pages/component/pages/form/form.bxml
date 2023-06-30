@@ -5,6 +5,7 @@
       <view class='bnui-cell bnui-cell_input'>
         <view class='bnui-cell__bd'>
           <deprecated-input
+            id="deprecated-input"
             autoFocus
             enterkeyhint='search'
             data-compname="DeprecatedInput"

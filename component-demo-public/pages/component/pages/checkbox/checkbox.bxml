@@ -56,7 +56,7 @@
           class='radio'
           bindtap="toggleChecked"
         >
-          <checkbox value='cb' checked={{checked}}></checkbox>
+          <checkbox class='controlled-checkbox' value='cb' checked={{checked}}></checkbox>
           Checked
         </label>
         <button

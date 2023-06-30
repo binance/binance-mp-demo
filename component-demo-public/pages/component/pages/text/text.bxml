@@ -17,7 +17,7 @@
       <view class="page-body">
         <view class="page-section">
           <text
-            id="text"
+            id="text-user-select"
             bindtap="text2Click"
             bind:longpress="text2Longpress"
             userSelect
