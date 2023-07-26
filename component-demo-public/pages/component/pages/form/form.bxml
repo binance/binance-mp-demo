@@ -19,6 +19,23 @@
             bindconfirm="handleConfirm"
             bindkeyboardheightchange="handleKeyboardHeightChange"
           />
+          <view>test manual = false </view>
+          <view>{{inputValue1}}</view>
+          <deprecated-input
+            id="deprecated-input-1"
+            class="bnui-input"
+            bindinput="handleInput1"
+            value="{{inputValue1}}"
+          />
+          <view>test manual = true </view>
+          <view>{{inputValue2}}</view>
+          <deprecated-input
+            manual="{{true}}"
+            id="deprecated-input-2"
+            class="bnui-input"
+            value="{{inputValue2}}"
+            bindinput="handleInput2"
+          />
         </view>
       </view>
     </view>

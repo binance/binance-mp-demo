@@ -1,4 +1,8 @@
 Page({
+  data: {
+    inputValue1: 'test',
+    inputValue2: 'test',
+  },
   formSubmit(e) {
     console.log('form fires submit event，data:', e.detail.value)
   },
@@ -7,6 +11,21 @@ Page({
   },
   handleInput(e) {
     console.log(`[${e.currentTarget.dataset.compname}] onInput`, e)
+  },
+  handleInput1(e) {
+    this.setData({
+      inputValue1: e.detail.value
+    })
+    e.control?.({value: e.detail.value})
+  },
+  handleInput2(e) {
+    const that = this
+    setTimeout(() => {
+      that.setData({
+        inputValue2: e.detail.value
+      })
+      e.control?.({value: e.detail.value})
+    }, 1000)
   },
   handleFocus(e) {
     console.log(`[${e.currentTarget.dataset.compname}] onFocus`, e)

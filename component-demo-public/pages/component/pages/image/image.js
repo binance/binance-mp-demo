@@ -1,7 +1,7 @@
 Page({
   data: {
-    imageUrl: 'https://bin.bnbstatic.com/image/julia/new-hompage/foreground-image-light.png',
-    lazyImageUrl: 'https://bin.bnbstatic.com/image/julia/new-hompage/foreground-image-light.png',
+    imageUrl: 'https://public.bnbstatic.com/static/images/common/ogImage.jpg',
+    lazyImageUrl: 'https://public.bnbstatic.com/static/images/common/ogImage.jpg',
     localImage: 'pages/tabbar/component/resources/pic/1.jpg',
     array: [{
       mode: 'scaleToFill',

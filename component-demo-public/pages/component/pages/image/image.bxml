@@ -20,7 +20,7 @@
       <view class='page-section page-section-gap'>
         <view class='page-section-title'>Internet Image</view>
         <view class='page-section-ctn'>
-          <image class='image' src="{{imageUrl}}" />
+          <image id='net-image' class='image' src="{{imageUrl}}" />
         </view>
       </view>
 
@@ -36,6 +36,7 @@
       <view class='page-section page-section-gap'>
         <view class='image-block-area' />
         <image
+          id='lazy-image'
           class='image-lazy-load'
           lazyLoad="{{true}}"
           src="{{lazyImageUrl}}"
@@ -45,7 +46,7 @@
       <view class="page-section page-section-gap" bn:for="{{array}}">
         <view class="page-section-title">{{item.text}}</view>
         <view class="page-section-ctn">
-          <image mode="{{array[index].mode}}" style="{{'border-radius: 20px; width: 200px; height: 200px; background-color: #eeeeee;'}}" src="{{localImage}}"></image>
+          <image class="styled-image" mode="{{array[index].mode}}" style="{{'border-radius: 20px; width: 200px; height: 200px; background-color: #eeeeee;'}}" src="{{localImage}}"></image>
         </view>
       </view>
     </view>
