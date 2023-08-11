@@ -91,7 +91,8 @@
         "pages/canvas/glsl-model/glsl-model",
         "pages/canvas/3d-rendering/3d-rendering",
         "pages/deprecated-canvas/deprecated-canvas",
-        "pages/editor/editor"
+        "pages/editor/editor",
+        "pages/chart/chart"
       ]
     },
     {
@@ -100,7 +101,8 @@
       "pages": [
         "pages/navigation/navigation",
         "pages/promise/promise",
-        "pages/bns/bns"
+        "pages/bns/bns",
+        "pages/custom-component/custom-component"
       ]
     },
     {

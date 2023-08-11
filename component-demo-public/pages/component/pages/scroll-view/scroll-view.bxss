@@ -1,6 +1,11 @@
 .page-section-spacing {
   margin-top: 30px;
 }
+.page-section-anchor {
+  margin-top: 30px;
+  box-sizing: border-box;
+  padding: 0 40px;
+}
 .scroll-view_H {
   white-space: nowrap;
 }

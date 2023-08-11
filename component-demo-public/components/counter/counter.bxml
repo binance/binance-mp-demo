@@ -1,0 +1,4 @@
+<view class="counter">
+  <view>count: {{count}}</view>
+  <button bindtap="onClick">+</button>
+</view>

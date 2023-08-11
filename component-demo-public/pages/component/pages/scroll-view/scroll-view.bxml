@@ -6,15 +6,7 @@
         <text>scrollY Vertical Scroll</text>
       </view>
       <view class="page-section-spacing">
-        <scroll-view
-          scrollY
-          style="height: 150px;"
-          bindscrolltoupper="onScrollToUpper"
-          bindscrolltolower="onScrollToLower"
-          bindtap="onTap"
-          bind:longpress="onLongpress"
-          bindscroll="onScroll"
-        >
+        <scroll-view scrollY style="height: 150px;" bindscrolltoupper="onScrollToUpper" bindscrolltolower="onScrollToLower" bindtap="onTap" bind:longpress="onLongpress" bindscroll="onScroll">
           <view class="scroll-view-item demo-text-1"></view>
           <view class="scroll-view-item demo-text-2"></view>
           <view class="scroll-view-item demo-text-3"></view>
@@ -26,15 +18,7 @@
         <text>scroll-x="{{true}}" Horizontal Scroll</text>
       </view>
       <view class="page-section-spacing">
-        <scroll-view
-          class="scroll-view_H"
-          scroll-x="{{true}}"
-          style=" width: 100%;"
-          bindscrolltoupper="onScrollToUpper"
-          bindscrolltolower="onScrollToLower"
-          bindscroll="onScroll"
-          scrollLeft="{{25}}"
-        >
+        <scroll-view class="scroll-view_H" scroll-x="{{true}}" style=" width: 100%;" bindscrolltoupper="onScrollToUpper" bindscrolltolower="onScrollToLower" bindscroll="onScroll" scrollLeft="{{25}}">
           <view class="scroll-view-item_H demo-text-1"></view>
           <view class="scroll-view-item_H demo-text-2"></view>
           <view class="scroll-view-item_H demo-text-3"></view>
@@ -46,35 +30,19 @@
         <text>scroll-y ScrollIntoView 2 item</text>
       </view>
       <view class="page-section-spacing">
-        <scroll-view
-          scroll-y="{{true}}"
-          style="height: 150px;"
-          bindscrolltoupper="onScrollToUpper"
-          bindscrolltolower="onScrollToLower"
-          bindscroll="onScroll"
-          scroll-into-view="{{scrollIntoView}}"
-        >
+        <scroll-view scroll-y="{{true}}" style="height: 150px;" bindscrolltoupper="onScrollToUpper" bindscrolltolower="onScrollToLower" bindscroll="onScroll" scroll-into-view="{{scrollIntoView}}">
           <view id="demo1" class="scroll-view-item demo-text-1"></view>
           <view id="demo2" class="scroll-view-item demo-text-2"></view>
           <view id="demo3" class="scroll-view-item demo-text-3"></view>
         </scroll-view>
       </view>
     </view>
-
     <view class="page-section">
       <view class="page-section-title">
         <text>scroll-x ScrollIntoView 2 item</text>
       </view>
       <view class="page-section-spacing">
-        <scroll-view
-          class="scroll-view_H"
-          scroll-x="{{true}}"
-          style="width: 100%;"
-          bindscrolltoupper="onScrollToUpper"
-          bindscrolltolower="onScrollToLower"
-          bindscroll="onScroll"
-          scroll-into-view="{{scrollIntoView}}"
-        >
+        <scroll-view class="scroll-view_H" scroll-x="{{true}}" style="width: 100%;" bindscrolltoupper="onScrollToUpper" bindscrolltolower="onScrollToLower" bindscroll="onScroll" scroll-into-view="{{scrollIntoView}}">
           <view id="demo1" class="scroll-view-item_H demo-text-1"></view>
           <view id="demo2" class="scroll-view-item_H demo-text-2"></view>
           <view id="demo3" class="scroll-view-item_H demo-text-3"></view>
@@ -86,60 +54,46 @@
         <text>Vertical Scroll with infinite scroll</text>
       </view>
       <view class="page-section-spacing">
-        <scroll-view
-          scroll-y="{{true}}"
-          style="height: 150px;"
-          bindscrolltolower="loadMore"
-        >
-          <view
-            bn:for="{{items}}"
-            bn:key="index"
-            class="scroll-view-item demo-text-{{(index % 3 + 1)}}"
-          ></view>
+        <scroll-view scroll-y="{{true}}" style="height: 150px;" bindscrolltolower="loadMore">
+          <view bn:for="{{items}}" bn:key="index" class="scroll-view-item demo-text-{{(index % 3 + 1)}}"></view>
         </scroll-view>
       </view>
     </view>
-
     <view class="page-section">
       <view class="page-section-title">
         <text>enhanced, fastDeceleration</text>
       </view>
       <view class="page-section-spacing">
-        <scroll-view
-          class="scroll-view_H"
-          scroll-x="{{true}}"
-          style="width: 100%;"
-          bindscrolltoupper="onScrollToUpper"
-          bindscrolltolower="onScrollToLower"
-          bindscroll="onScroll"
-          scroll-left="{{25}}"
-          enhanced
-          fastDeceleration
-        >
+        <scroll-view class="scroll-view_H" scroll-x="{{true}}" style="width: 100%;" bindscrolltoupper="onScrollToUpper" bindscrolltolower="onScrollToLower" bindscroll="onScroll" scroll-left="{{25}}" enhanced fastDeceleration>
           <view class="scroll-view-item_H demo-text-1"></view>
           <view class="scroll-view-item_H demo-text-2"></view>
           <view class="scroll-view-item_H demo-text-3"></view>
         </scroll-view>
       </view>
-
       <view class="page-section-spacing">
-        <scroll-view
-          scroll-y="{{true}}"
-          style="height: 150px;"
-          bindscrolltoupper="onScrollToUpper"
-          bindscrolltolower="onScrollToLower"
-          bindtap="onTap"
-          bind:longpress="onLongpress"
-          bindscroll="onScroll"
-          scroll-top="{{25}}"
-          enhanced
-          fastDeceleration
-        >
+        <scroll-view scroll-y="{{true}}" style="height: 150px;" bindscrolltoupper="onScrollToUpper" bindscrolltolower="onScrollToLower" bindtap="onTap" bind:longpress="onLongpress" bindscroll="onScroll" scroll-top="{{25}}" enhanced fastDeceleration>
           <view class="scroll-view-item demo-text-1"></view>
           <view class="scroll-view-item demo-text-2"></view>
           <view class="scroll-view-item demo-text-3"></view>
         </scroll-view>
       </view>
+    </view>
+    <view class="page-section-anchor">
+      <view class="page-section-title">
+        <text>scroll-anchoring: true</text>
+      </view>
+      <scroll-view scroll-anchoring="{{true}}" scroll-y="{{true}}" scroll-top="{{25}}" style="height: 150px;" bindscrolltoupper="onScrollToUpper" bindscrolltolower="onScrollToLower" bindscroll="onScroll">
+        <view bn:for="{{prependItems}}" bn:key="item" class="scroll-view-item_H">{{item}}</view>
+      </scroll-view>
+      <view class="page-section-title">
+        <text>scroll-anchoring: {{scrollAnchoring}}</text>
+        <button bindtap="scrollAnchor">toggle scroll-anchoring</button>
+      </view>
+      <scroll-view scroll-anchoring="{{scrollAnchoring}}" scroll-y="{{true}}" scroll-top="{{25}}" style="height: 150px;" bindscrolltoupper="onScrollToUpper" bindscrolltolower="onScrollToLower" bindscroll="onScroll">
+        <view bn:for="{{prependItems}}" bn:key="item" class="scroll-view-item_H">{{item}}</view>
+      </scroll-view>
+      <button bindtap="prepend">prepend</button>
+      <button bindtap="shift">shift</button>
     </view>
   </view>
 </theme-context>

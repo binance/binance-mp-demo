@@ -25,7 +25,7 @@ const list = [
     id: 'media',
     name: 'Media',
     open: false,
-    pages: ['video', 'image','native-image','nft-image', 'canvas', 'deprecated-canvas'],
+    pages: ['video', 'image','native-image','nft-image', 'canvas', 'deprecated-canvas', 'chart'],
     image: 'pages/tabbar/component/resources/kind/media.png'
   },
   {

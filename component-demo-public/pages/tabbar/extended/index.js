@@ -21,7 +21,14 @@ Page({
         open: false,
         pages: ['bns'],
         image: 'pages/tabbar/extended/resources/kind/nav.png'
-      }
+      },
+      {
+        id: 'custom-component',
+        name: 'Custom Component',
+        open: false,
+        pages: ['custom-component'],
+        image: 'pages/tabbar/extended/resources/kind/nav.png'
+      },
       // {
       //   id: 'eventChannel',
       //   name: 'Event Channel',

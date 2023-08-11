@@ -1,0 +1,8 @@
+<theme-context>
+  <view class='container'>
+    <head title='chart'></head>
+    <view class='page-body'>
+    <chart chartId="test" class="chart"></chart>
+    </view>
+  </view>
+</theme-context>

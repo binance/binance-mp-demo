@@ -2,7 +2,9 @@ Page({
   data: {
     items: new Array(3).fill(1),
     scrollTop: 25,
-    scrollIntoView: 'demo3'
+    scrollIntoView: 'demo3',
+    prependItems: [],
+    scrollAnchoring: false
   },
   onShow() {
     setTimeout(() => {
@@ -33,6 +35,22 @@ Page({
   loadMore() {
     this.setData({
       items: [...this.data.items, ...new Array(3).fill(1)]
+    })
+  },
+  prepend() {
+    this.setData({
+      prependItems: [Math.random().toFixed(10), ...this.data.prependItems]
+    })
+  },
+  shift() {
+    this.data.prependItems.shift()
+    this.setData({
+      prependItems: this.data.prependItems
+    })
+  },
+  scrollAnchor() {
+    this.setData({
+      scrollAnchoring: !this.data.scrollAnchoring
     })
   }
 })
