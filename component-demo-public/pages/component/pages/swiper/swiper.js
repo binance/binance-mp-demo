@@ -1,6 +1,8 @@
+const colorList = ['yellow', 'red', 'orange', 'green']
+
 Page({
   data: {
-    bgColorGroups: ['yellow', 'red', 'orange', 'green'],
+    bgColorGroups: [],
     indicatorDots: true,
     isAutoplay: false,
     circular: true,
@@ -29,6 +31,11 @@ Page({
   },
   onReady() {
     console.log('onReady')
+    setTimeout(() => {
+      this.setData({
+        bgColorGroups: [...colorList]
+      })
+    })
   },
   onHide() {
     console.log('onHide')
