@@ -1,0 +1,10 @@
+.options {
+  padding: 0 12px;
+}
+.options-input {
+  background-color: #eee;
+}
+.options-picker {
+  background-color: #eee;
+  padding: 12px 0;
+}

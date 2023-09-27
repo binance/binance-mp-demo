@@ -1,0 +1,30 @@
+<view class="container">
+  <button bindtap="openWidget">open widget</button>
+  <button bindtap="closeWidget">close widget</button>
+  <view>
+    <view class="options">
+      <text>width:</text>
+      <input class="options-input" type="number" bindinput="handleWidthInput"/>
+    </view>
+    <view class="options">
+      <text>height:</text>
+      <input class="options-input" type="number" bindinput="handleHeightInput"/>
+    </view>
+    <view class="options">
+      <text>type:</text>
+      <picker class="options-picker" mode="selector" range="{{typeOptions}}" value="{{typeIndex}}" bindchange="handleTypeChange">
+        <view>{{typeOptions[typeIndex]}}</view>
+      </picker>
+    </view>
+    <view class="options">
+      <text>maskClosable:</text>
+      <picker class="options-picker" mode="selector" range="{{maskClosableOptions}}" value="{{maskClosableIndex}}" bindchange="handleMaskClosableChange">
+        <view>{{maskClosableOptions[maskClosableIndex]}}</view>
+      </picker>
+    </view>
+  </view>
+  <button bindtap="toggle">toggle</button>
+  <view bn:if="{{show}}">
+    <widget-slot appid="N6QyfEJN5fHFb94HjB4mTG" path="widgets/clock-widget/index" props="{{props}}"/>
+  </view>
+</view>

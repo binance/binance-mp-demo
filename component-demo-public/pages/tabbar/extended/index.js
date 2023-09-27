@@ -29,6 +29,13 @@ Page({
         pages: ['custom-component'],
         image: 'pages/tabbar/extended/resources/kind/nav.png'
       },
+      {
+        id: 'dynamic-widgets',
+        name: 'Dynamic Widgets',
+        open: false,
+        pages: ['dynamic-widgets'],
+        image: 'pages/tabbar/extended/resources/kind/nav.png'
+      },
       // {
       //   id: 'eventChannel',
       //   name: 'Event Channel',
