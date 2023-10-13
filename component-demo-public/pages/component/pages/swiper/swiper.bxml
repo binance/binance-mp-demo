@@ -20,6 +20,7 @@
           bindchange="onChange"
           bindtransition="onTransition"
           bindanimationfinish="onAnimationfinish"
+          rtl="{{rtl}}"
         >
           <block bn:for="{{bgColorGroups}}" bn:key="*this">
             <swiper-item style="{{'background-color:' + item}}">
@@ -48,6 +49,16 @@
             {{circular ? "stop circular" : "play circular"}}
           </button>
         </view>
+
+        <view class="options_line">
+          <button
+            class="options_btn"
+            bindtap="onRtlChange"
+          >
+            {{rtl ? "rtl" : "ltr"}}
+          </button>
+        </view>
+
         <view class="options_line">
           <button
             class="options_btn"

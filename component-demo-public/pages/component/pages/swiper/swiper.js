@@ -20,7 +20,8 @@ Page({
     intervalInput: 3000,
     duration: 200,
     durationInput: 200,
-    displayMultipleItemsInput: 1
+    displayMultipleItemsInput: 1,
+    rtl: false,
   },
   onLoad(query) {
     console.log('onload', this, query)
@@ -49,6 +50,9 @@ Page({
   },
   onCircularChange() {
     this.setData({ circular: !this.data.circular })
+  },
+  onRtlChange() {
+    this.setData({ rtl: !this.data.rtl })
   },
   onVerticalChange() {
     this.setData({ vertical: !this.data.vertical })
